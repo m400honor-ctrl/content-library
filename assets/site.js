@@ -46,6 +46,63 @@
     window.addEventListener("hashchange", function(){ fromHash(true); });
   }
 
+  /* الرف: الكتاب يتسحب ويتفتح وبعدين يفتح المقال */
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function cleanupBooks(){
+    document.querySelectorAll(".book-fly,.book-backdrop").forEach(function(x){ x.remove(); });
+    document.querySelectorAll(".spine.pulled").forEach(function(s){ s.classList.remove("pulled"); s.style.visibility = ""; });
+  }
+  function openBook(a){
+    if (document.querySelector(".book-fly")) return;
+    var href = a.getAttribute("href");
+    var cs = getComputedStyle(a);
+    a.classList.add("pulled");
+    setTimeout(function(){
+      var r = a.getBoundingClientRect();
+      var back = document.createElement("div"); back.className = "book-backdrop";
+      var fly = document.createElement("div"); fly.className = "book-fly";
+      fly.style.setProperty("--bk", cs.getPropertyValue("--bk"));
+      fly.style.setProperty("--ink-b", cs.getPropertyValue("--ink-b"));
+      fly.style.left = r.left + "px"; fly.style.top = r.top + "px";
+      fly.style.width = r.width + "px"; fly.style.height = r.height + "px";
+      var page = document.createElement("div"); page.className = "bf-page";
+      var ps = document.createElement("small"); ps.textContent = a.dataset.src || "";
+      var pb = document.createElement("b"); pb.textContent = a.dataset.title || "";
+      var pn = document.createElement("span"); pn.textContent = "بيتفتح…";
+      page.append(ps, pb, pn);
+      var cover = document.createElement("div"); cover.className = "bf-cover";
+      var front = document.createElement("div"); front.className = "bf-front";
+      var fb = document.createElement("b"); fb.textContent = a.dataset.title || "";
+      var fs = document.createElement("small"); fs.textContent = a.dataset.src || "";
+      front.append(fb, fs);
+      var backFace = document.createElement("div"); backFace.className = "bf-back";
+      cover.append(front, backFace);
+      fly.append(page, cover);
+      document.body.append(back, fly);
+      a.style.visibility = "hidden";
+      var w = Math.min(320, window.innerWidth * 0.72), h = Math.min(w * 1.42, window.innerHeight * 0.78);
+      w = h / 1.42;
+      fly.getBoundingClientRect();
+      requestAnimationFrame(function(){
+        back.classList.add("on");
+        fly.classList.add("center");
+        fly.style.left = (window.innerWidth - w) / 2 + "px";
+        fly.style.top = (window.innerHeight - h) / 2 + "px";
+        fly.style.width = w + "px"; fly.style.height = h + "px";
+      });
+      setTimeout(function(){ fly.classList.add("open"); }, 600);
+      setTimeout(function(){ location.href = href; }, 1300);
+    }, 230);
+  }
+  document.querySelectorAll(".spine").forEach(function(a){
+    a.addEventListener("click", function(ev){
+      if (reduce || ev.metaKey || ev.ctrlKey || ev.shiftKey || ev.altKey || ev.button !== 0) return;
+      ev.preventDefault();
+      openBook(a);
+    });
+  });
+  window.addEventListener("pageshow", cleanupBooks);
+
   /* نسخ لينك الصفحة */
   document.querySelectorAll("[data-copy]").forEach(function(b){
     b.addEventListener("click", function(){
