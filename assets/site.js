@@ -20,7 +20,7 @@
     function apply(){
       var q = norm(input.value.trim()), shown = 0;
       cards.forEach(function(c){
-        var okT = topic === "all" || (" " + c.dataset.topics + " ").indexOf(" " + topic + " ") >= 0;
+        var okT = topic === "all" || c.dataset.cat === topic;
         var okQ = !q || norm(c.dataset.text).indexOf(q) >= 0;
         c.hidden = !(okT && okQ); if (!c.hidden) shown++;
       });

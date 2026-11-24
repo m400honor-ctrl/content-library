@@ -270,4 +270,57 @@ p,ul,ol,dl,figure,blockquote{margin:0}
   .apply .pen-note{position:static;transform:none}
   .foot-site .wrap{grid-template-columns:minmax(0,1fr)}
 }
+
+/* مجموعات الرف حسب التصنيف */
+.shelf{gap:10px;padding-bottom:0}
+.sg{position:relative;display:flex;align-items:flex-end;height:100%}
+.sg-books{display:flex;align-items:flex-end;gap:5px;height:100%}
+.sg-label{position:absolute;inset-inline:0;bottom:-48px;margin-inline:auto;width:max-content;max-width:100%;font-size:13px;font-weight:700;color:var(--c);background:var(--t);padding:2px 12px;border-radius:99px;text-decoration:none;white-space:nowrap}
+.sg-label:hover{background:var(--c);color:var(--on)}
+.shelf-scroll{padding-bottom:56px}
+.bookend{align-self:flex-end;margin-inline:4px}
+.shelf-tip{font-size:19px;margin:0}
+
+/* التصنيفات */
+.cat-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.cat-tile{position:relative;display:flex;flex-direction:column;gap:10px;padding:20px 20px 18px;border-radius:18px;background:var(--t);text-decoration:none;color:var(--ink);border:1.5px solid transparent;transition:transform .15s,border-color .15s,box-shadow .15s;overflow:hidden}
+.cat-tile:hover{transform:translateY(-3px);border-color:var(--c);box-shadow:0 16px 30px -20px rgba(20,22,26,.4)}
+.cat-tile::after{content:"";position:absolute;width:140px;height:140px;border-radius:50%;border:2px dashed var(--c);opacity:.22;left:-50px;bottom:-60px}
+.ct-top{display:flex;justify-content:space-between;align-items:flex-start}
+.ct-icon{width:56px;height:auto}
+.ct-count{background:var(--paper);color:var(--c);font-size:12.5px;font-weight:700;padding:2px 10px;border-radius:99px}
+.cat-tile h3{font-size:21px;line-height:1.4}
+.cat-tile p{font-size:14.5px;color:var(--ink-2);line-height:1.7}
+.cat-tile ul{list-style:none;padding:0;margin:2px 0 0;display:grid;gap:4px;font-size:13.5px;line-height:1.5}
+.cat-tile li{position:relative;padding-inline-start:14px}
+.cat-tile li::before{content:"";position:absolute;inset-inline-start:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--c)}
+.cat-tile li.more{color:var(--ink-3)}
+.cat-tile li.more::before{background:var(--line)}
+.ct-go{margin-top:auto;padding-top:8px;font-size:14px;font-weight:700;color:var(--c)}
+.ct-go small{font-weight:500;color:var(--ink-3);font-size:12.5px}
+
+.chip.soft{background:var(--paper);border:1px solid var(--line);color:var(--ink-2)}
+.chip.soft::before{background:var(--ink-3)}
+.chips.big .chip{font-size:15px;padding:7px 16px}
+
+/* صفحة التصنيف */
+.cat-band .a-head h1{font-size:50px}
+.cat-desc{font-size:19px;color:var(--ink-2);max-width:56ch;line-height:1.85}
+.read-list{list-style:none;padding:0;margin:0;display:grid;gap:12px;counter-reset:r}
+.read-list li{counter-increment:r}
+.read-list a{display:grid;grid-template-columns:52px minmax(0,1fr);grid-template-areas:"n t" "n m" "n o";column-gap:16px;row-gap:2px;padding:18px 20px;border:1.5px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s}
+.read-list a:hover{border-color:var(--c);background:var(--t)}
+.read-list a::before{content:counter(r);grid-area:n;width:46px;height:46px;border-radius:14px;background:var(--c);color:var(--on);display:grid;place-items:center;font-family:var(--f-display);font-size:19px;font-weight:700}
+.rl-t{grid-area:t;font-family:var(--f-display);font-size:19px;font-weight:700;line-height:1.5}
+.rl-m{grid-area:m;font-size:13.5px;color:var(--ink-3)}
+.rl-m b{color:var(--ink-2);font-weight:700}
+.rl-o{grid-area:o;font-size:15px;color:var(--ink-2);line-height:1.75;margin-top:4px}
+@media (max-width:1100px){.cat-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){
+  .cat-grid{grid-template-columns:minmax(0,1fr)}
+  .cat-band .a-head h1{font-size:34px}
+  .read-list a{grid-template-columns:40px minmax(0,1fr);padding:14px}
+  .read-list a::before{width:36px;height:36px;font-size:16px;border-radius:10px}
+  .shelf-tip{font-size:17px}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
