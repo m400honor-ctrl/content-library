@@ -1,0 +1,9 @@
+/* Shared article presentation: white canvas, comfortable reading, polished media. */
+html, body { background: #fff !important; color-scheme: light; }
+body { min-height: 100vh; }
+main img { max-width: 100%; height: auto; }
+main figure { margin: clamp(1.5rem, 4vw, 2.5rem) auto; text-align: center; }
+main figure img { display: block; max-width: min(100%, 900px); max-height: 78vh; width: auto; margin: 0 auto; object-fit: contain; border: 1px solid #e8e9ed; border-radius: 12px; background: #fff; box-shadow: 0 8px 26px rgba(25, 34, 54, .08); }
+main img.hero { display:block; width:100%; max-height: min(56vw, 430px); object-fit: contain; object-position:center; margin: 1.25rem auto 1.75rem; border:1px solid #e8e9ed; border-radius:16px; background:#fff; box-shadow:0 10px 30px rgba(25,34,54,.09); }
+main figcaption { max-width: 68ch; margin: .65rem auto 0; color: #626a78; font-size: .92em; line-height: 1.7; }
+@media (max-width: 640px) { main img.hero { max-height: 60vh; border-radius: 10px; } main figure img { border-radius: 9px; } }
