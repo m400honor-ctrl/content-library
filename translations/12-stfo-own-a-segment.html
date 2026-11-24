@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>امتلك شريحة بدل الفئة</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ألوان وقياسات موقع STFO الأصلي (الثيم الداكن الافتراضي) */
+:root{--bg:#ffffff;--card:#f5f3f0;--hover:#ece8e3;--text:#1c1917;--text2:#57534e;--mute:#78716c;--accent:#e8500f;--accent-hover:#c43f00;--border:rgba(0,0,0,.12);--border-subtle:rgba(0,0,0,.06);--radius:6px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--bg)}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"IBM Plex Sans Arabic","DM Sans",system-ui,sans-serif;font-size:18px;line-height:1.85;-webkit-font-smoothing:antialiased}
+a{color:var(--accent)}
+.topbar{border-bottom:1px solid var(--border-subtle);background:var(--bg)}
+.topbar .in{max-width:1024px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo{font-family:"Lexend","IBM Plex Sans Arabic",sans-serif;font-weight:700;color:var(--accent);font-size:22px;letter-spacing:.5px;direction:ltr}
+.topbar nav{display:flex;gap:28px;color:var(--text2);font-size:14px;font-weight:500;flex-wrap:wrap}
+.topbar nav span{white-space:nowrap}
+.wrap{max-width:1024px;margin:0 auto;padding:64px 24px 96px}
+header.art{max-width:42rem;margin:0 auto}
+.meta{font-size:14px;color:var(--mute);display:flex;gap:10px;flex-wrap:wrap}
+.meta bdi{direction:ltr}
+h1,h2,h3{font-family:"IBM Plex Sans Arabic","Instrument Serif",Georgia,serif;color:var(--text)}
+h1{font-size:clamp(2rem,4vw,3.1rem);line-height:1.35;font-weight:600;margin:16px 0 0}
+.hero{display:block;width:100%;height:auto;border-radius:var(--radius);margin:40px 0 0}
+.orig{font-size:14px;color:var(--mute);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:8px 0;margin:24px 0 0}
+.orig bdi{direction:ltr}
+.prose{max-width:42rem;margin:48px auto 0}
+.prose a{text-decoration:underline;text-underline-offset:2px}
+.prose p{margin:1.5em 0}
+.prose h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:600;line-height:1.4;margin:2.5em 0 .75em}
+.prose h3{font-size:clamp(1.2rem,2vw,1.45rem);font-weight:600;line-height:1.5;margin:2em 0 .5em}
+.prose img{display:block;border-radius:var(--radius);background:var(--card);max-width:100%;height:auto;margin:2em 0;padding:.5rem}
+.prose blockquote{border-right:3px solid var(--accent);border-left:0;background:var(--card);border-radius:var(--radius) 0 0 var(--radius);color:var(--text2);margin:2em 0;padding:1.25rem 1.5rem;font-style:normal}
+.prose blockquote p{margin:.5em 0}
+.prose ul,.prose ol{margin:1.5em 0;padding-right:1.5rem;padding-left:0}
+.prose ul{list-style:disc}.prose ol{list-style:decimal}
+.prose li{margin:.5em 0;padding-right:.25em}
+.prose li::marker{color:var(--accent)}
+.prose strong{color:var(--text);font-weight:700}
+.prose em{font-style:normal;color:var(--text)}
+.prose .quote{color:var(--text2)}
+.prose table{border-collapse:collapse;width:100%;margin:2em 0;font-size:16px}
+.prose th,.prose td{border-bottom:1px solid var(--border);text-align:right;padding:.75rem 1rem;vertical-align:top}
+.prose th{color:var(--text);font-weight:600}
+.prose td{color:var(--text2)}
+.tablewrap{overflow-x:auto}
+.en{direction:ltr;unicode-bidi:isolate}
+@media (max-width:600px){.topbar nav{display:none}.wrap{padding:40px 16px 80px}.prose th,.prose td{padding:.6rem .5rem}}
+/* rtl-polish v1 */
+html{direction:rtl}
+body{text-align:right}
+p,li,dd,dt,td,th,figcaption,blockquote,h1,h2,h3,h4,h5,h6{text-align:right;letter-spacing:0!important;text-transform:none!important}
+p,li{line-height:1.9;word-spacing:.02em}
+ul,ol{padding-right:1.7em!important;padding-left:0!important}
+li>ul,li>ol{margin-top:.35em}
+table{direction:rtl}
+th,td{text-align:right}
+figure,figcaption{text-align:center}
+bdi.en{unicode-bidi:isolate;direction:ltr}
+.orig a,.orig bdi{overflow-wrap:anywhere}
+pre,code,kbd,samp{direction:ltr;unicode-bidi:isolate;text-align:left}
+img{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<div dir="rtl" style="padding:10px 16px;border-bottom:1px solid #eee;background:#fff;font:600 14px Tajawal,Arial,sans-serif"><a href="../translations.html" style="color:#2446c7;text-decoration:none">← مكتبة الترجمات العربية</a> <span style="color:#888">·</span> <a href="../index.html" style="color:#2446c7;text-decoration:none">مكتبة الكونتنت</a></div>
+
+<div class="topbar"><div class="in"><span class="logo">STFO</span>
+<nav><span>أعمالنا</span><span>أبحاث</span><span>المنهجية</span><span>الكتاب</span><span>من نحن</span></nav></div></div>
+
+<main class="wrap">
+<header class="art">
+<div class="meta"><span><bdi>13-08-2021</bdi></span><span>· حُدّث في <bdi>23-04-2026</bdi></span><span>· بقلم <bdi class="en">Louis Grenier</bdi></span></div>
+<h1>توقّف عن محاولة خلق فئة جديدة. امتلك شريحة بدلًا من ذلك.</h1>
+<img class="hero" src="https://www.stfo.io/og/articles-category-creation.png" alt="Stop Trying To Create A Category. Own A Segment Instead.">
+<div class="orig">ترجمة عربية بالمعنى للمقال الأصلي: <a href="https://www.stfo.io/articles/category-creation"><bdi>Stop Trying To Create A Category. Own A Segment Instead.</bdi></a></div>
+</header>
+
+<div class="prose">
+<h2 id="tldr">الخلاصة السريعة (<bdi class="en">TL</bdi>;<bdi class="en">DR</bdi>)</h2>
+<p>معظم ما يُسمّى «خلق فئة جديدة» (<bdi class="en">Category Creation</bdi>) في الـ <bdi class="en">B2B</bdi> مجرد استعراض. خلق الفئة الحقيقي يستغرق من 6 إلى 10 سنوات، ويكلّف 100 مليون دولار أو أكثر، ويحتاج إلى تحوّل في السوق لا يحدث إلا مرة كل عقد. وتقريبًا لا أحد ممن يدّعون أنهم يخلقون فئة يفعل ذلك فعلًا. أما الخطوة المضمونة لـ 99% من شركات الـ <bdi class="en">B2B</bdi> فهي <strong>امتلاك شريحة</strong> (<bdi class="en">Owning a Segment</bdi>): اختر مشتريًا محددًا داخل فئة موجودة بالفعل، وركّز على <a href="https://www.stfo.io/glossary/ignored-struggles">معاناة مُهمَلة</a> تهمّه، و<a href="https://www.stfo.io/book/chapters/the-monster">سمِّ العدو</a> الذي يكرهه أصلًا. هكذا تبرز بقوة وتلفت الأنظار (<bdi class="en">Stand The F</bdi>*<bdi class="en">ck Out</bdi>) دون أن تنتظر عشر سنوات.</p>
+
+<h2 id="i-tried-to-create-a-category-once-it-cost-me-20000-and-18-months">حاولت أن أخلق فئة مرة. كلّفني ذلك 20,000 دولار و18 شهرًا.</h2>
+<p><img src="https://www.stfo.io/images/category-creation-01.webp" alt="لافتة تحذير من مخاطر خلق فئة جديدة في السوق" width="1200" height="666" loading="lazy" decoding="async"></p>
+<p>في عام 2015 كنت قد ادّخرت 20,000 دولار لأبدأ مشروعي الخاص في دبلن. فكرتي: أن أساعد الشركات المحلية على كسب مزيد من المال عبر الإنترنت من خلال تحسين معدل التحويل (<bdi class="en">CRO</bdi>). ظننت أنني وقعت على شيء مهم، لأن أحدًا لم يكن يقدّم هذه الخدمة محليًا.</p>
+<p>لم يخطر ببالي أن السبب، ربما، وربما فقط، أن أحدًا لم يكن يقدّمها محليًا لأن <em>الطلب عليها لم يكن موجودًا</em>.</p>
+<p>في <a href="https://www.stfo.io/book/chapters/the-category">الفصل السابع من كتاب <em>Stand The F*ck Out</em></a> («الفئة»)، أحكي القصة كاملة. باختصار: قضيت 18 شهرًا أحاول بيع خدمة تحسين معدل التحويل في سوق يريد تحسين محركات البحث (<bdi class="en">SEO</bdi>) والإعلانات وإدارة السوشيال ميديا. كنت، كما أصف نفسي في الكتاب، «طاهيًا يحاول إقناع سيّاح أيرلنديين بتجربة الحلزون بزبدة الثوم والأعشاب، بينما كل ما يريدونه هو اللازانيا». أغلقت الوكالة. منهك ذهنيًا. ومفلس.</p>
+<p>علّمني ذلك الفشل ما يجب أن يسمعه كل فريق <bdi class="en">B2B</bdi> يطارد «خلق فئة». وأقتبس هنا <bdi class="en">Eugene Schwartz</bdi> مباشرة من الفصل السابع:</p>
+<blockquote>
+<p><strong>«لا يمكنك أن تخلق الطلب على أي شيء، لأن الطلب أكبر من أن تخلقه أنت. لا بد أن يكون الطلب موجودًا في السوق بالفعل».</strong></p>
+</blockquote>
+<p>الطلب قوة من قوى السوق. أنت لا تخلقه. أنت تجده، ثم تضع نفسك في موقع مناسب في مواجهته.</p>
+<p>ومع ذلك، فكل عرض تقديمي لشركة <bdi class="en">B2B SaaS</bdi> في 2026 فيه شريحة مكتوب عليها «نحن نخلق فئة جديدة». ومعظمهم لا يفعلون ذلك. هم يعيدون تسمية فئة فرعية، أو يغيّرون اسم خاصية في المنتج، أو يطبعون بيانًا (مانيفستو) ويأملون أن يومئ المستثمرون برؤوسهم موافقين. إليك كيف تميّز الفرق، وماذا تفعل بدلًا من ذلك.</p>
+
+<h2 id="the-stfo-category-creation-test">اختبار <bdi class="en">STFO</bdi> لخلق الفئة</h2>
+<p>أنت لم تخلق فئة فعلًا إن كان أيٌّ من هذه صحيحًا:</p>
+<ul>
+<li>لم يُصدر أي محلل مستقل (<bdi class="en">Gartner</bdi> أو <bdi class="en">Forrester</bdi> أو <bdi class="en">G2</bdi>) تقريرًا من نوع <bdi class="en">Magic Quadrant</bdi> أو <bdi class="en">Wave</bdi> أو <bdi class="en">Grid</bdi> لهذه الفئة</li>
+<li>المشترون لا يبحثون عن اسم الفئة إلا مقرونًا باسم البراند الخاص بك</li>
+<li>مندوبو المبيعات لديك مضطرون إلى شرح الفئة قبل أن يبدؤوا في عرض المنتج</li>
+<li>فئتك لا تظهر في أي مسمى وظيفي، أو وصف وظيفة، أو نموذج طلب عروض (<bdi class="en">RFP</bdi>)</li>
+</ul>
+<p>إن كان أي من ذلك صحيحًا، فأنت تعمل على الرسائل التسويقية (<bdi class="en">Messaging</bdi>)، لا على خلق فئة. وهذا لا بأس به. معظم شركات الـ <bdi class="en">B2B</bdi> يجب أن تعمل على الرسائل. فقط لا تخلط بين ذلك وبين الاستراتيجية. ولا تجمع تمويلًا وكأنك عبرت جسرًا لم تبدأ في بنائه بعد.</p>
+
+<h2 id="category-creation-vs-category-design-vs-owning-a-segment">خلق الفئة مقابل تصميم الفئة مقابل امتلاك الشريحة</h2>
+<p>ثلاثة مصطلحات تُستخدم وكأنها شيء واحد. وهي ليست كذلك، والتفرقة بينها جوهرية ويقوم عليها كل ما بعدها.</p>
+<div class="tablewrap"><table><thead><tr><th>المصطلح</th><th>معناه</th><th>التكلفة</th><th>من يجب أن يجرّبه</th></tr></thead><tbody>
+<tr><td>خلق الفئة (<bdi class="en">Category Creation</bdi>)</td><td>اختراع فئة جديدة من الصفر</td><td>أكثر من 100 مليون دولار، و6 إلى 10 سنوات، وتحوّل لا يحدث إلا مرة كل عقد</td><td>نحو 0.1% من شركات الـ <bdi class="en">B2B</bdi> (ونعم، هذا تقدير أخرجته من رأسي بلا أي مصدر)</td></tr>
+<tr><td>تصميم الفئة (<bdi class="en">Category Design</bdi>)</td><td>تشكيل الطريقة التي يرى بها السوق فئة موجودة تنتمي إليها</td><td>شهور من العمل الاستراتيجي، وميزانية متواضعة</td><td>معظم شركات الـ <bdi class="en">B2B</bdi></td></tr>
+<tr><td>امتلاك الشريحة (<bdi class="en">Owning a Segment</bdi>)</td><td>أن تصبح الخيار الوحيد لمشترٍ محدد داخل فئة موجودة</td><td>أسابيع من البحث، مع هوس حقيقي بالتفاصيل</td><td>99% من شركات الـ <bdi class="en">B2B</bdi></td></tr>
+<tr><td>تحدّي الأعراف (<bdi class="en">Challenging Conventions</bdi>)</td><td>البقاء داخل فئة موجودة مع كسر عُرف أو اثنين من أعرافها</td><td>جهد في إعادة التموضع</td><td>يكمّل كل ما سبق</td></tr>
+</tbody></table></div>
+<p>خلق الفئة هو ما يريده كل مؤسس. وتصميم الفئة (بالمعنى الذي تستخدمه <a href="https://www.stfo.io/podcast/guests/april-dunford">April Dunford</a>) هو ما تحتاجه معظم الشركات فعلًا. وامتلاك الشريحة هو إجابة <bdi class="en">STFO</bdi>. وتحدّي الأعراف هو التكتيك الذي يكمّله.</p>
+
+<h2 id="why-most-category-creation-case-studies-arent-what-you-think">لماذا معظم دراسات حالة «خلق الفئة» ليست كما تظن</h2>
+<p>خذ المثال الكلاسيكي في <a href="https://www.stfo.io/glossary/blue-ocean-strategy">كتاب <bdi class="en">Blue Ocean Strategy</bdi></a>: الشركة الفرنسية <bdi class="en">SEB</bdi> وقلّايتها الهوائية. سعرات حرارية أقل بنسبة 40%، ودهون أقل بنسبة 80%.</p>
+<p><img src="https://www.stfo.io/images/air-fry-makers-are-not-a-new-category.webp" alt="القلّايات الهوائية ليست فئة جديدة" width="1200" height="800" loading="lazy" decoding="async"></p>
+<p><strong>هذه ليست فئة جديدة. إنها فئة فرعية.</strong> الجميع كانوا يعرفون بالفعل ما هي القلّاية. لم تضطر <bdi class="en">SEB</bdi> إلى تثقيف السوق. بل استندت إلى ما يعرفه الناس أصلًا، واقتطعت لنفسها شريحة: الناس الذين يحاولون تقليل الدهون في طعامهم.</p>
+<p>والأمر نفسه يحدث مع <bdi class="en">HubSpot</bdi>. ينسب إليها الناس الفضل في خلق «التسويق الجاذب» (<bdi class="en">Inbound Marketing</bdi>). اسأل <a href="https://www.stfo.io/podcast/rand-fishkin-s-secrets-to-successfully-launching-a-new-product">Meghan Keaney Anderson</a>، نائبة رئيس التسويق السابقة لديهم:</p>
+<p><img src="https://www.stfo.io/images/meghan-keaney-anderson.webp" alt="Meghan Keaney Anderson عن سبب عدم ضرورة خلق فئة" width="1200" height="736" loading="lazy" decoding="async"></p>
+<p class="quote">«دعوني أكون واضحة. <strong>لا أعتقد أنك مضطر إلى خلق فئة.</strong> أعتقد أنك مضطر إلى تسمية العدو، وهكذا أصبح التسويق الجاذب فئة. لكن بوجود هذه الفئة أو بدونها، كنا سنحتاج على أي حال إلى تسمية التسويق الصادر (<bdi class="en">Outbound</bdi>) والإعلانات غير ذات الصلة على أنها العدو. <strong>ما يجب أن تسمّيه هو الشيء الذي تحاربه، لا الفئة التي تنتمي إليها.</strong>»</p>
+<p>هذه هي الحيلة. سمّت <bdi class="en">HubSpot</bdi> العدو (المقاطعة، والرسائل المزعجة، والنماذج التي لا تؤدي إلى أي شيء). وظهر «التسويق الجاذب» كنتيجة جانبية لتلك المعركة. لم يكونوا يحاولون خلق فئة. كانوا يحاولون هزيمة ممارسات بعينها يكرهها مشتروهم أصلًا.</p>
+
+<h2 id="4-reasons-most-b2b-companies-should-not-try-to-create-a-category">4 أسباب تجعل معظم شركات الـ <bdi class="en">B2B</bdi> يجب ألا تحاول خلق فئة</h2>
+<h3 id="reason-1-the-cost-is-brutal">السبب الأول: التكلفة قاسية.</h3>
+<p><a href="https://www.stfo.io/podcast/guests/april-dunford">April Dunford</a>، <a href="https://www.stfo.io/glossary/positioning">استشارية التموضع (<bdi class="en">Positioning</bdi>)</a> ومؤلفة كتاب <em>Obviously Awesome</em>:</p>
+<p><img src="https://www.stfo.io/images/april-dunford.webp" alt="April Dunford عن سبب عدم نجاح خلق الفئة مع معظم رواد الأعمال" width="1200" height="630" loading="lazy" decoding="async"></p>
+<p class="quote">«ما نفعله مذهل جدًا. جامح جدًا. لا يناسب أي خانة موجودة. إذن عليّ أن أخلق سوقي الجديد لأقدّمه. وهذا في الحقيقة أصعب الأساليب على الإطلاق، لأنك <strong>أولًا مضطر إلى أن تثبت للناس أن سوقك يستحق أن يوجد</strong>. ثم عليك بعد ذلك أن تضع نفسك في هذا السوق باعتبارك الخيار الأفضل. هذا يحتاج إلى مال ووقت وجهد. وعمومًا، لا يقدر على ذلك إلا الشركات الكبيرة المموّلة من رأس المال الجريء، ذات الجيوب العميقة، والمستثمرين الناضجين جدًا والصبورين».</p>
+<p>تقدّر أبحاث <bdi class="en">Play Bigger</bdi> متوسط المدة اللازمة لخلق فئة بـ <strong>6 إلى 10 سنوات</strong>. ومعظم شركات الـ <bdi class="en">B2B SaaS</bdi> لا يكفيها رصيدها من المال والوقت (<bdi class="en">Runway</bdi>) لهذه المدة.</p>
+<h3 id="reason-2-you-dont-get-to-decide">السبب الثاني: القرار ليس بيدك.</h3>
+<p>الفئات لا تُعلَن. بل تنشأ. وعادةً ما يكون ذلك بسبب تحوّل ضخم، سياسي أو بيئي أو ثقافي أو تكنولوجي، صادف أن ركبت الشركة موجته. الشركة لم تتسبب في التحوّل. التحوّل هو الذي تسبب في الفئة.</p>
+<p><bdi class="en">HubSpot</bdi> لم تخلق التسويق الجاذب. اجتماع الضجر من الرسائل المزعجة، وظهور منصات المحتوى، ومكافأة <bdi class="en">Google</bdi> للمحتوى المفيد، هو ما خلق الفئة. و<bdi class="en">HubSpot</bdi> أطلقت عليها الاسم.</p>
+<h3 id="reason-3-your-product-isnt-as-different-as-you-think">السبب الثالث: منتجك ليس مختلفًا بالقدر الذي تظنه.</h3>
+<p>لدى <bdi class="en">Youngme Moon</bdi>، مؤلفة كتاب <em>Different</em>، اسم لهذه الظاهرة: <strong>خبراء الفئة المتذوّقون (<bdi class="en">Category Connoisseurs</bdi>)</strong>. المؤسسون والمسوّقون داخل الشركة غارقون في منتجهم إلى درجة أن اختلافًا بنسبة 10% يبدو لهم قفزة بنسبة 100%. أما بالنسبة للمشتري، <a href="https://www.stfo.io/research/b2b-brand-distinctiveness-2026">فأنتم جميعًا تبدون متشابهين</a>.</p>
+<p>اختبر ذلك. اطلب من 20 مشتريًا مستهدفًا أن يصفوا ما تفعله في جملة واحدة. إن وضعوك في فئة موجودة بالفعل، فأنت في تلك الفئة. مفرداتهم هي التي تنتصر، لا مفرداتك.</p>
+<h3 id="reason-4-youre-trying-to-create-demand-that-doesnt-exist">السبب الرابع: أنت تحاول خلق طلب غير موجود.</h3>
+<p>هذا هو السبب الذي يغفل عنه معظم الناس، وهو الذي تعلّمته بالطريقة الصعبة في دبلن. خلق الفئة، في جوهره، محاولة لخلق الطلب. والحملات التسويقية لا تخلق الطلب. التحوّلات التكنولوجية، والتغييرات التنظيمية والتشريعية، وعادات الأجيال، والأزمات: هذه هي التي تخلق الطلب.</p>
+<p>إن لم يكن الطلب موجودًا، فلن يجعله يظهر أي قدر من تسمية الفئات، أو <a href="https://www.stfo.io/glossary/thought-leadership">القيادة الفكرية (<bdi class="en">Thought Leadership</bdi>)</a>، أو رعاية البودكاستات، أو البيانات والمانيفستوهات. ستحرق الوقت والمال وأنت تحاول تثقيف سوق لم يطلب أن يتثقّف.</p>
+
+<h2 id="what-works-instead-owning-a-segment">ما الذي ينجح بدلًا من ذلك: امتلاك الشريحة</h2>
+<p>انسَ خلق فئة. اختر شريحة داخل فئة موجودة، وامتلكها.</p>
+<p>في <a href="https://www.stfo.io/book/chapters/the-segment">الفصل السادس من كتاب <em>Stand The F*ck Out</em></a> («الشريحة»)، أعرّف الشريحة بأنها <strong>مجموعة من الناس يعانون من معاناة مُهمَلة محددة بتكرار أكبر أو بحدّة أشد من بقية السوق.</strong></p>
+<p>ثلاث صفات للشريحة التي تستحق أن تمتلكها:</p>
+<ol>
+<li><strong>ضيّقة بما يكفي لتفوز بها.</strong> إن كانت الشريحة «كل شركات الـ <bdi class="en">B2B SaaS</bdi>»، فقد خسرت. وإن كانت «مؤسسي شركات <bdi class="en">B2B SaaS</bdi> الذين لم يصلوا إلى جولة التمويل <bdi class="en">B</bdi>، وما زالوا يديرون المبيعات بأنفسهم، وعيّنوا للتو أول مسؤول حسابات (<bdi class="en">AE</bdi>)»، فهنا نبدأ الكلام الجاد.</li>
+<li><strong>مؤلمة بما يكفي ليشتروا.</strong> إن لم تكن هذه المشكلة تحرمهم النوم، فلن يدفعوا مقابل حلّها.</li>
+<li><strong>مترابطة بما يكفي ليتحدثوا.</strong> إن لم يكونوا يتشاركون مجموعات <bdi class="en">Slack</bdi>، أو مؤتمرات، أو دوائر <bdi class="en">LinkedIn</bdi>، أو مجتمعات على <bdi class="en">Reddit</bdi>، فمحرّك التسويق الشفهي (<bdi class="en">Word of Mouth</bdi>) لديك لن يجد طريقًا يسير عليه.</li>
+</ol>
+<p>ثم اعمل بجد. كن الخيار البديهي لهذا المشتري المحدد قبل أن تفكر حتى في التوسّع.</p>
+
+<h2 id="four-b2b-companies-that-own-a-segment-without-creating-a-category">أربع شركات <bdi class="en">B2B</bdi> تمتلك شريحة دون أن تخلق فئة</h2>
+<h3 id="prco">PR.co</h3>
+<p>برنامج علاقات عامة للبراندات الكبيرة التي يهمها أن تُنجز الأمر على الوجه الصحيح. الفئة: برامج العلاقات العامة. لا جديد في الفئة. يبيعون لفرق الاتصال في <bdi class="en">Shimano</bdi> و<bdi class="en">Just Eat Takeaway</bdi> و<bdi class="en">Wise</bdi> و<bdi class="en">Polaroid</bdi> وأطباء بلا حدود (<bdi class="en">Doctors Without Borders</bdi>) و<bdi class="en">Wolt</bdi> و<bdi class="en">Canyon</bdi>. الشريحة: <strong>البراندات الكبيرة ذات المخاطر العالية، حيث يضر بيان صحفي فاشل بالبراند أكثر بكثير مما يوفّره من وقت.</strong> لم يخترعوا فئة. اختاروا المشتري الذي لا يحتمل استخدام أدوات علاقات عامة عامة ونمطية، وأصبحوا الخيار البديهي لهذا المشتري. تقييمهم 4.7 على <bdi class="en">G2</bdi>، و4.6 على <bdi class="en">Capterra</bdi>.</p>
+<h3 id="vialytics">Vialytics</h3>
+<p>برنامج <bdi class="en">B2B SaaS</bdi> لإدارة الطرق في البلديات، في أكثر من 300 مدينة أوروبية. الفئة: برامج الأشغال العامة (الأدوات التي تستخدمها المدن أصلًا). لا جديد هنا. الشريحة: <strong>البلديات الأوروبية الصغيرة والمتوسطة التي ما زال فحص الطرق فيها يعتمد على جداول البيانات والزيارات الميدانية الموسمية.</strong> لم يخلقوا فئة «فحص البنية التحتية بالذكاء الاصطناعي». بل امتلكوا نموذجًا محددًا واحدًا من المشترين داخل فئة غير جذابة. وهذا هو حصنهم الدفاعي.</p>
+<h3 id="balsamiq">Balsamiq</h3>
+<p><a href="https://www.stfo.io/work/balsamiq">دراسة حالة <bdi class="en">Balsamiq</bdi></a> نموذج مثالي لتحويل الاتجاه نحو شريحة. أداة لرسم المخططات الأولية (<bdi class="en">Wireframing</bdi>) عمرها 15 عامًا، كانت تسوّق للمصممين، بينما لم يكن المصممون يمثلون إلا 10% من الإيرادات. أعدنا تموضعها لتخاطب <strong>فرق المنتج</strong> (المشترين الذين يدفعون فعلًا). النتيجة: زيادة بنسبة 40% أو أكثر في التسجيلات المؤهلة للفترة التجريبية. لم يخترعوا «رسم المخططات للمنتجات» كفئة. اختاروا الشريحة الصحيحة داخل فئة موجودة، وأعادوا تشكيل كل نقطة تواصل حول ذلك المشتري.</p>
+<h3 id="leadsie">Leadsie</h3>
+<p><a href="https://www.stfo.io/work/leadsie">دراسة حالة <bdi class="en">Leadsie</bdi></a> نموذج مثالي آخر للتحرك نحو شريحة. إدارة الوصول والصلاحيات لوكالات التسويق الرقمي. الفئة: أدوات استقبال العملاء الجدد (<bdi class="en">Onboarding</bdi>) ومنح الوصول لحسابات العملاء. الشريحة: <strong>وكالات التسويق الرقمي التي تقضي ساعات مع كل عميل جديد لتجعله يمنحها الوصول إلى حساباته الإعلانية و<bdi class="en">Google Analytics</bdi> و<bdi class="en">Search Console</bdi> وغيرها.</strong> بعد جلسة نقد لاذع لتموضعهم (<bdi class="en">Repositioning Roast</bdi>)، كانت أرقامهم: +93% في تفعيل البيانات خلال 14 يومًا، و+44% في إنشاء الحسابات، و+32% في التسجيلات الأسبوعية. المنتج نفسه. الفئة نفسها. شريحة أكثر تحديدًا، وكل رسالة أُعيد بناؤها من أجل تلك الشريحة.</p>
+
+<h2 id="common-mistakes-b2b-teams-make-with-category-creation">أخطاء شائعة ترتكبها فرق الـ <bdi class="en">B2B</bdi> مع خلق الفئة</h2>
+<ul>
+<li><strong>تسمية إعادة التموضع «خلق فئة».</strong> إن كل ما فعلته أنك غيّرت اسم منتجك، وأضفت صفة، وطبعت بيانًا، فهذا عمل على الرسائل التسويقية. لا تخلط بينه وبين الاستراتيجية.</li>
+<li><strong>بناء اسم للفئة قبل اختيار الشريحة.</strong> اسم الفئة هو الخطوة الأخيرة، لا الأولى. الشريحة، ثم المعاناة المُهمَلة، ثم العدو، ثم اسم الفئة.</li>
+<li><strong>مطاردة «الفريد» بدلًا من «ذي المعنى».</strong> أن تكون مختلفًا لمجرد الاختلاف لا يحرّك المشترين. وإطار <bdi class="en">Seth Godin</bdi> ما زال صالحًا: <em>«كيف نجعله مختلفًا بحيث يصبح لافتًا فعلًا؟»</em> لا <em>«كيف نجعله مثل الآخرين تمامًا ثم نجعله لافتًا؟»</em> الاختلافات ذات المعنى تتفوق على الاختلافات العشوائية في كل مرة.</li>
+<li><strong>تجاهل مدة الـ 6 إلى 10 سنوات.</strong> إن كان مجلس إدارتك سيسألك عن الإيراد الشهري المتكرر (<bdi class="en">MRR</bdi>) بعد ستة أرباع سنة، فأنت لا تخلق فئة. أنت تعمل على الرسائل التسويقية. ضع ميزانيتك وسمِّ ما تفعله على هذا الأساس.</li>
+<li><strong>تقليد الشركات المشهورة بخلق الفئات دون معرفة الظروف.</strong> شركات بعينها ركبت تحولات بعينها (الضجر من الرسائل المزعجة مع تحسين محركات البحث للمحتوى، والعمل عن بُعد مع أدوات المحادثة، والهواتف مع تجربة الاستخدام المصممة للموبايل أولًا). تلك الظروف ليست ظروفك. وخطط اللعب هذه لا يمكن نقلها كما هي.</li>
+</ul>
+
+<h2 id="faq">الأسئلة الشائعة</h2>
+<h3 id="what-is-category-creation">ما هو خلق الفئة؟</h3>
+<p>خلق الفئة هو الجهد المتعمّد والاستراتيجي لتأسيس فئة سوقية جديدة، أي طريقة جديدة لتجميع المنتجات أو الخدمات لم تكن موجودة من قبل. وهو نادر. يستغرق في المتوسط من 6 إلى 10 سنوات، وعشرات أو مئات الملايين من رأس المال، ويعتمد عادةً على تحوّل ضخم في الأساس (تكنولوجي أو تنظيمي أو ثقافي) تركب الشركة موجته حتى القمة. وأعمال <bdi class="en">Play Bigger</bdi> و<bdi class="en">Christopher Lochhead</bdi> هي المراجع الكلاسيكية في هذا الموضوع.</p>
+<h3 id="whats-the-difference-between-category-creation-and-category-design">ما الفرق بين خلق الفئة وتصميم الفئة؟</h3>
+<p>خلق الفئة يعني اختراع فئة جديدة تمامًا لا يعرفها السوق بعد. أما تصميم الفئة، بالمعنى الذي تستخدمه <bdi class="en">April Dunford</bdi>، فيعني تشكيل الطريقة التي يرى بها السوق فئة موجودة تنتمي إليها: أن تختار الفئة التي تتموضع فيها، وكيف توصل مكانك داخلها. وتصميم الفئة أسهل تحقيقًا بكثير لمعظم شركات الـ <bdi class="en">B2B</bdi>.</p>
+<h3 id="what-are-examples-of-b2b-companies-owning-a-segment">ما أمثلة شركات الـ <bdi class="en">B2B</bdi> التي تمتلك شريحة؟</h3>
+<p><bdi class="en">PR.co</bdi> (برنامج علاقات عامة للبراندات الكبيرة ذات المخاطر العالية)، و<bdi class="en">Vialytics</bdi> (برنامج أشغال عامة للبلديات الأوروبية الصغيرة والمتوسطة)، و<bdi class="en">Balsamiq</bdi> (رسم المخططات الأولية لفرق المنتج بدلًا من المصممين)، و<bdi class="en">Leadsie</bdi> (إدارة الوصول لوكالات التسويق الرقمي). الأربع بقيت داخل فئة موجودة، وأصبحت الخيار البديهي لمشترٍ محدد داخلها.</p>
+<h3 id="how-long-does-category-creation-take">كم يستغرق خلق الفئة؟</h3>
+<p>تقدّر أبحاث <bdi class="en">Play Bigger</bdi> المتوسط بـ <strong>6 إلى 10 سنوات</strong>. ومعظم الأمثلة الشهيرة التي يكثر الاستشهاد بها (<bdi class="en">HubSpot</bdi> و<bdi class="en">Salesforce</bdi> و<bdi class="en">Workday</bdi> و<bdi class="en">Atlassian</bdi>) احتاجت أكثر من عقد لترسّخ فئاتها في تقارير المحللين، ومفردات المشترين، وأوصاف الوظائف. ومعظم شركات الـ <bdi class="en">B2B SaaS</bdi> لا تملك رصيدًا يكفي 10 سنوات، ولهذا فامتلاك الشريحة هو الخطوة الأكثر موثوقية.</p>
+<h3 id="whats-the-difference-between-a-category-and-a-segment">ما الفرق بين الفئة والشريحة؟</h3>
+<p>الفئة تسمية لمجموعة من المنتجات المتشابهة (مثل «برامج العلاقات العامة» أو «أدوات رسم المخططات الأولية»). أما الشريحة فمجموعة محددة من المشترين يعانون من معاناة مُهمَلة محددة بتكرار أكبر أو بحدّة أشد من بقية السوق. أنت لا تمتلك الفئة لمجرد أنك فيها. أنت تمتلك الشريحة بأن تكون الخيار البديهي لمشترٍ محدد.</p>
+<h3 id="can-a-small-b2b-company-create-a-category">هل تستطيع شركة <bdi class="en">B2B</bdi> صغيرة أن تخلق فئة؟</h3>
+<p>نظريًا نعم. عمليًا تقريبًا أبدًا. الظروف المطلوبة (تحوّل ضخم في السوق، ورأس مال صبور، ورصيد يكفي عقدًا كاملًا، وقاعدة مشترين مستعدة لتبنّي إطار جديد) نادرًا ما تجتمع لشركات الـ <bdi class="en">B2B</bdi> الصغيرة. والخطوة الموثوقة هي امتلاك الشريحة، ويمكن تنفيذها في شهور بفريق صغير.</p>
+<h3 id="what-is-the-niche-thing-that-april-dunford-talks-about">ما هي «فكرة النيتش» التي تتحدث عنها <bdi class="en">April Dunford</bdi>؟</h3>
+<p>إنها الخطوة نفسها: امتلاك الشريحة. تصفها <a href="https://www.stfo.io/podcast/guests/april-dunford">Dunford</a> بأنها اختيار قطاع رأسي أو نوع محدد من المشترين، والفوز هناك، ثم التوسع إلى الشرائح المجاورة بعد أن تكتسب المصداقية والزخم. وقد سمّى <bdi class="en">Geoffrey Moore</bdi> هذا الأسلوب «استراتيجية قوارير البولينج» (<bdi class="en">Bowling Pin Strategy</bdi>) في كتاب <em>Crossing The Chasm</em>. أسقِط القارورة الأمامية، فتتبعها القوارير المجاورة.</p>
+<h3 id="is-category-design-the-same-as-positioning">هل تصميم الفئة هو نفسه التموضع؟</h3>
+<p>بينهما تداخل. التموضع هو الاختيار المتعمّد للفئة التي تنتمي إليها، ولمن تقدّم منتجك، ولماذا أنت الأفضل. وتصميم الفئة جزء من التموضع يركّز تحديدًا على سؤال «أي فئة؟». يمكنك أن تتموضع تموضعًا ممتازًا دون أن تنشغل بهوس تصميم الفئة. لكن لا يمكنك أن تصمّم الفئة تصميمًا ممتازًا دون تموضع متين تحته.</p>
+
+<h2 id="the-take">رأيي في الموضوع</h2>
+<p>خلق الفئة على الأرجح واحدة من أكثر الاستراتيجيات المبالغ في تقديرها في عالم الـ <bdi class="en">B2B</bdi>.</p>
+<p>تبدو استراتيجية ذات رؤية في عرض تقديمي للمستثمرين. وتُقرأ جيدًا في بيان. وتجعل المؤسسين يشعرون بأنهم يبنون شيئًا أسطوريًا. وتفشل 99 مرة من كل 100، لأن الطلب الذي تحاول أن تخلقه غير موجود فعلًا بعد. لا يمكنك أن تصنع إعصارًا بمروحة مكتب ثمنها 35 دولارًا.</p>
+<p>ما ينجح عادةً: اختر شريحة داخل فئة موجودة. انشغل بهوس بالمشتري الوحيد الذي يعاني من معاناة مُهمَلة محددة بحدّة أشد من أي شخص آخر. سمِّ العدو الذي يكرهه هذا المشتري أصلًا. كن الخيار البديهي لهذا المشتري قبل أن تفكر حتى في التوسع.</p>
+<p>لست مضطرًا إلى خلق فئة لكي تبرز وتلفت الأنظار بقوة. أنت مضطر إلى أن تمتلك شريحة امتلاكًا كاملًا إلى درجة أن اسم الفئة لا يعود مهمًا.</p>
+</div>
+</main>
+</body>
+</html>

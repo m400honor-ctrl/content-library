@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>عرض القيمة الفريد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ألوان وقياسات مقال CXL الأصلي */
+:root{--ink:#1a1a1a;--text:rgba(26,26,26,.94);--red:#d61f2c;--box:#f1f1f1;--line:#cccccc;--bg:#ffffff;--mute:#6b6b6b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Tajawal",lato,sans-serif;font-size:18px;line-height:1.75}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{border-bottom:1px solid #eee;background:#fff}
+.topbar .in{max-width:1100px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:28px;font-size:15px}
+.logo{font-family:"Work Sans","Cairo",sans-serif;font-weight:900;color:var(--red);font-size:22px;letter-spacing:.5px;direction:ltr}
+.topbar nav{display:flex;gap:22px;color:var(--ink);flex-wrap:wrap}
+.topbar nav span{white-space:nowrap}
+.wrap{max-width:760px;margin:0 auto;padding:36px 16px 80px}
+h1,h2,h3,h4{font-family:"Cairo","Work Sans",sans-serif;color:var(--ink)}
+h1{font-size:38px;line-height:1.35;font-weight:900;margin:0 0 18px}
+h2{font-size:34px;font-weight:600;line-height:1.45;margin:47px 0 19px}
+h3{font-size:24px;font-weight:600;line-height:1.5;margin:36px 0 12px}
+h4{font-size:19px;font-weight:600;line-height:1.5;margin:28px 0 10px}
+.crumbs{font-size:15px;color:var(--ink);margin-bottom:10px}
+.crumbs a{color:var(--ink)}
+.crumbs span{margin:0 6px;color:#999}
+.byline{font-size:15px;color:var(--text);margin-bottom:14px}
+.byline a{color:var(--red)}
+.pill{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:6px 16px;border-radius:999px;border:2px solid #b31722;margin-bottom:22px}
+.hero{display:block;width:100%;height:auto;margin:0 0 28px}
+.orig{font-size:14px;color:var(--mute);border-top:1px solid #eee;border-bottom:1px solid #eee;padding:8px 0;margin-bottom:24px}
+.orig bdi{direction:ltr}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 20px;padding-right:28px;padding-left:0}
+li{margin-bottom:6px}
+li p{margin:0 0 6px}
+li ul,li ol{margin:6px 0 4px}
+strong{font-weight:700}
+figure{margin:24px 0;text-align:center}
+figure img{max-width:100%;height:auto;display:inline-block}
+figcaption{font-size:16px;margin-top:6px}
+.toc h2{margin-top:30px}
+.toc ul{list-style:disc}
+blockquote{background:var(--ink);color:#fff;border-right:8px solid var(--red);border-left:0;margin:24px 0;padding:16px 40px;font-style:normal}
+blockquote p{margin:0 0 12px;color:#fff}
+blockquote p:last-child{margin-bottom:0}
+blockquote em{font-style:normal;opacity:.75}
+.expert{background:var(--box);border:1px solid var(--line);padding:20px;margin:0 0 20px}
+.expert figure{margin:0 0 6px;text-align:right}
+.expert img{width:150px;height:150px;object-fit:cover}
+.expert p:first-of-type{margin-top:9px}
+.en{direction:ltr;unicode-bidi:isolate;font-family:lato,sans-serif}
+table{width:100%;border-collapse:collapse;margin:0 0 24px;font-size:16px}
+th,td{border:1px solid var(--line);padding:10px 12px;text-align:right;vertical-align:top}
+th{background:var(--box);font-family:"Cairo",sans-serif;font-weight:600;color:var(--ink)}
+@media (max-width:600px){h1{font-size:28px}h2{font-size:26px}h3{font-size:21px}blockquote{padding:14px 20px}.topbar nav{display:none}table{font-size:14px}}
+/* rtl-polish v1 */
+html{direction:rtl}
+body{text-align:right}
+p,li,dd,dt,td,th,figcaption,blockquote,h1,h2,h3,h4,h5,h6{text-align:right;letter-spacing:0!important;text-transform:none!important}
+p,li{line-height:1.9;word-spacing:.02em}
+ul,ol{padding-right:1.7em!important;padding-left:0!important}
+li>ul,li>ol{margin-top:.35em}
+table{direction:rtl}
+th,td{text-align:right}
+figure,figcaption{text-align:center}
+bdi.en{unicode-bidi:isolate;direction:ltr}
+.orig a,.orig bdi{overflow-wrap:anywhere}
+pre,code,kbd,samp{direction:ltr;unicode-bidi:isolate;text-align:left}
+img{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<div dir="rtl" style="padding:10px 16px;border-bottom:1px solid #eee;background:#fff;font:600 14px Tajawal,Arial,sans-serif"><a href="../translations.html" style="color:#2446c7;text-decoration:none">← مكتبة الترجمات العربية</a> <span style="color:#888">·</span> <a href="../index.html" style="color:#2446c7;text-decoration:none">مكتبة الكونتنت</a></div>
+
+<div class="topbar"><div class="in"><span class="logo">CXL</span>
+<nav><span>ورش مباشرة ⌄</span><span>ميني ديجريز ⌄</span><span>كورسات ⌄</span><span>مصادر ⌄</span><span>للفرق</span><span>الأسعار</span></nav></div></div>
+
+<main class="wrap">
+<h1>عرض القيمة الفريد: كيف تصنع عرض قيمة فريدًا (<bdi class="en">UVP</bdi>) مع 7 أمثلة</h1>
+<div class="crumbs"><a href="https://cxl.com/">الرئيسية</a><span>›</span><a href="https://cxl.com/blog/">المدونة</a><span>›</span><a href="https://cxl.com/blog/category/cro-testing/">تحسين معدل التحويل والاختبارات</a><span>›</span></div>
+<div class="byline">بقلم: <a href="https://cxl.com/blog/author/peep-laja/">Peep Laja</a> &<bdi class="en">nbsp</bdi>; نُشر: 16 ديسمبر 2022 &<bdi class="en">nbsp</bdi>;|&<bdi class="en">nbsp</bdi>; آخر تحديث: 5 نوفمبر 2026</div>
+<span class="pill">تابع الجديد</span>
+<img class="hero" src="https://cxl.com/wp-content/uploads/2022/05/Unique-value-proposition-1-1280x670.png" alt="عرض القيمة الفريد">
+<div class="orig">ترجمة عربية بالمعنى للمقال الأصلي: <a href="https://cxl.com/blog/value-proposition-examples-how-to-create/"><bdi>Unique Value Proposition: How to Create a UVP (With 7 Examples)</bdi></a></div>
+
+<p><strong>عرض القيمة (<bdi class="en">Value Proposition</bdi>) وعدٌ بقيمة ستُقدَّم للعميل: إنه السبب الرئيسي الذي يجعل العميل المحتمل يشتري منك بدلًا من منافسك. أما عرض القيمة الفريد (<bdi class="en">Unique Value Proposition</bdi> أو <bdi class="en">UVP</bdi>) فيصوغ هذا الوعد بدقة شديدة لدرجة أنك وحدك تستطيع أن تقطعه.</strong></p>
+<p>يؤثر عرض القيمة تأثيرًا كبيرًا في قرار الزائر: هل يواصل استكشاف منتجك أم يضغط زر الرجوع؟ وعلى موقعك، عرض القيمة هو أهم ما تحتاج إلى اختباره. إن أصبت فيه، سيصنع فرقًا حقيقيًا في معدل التحويل.</p>
+<p>يجب أن يكون اختبار عرض القيمة على رأس أولوياتك في عمل <a href="https://cxl.com/conversion-optimization//">تحسين معدل التحويل</a>.</p>
+<p>وكلما كانت شركتك أقل شهرة، احتجت إلى عرض قيمة أقوى.</p>
+
+<h2 id="h-tl-dr">الخلاصة السريعة</h2>
+<ul>
+<li><p><strong>عرض القيمة الفريد ليس شعارًا.</strong> إنه عبارة محددة يمكن اختبارها، تجمع بين الصلة بالعميل، والقيمة القابلة للقياس، والتمايز؛ وليس شعارًا دعائيًا (<bdi class="en">Tagline</bdi>) ولا عبارة تموضع (<bdi class="en">Positioning Statement</bdi>).</p></li>
+<li><p><strong>الوضوح يتفوق على الذكاء اللفظي في كل مرة.</strong> إن لم يستطع القارئ أن يشرح عرضك لصديق في جملة واحدة، فقد فشل عرض القيمة.</p></li>
+<li><p><strong>ابنِه بالهيكل نفسه في كل مرة:</strong> عنوان رئيسي، ثم عنوان فرعي أو فقرة قصيرة، ثم ثلاث نقاط، ثم عنصر بصري داعم.</p></li>
+<li><p><strong>اختبره مع عملاء محتملين حقيقيين، لا باختبارات <bdi class="en">A/B</bdi> وحدها.</strong> اختبار الرسائل (<bdi class="en">Message Testing</bdi>) يخبرك <em>لماذا</em> لا ينجح شيء ما؛ أما اختبار التقسيم (<bdi class="en">Split Testing</bdi>) فيخبرك فقط <em>هل</em> نجح أم لا.</p></li>
+<li><p><strong>غيّر الذكاء الاصطناعي سرعة كتابة البدائل واختبارها</strong>، لكنه لم يغيّر ما يجعل عرض القيمة ناجحًا: التحديد، والدليل، ولغة مأخوذة من عملاء فعليين.</p></li>
+</ul>
+
+<div class="toc"><h2>المحتويات</h2><ul>
+<li><a href="#h-tl-dr">الخلاصة السريعة</a></li>
+<li><a href="#h-what-is-a-unique-value-proposition-uvp">ما عرض القيمة الفريد (<bdi class="en">UVP</bdi>)؟</a><ul>
+<li><a href="#h-people-should-read-and-understand-your-unique-value-proposition">يجب أن يقرأ الناس عرض قيمتك الفريد ويفهموه</a></li>
+<li><a href="#h-use-the-right-language-for-your-unique-value-proposition">استخدم اللغة الصحيحة في عرض قيمتك الفريد</a></li>
+<li><a href="#h-what-the-value-proposition-is-not">ما الذي لا يُعد عرض قيمة</a></li></ul></li>
+<li><a href="#h-what-is-the-structure-of-a-unique-value-proposition">ما هيكل عرض القيمة الفريد؟</a></li>
+<li><a href="#h-what-makes-a-great-value-proposition">ما الذي يصنع عرض قيمة رائعًا؟</a><ul>
+<li><a href="#h-why-does-the-presentation-of-your-value-proposition-matter">لماذا تهم طريقة عرض قيمتك؟</a></li></ul></li>
+<li><a href="#h-7-great-unique-value-proposition-examples">7 أمثلة رائعة لعروض قيمة فريدة</a><ul>
+<li><a href="#h-1-campaign-monitor">1. Campaign Monitor</a></li>
+<li><a href="#h-2-stripe">2. Stripe</a></li>
+<li><a href="#h-3-trello">3. Trello</a></li>
+<li><a href="#h-4-evernote">4. Evernote</a></li>
+<li><a href="#h-5-intercom">5. Intercom</a></li>
+<li><a href="#h-6-webflow">6. Webflow</a></li>
+<li><a href="#h-7-prey">7. Prey</a></li></ul></li>
+<li><a href="#h-poor-value-proposition-examples-and-their-updates">أمثلة لعروض قيمة ضعيفة، وكيف تطورت</a><ul>
+<li><a href="#h-1-cloudflare">1. Cloudflare</a></li>
+<li><a href="#h-2-continuum-financial">2. Continuum Financial</a></li></ul></li>
+<li><a href="#h-how-do-you-write-a-unique-value-proposition">كيف تكتب عرض قيمة فريدًا؟</a><ul>
+<li><a href="#h-use-boosters-for-your-value-proposition">استخدم «المعزّزات» في عرض قيمتك</a></li>
+<li><a href="#h-example-of-a-value-proposition-booster">مثال على «معزّز» لعرض القيمة</a></li></ul></li>
+<li><a href="#h-how-do-you-test-your-value-proposition">كيف تختبر عرض قيمتك؟</a><ul>
+<li><a href="#h-1-message-testing">1. اختبار الرسائل</a></li>
+<li><a href="#h-2-a-b-testing">2. اختبار <bdi class="en">A/B</bdi></a></li>
+<li><a href="#h-3-pay-per-click-advertising">3. الإعلانات بالدفع مقابل النقرة</a></li></ul></li>
+<li><a href="#h-how-is-ai-changing-value-proposition-testing">كيف يغيّر الذكاء الاصطناعي اختبار عرض القيمة؟</a></li>
+<li><a href="#h-faq">أسئلة شائعة</a><ul>
+<li><a href="#h-what-s-the-difference-between-a-value-proposition-and-a-unique-selling-proposition-usp">ما الفرق بين عرض القيمة وعرض البيع الفريد (<bdi class="en">USP</bdi>)؟</a></li>
+<li><a href="#h-how-long-should-a-value-proposition-be">ما الطول المناسب لعرض القيمة؟</a></li>
+<li><a href="#h-where-should-a-value-proposition-appear-on-a-website">أين يجب أن يظهر عرض القيمة على الموقع؟</a></li>
+<li><a href="#h-can-ai-write-my-value-proposition-for-me">هل يستطيع الذكاء الاصطناعي أن يكتب عرض قيمتي بدلًا مني؟</a></li>
+<li><a href="#h-how-do-i-know-if-my-value-proposition-is-working">كيف أعرف أن عرض قيمتي ناجح؟</a></li>
+<li><a href="#h-how-often-should-a-company-revisit-its-value-proposition">كم مرة يجب أن تراجع الشركة عرض قيمتها؟</a></li></ul></li>
+<li><a href="#h-conclusion">الخلاصة</a></li>
+<li><a href="#h-go-deeper">للتعمق أكثر</a></li></ul></div>
+
+<h2 id="h-what-is-a-unique-value-proposition-uvp">ما عرض القيمة الفريد (<bdi class="en">UVP</bdi>)؟</h2>
+<p>عرض القيمة عبارة واضحة تشرح فوائد منتجك، وكيف يحل مشكلات العملاء، ولماذا يختلف عن غيره، ولماذا يجب أن يشتريه العملاء. أما عرض القيمة الفريد فهو العبارة نفسها مع التركيز على الجزء الثالث: الاختلاف الذي لا يستطيع أحد غيرك أن يدّعيه بمصداقية. وعمليًا يُستخدم المصطلحان بالتبادل، وكل ما يلي ينطبق على الاثنين.</p>
+<p>في التسويق، يجب أن يقدّم عرض القيمة الفريد المثالي ما يلي:</p>
+<ol>
+<li><p><strong>الصلة (<bdi class="en">Relevancy</bdi>).</strong> اشرح كيف يحل منتجك مشكلات العملاء أو يحسّن وضعهم.</p></li>
+<li><p><strong>القيمة القابلة للقياس (<bdi class="en">Quantified Value</bdi>).</strong> قدّم فوائد محددة.</p></li>
+<li><p><strong>التمايز (<bdi class="en">Differentiation</bdi>).</strong> أخبر العميل المثالي لماذا يجب أن يشتري منك لا من المنافسين.</p></li>
+</ol>
+<p>يجب أن يكون عرض القيمة أول ما يراه الزوار في صفحتك الرئيسية، لكن يجب أيضًا أن يظهر في كل نقاط الدخول الرئيسية إلى الموقع.</p>
+<p>ولهذه الرسالة تأثير كبير في قرار الشراء: فقد وجدت <a href="https://wynter.com/post/why-your-website-is-the-dealbreaker">أبحاث <bdi class="en">Wynter</bdi></a> أن 100% من مديري التسويق التنفيذيين (<bdi class="en">CMOs</bdi>) في شركات <bdi class="en">B2B SaaS</bdi> الذين شملهم الاستطلاع يزورون موقع المورّد قبل اتخاذ قرار الشراء.</p>
+<p>الأمر ليس للجمال فقط، ولا لإرضاء رئيس تنفيذي أو كاتب إعلانات. ففي النهاية، يمكن أن يرفع عرض القيمة <a href="https://cxl.com/blog/customer-lifetime-value/">القيمة الدائمة للعميل</a>. وحين راجعنا مجموعة من المواقع، كان غياب عرض القيمة أو ضعفه من أكثر أوجه القصور شيوعًا. يتضمن تعريف عرض القيمة السابق ثلاثة عوامل مهمة؛ تأكد أنك تغطيها كلها في عرضك.</p>
+
+<h3 id="h-people-should-read-and-understand-your-unique-value-proposition">يجب أن يقرأ الناس عرض قيمتك الفريد <em>ويفهموه</em></h3>
+<p>عرض القيمة شيء يُفترض أن يفهمه بشر حقيقيون. إنه مكتوب ليقرأه الناس. وإليك مثالًا على ما <em>لا</em> يجب أن يكون عليه عرض القيمة:</p>
+<blockquote><p>حلول أتمتة تسويق وفعالية مبيعات تركّز على الإيرادات، تُطلق العنان للتعاون عبر دورة الإيرادات بأكملها</p></blockquote>
+<p>معظم القرّاء لن يستطيعوا شرح هذا العرض لصديق، ولا أن يقولوا كيف سيستفيدون منه. و«عروض المصطلحات» الفارغة هذه منتشرة بكثرة. تجنّب الرسائل العامة المبهمة.</p>
+<p>وما زالت المصطلحات المعقدة سببًا شائعًا لفشل الرسائل: ففي <a href="https://wynter.com/post/b2b-saas-branding-2025-survey">دراسة <bdi class="en">Wynter</bdi> على قادة التسويق في شركات <bdi class="en">B2B SaaS</bdi></a>، أشار 18% منهم إلى الكلمات الرنانة والمصطلحات التي لا يفهمها العملاء كمصدر للارتباك في الرسائل.</p>
+
+<h3 id="h-use-the-right-language-for-your-unique-value-proposition">استخدم اللغة الصحيحة في عرض قيمتك الفريد</h3>
+<p>يجب أن يُكتب عرض قيمتك بلغة العميل (استنادًا إلى <a href="https://cxl.com/blog/voice-of-customer/">أبحاث العملاء</a> و<a href="https://wynter.com/post/buyer-intelligence">معلومات المشترين</a>). يجب أن ينضم إلى الحوار الدائر أصلًا في ذهن العميل. ولكي تفعل ذلك، عليك أن تعرف اللغة التي يستخدمها عملاؤك لوصف ما تقدّمه، وكيف يستفيدون منه.</p>
+<p><strong>لا يمكنك أن تخمّن اللغة الصحيحة.</strong> فطريقة كلامك <em>أنت</em> عن خدماتك غالبًا ما تختلف كثيرًا عن طريقة وصف عملائك لها. والإجابات موجودة خارج مكتبك. عليك أن <a href="https://cxl.com/blog/customer-interviews/">تجري مقابلات مع عملائك</a> لتكتشفها، أو أن تستخدم أداة لاختبار الرسائل مثل <a href="https://wynter.com">Wynter</a>، التي تعرض مسودة نصك على المشترين المستهدفين الفعليين، وتعود إليك بتقرير عن الوضوح والصلة والتمايز.</p>
+
+<h3 id="h-what-the-value-proposition-is-not">ما الذي <em>لا</em> يُعد عرض قيمة</h3>
+<p>عرض القيمة ليس شعارًا ولا عبارة رنانة. هذا ليس عرض قيمة:</p>
+<blockquote><p><bdi class="en">L’Or</bdi>é<bdi class="en">al</bdi>. لأننا نستحق.</p></blockquote>
+<p>وليس عبارة تموضع. وهذا أيضًا ليس عرض قيمة:</p>
+<blockquote><p>العلامة الأولى للضمادات في أمريكا. تشفي الجرح سريعًا، وتشفي الألم أسرع.</p></blockquote>
+<p>عبارة التموضع جزء من عرض القيمة، لكنها ليست الشيء نفسه.</p>
+
+<h2 id="h-types-of-value-propositions">أنواع عروض القيمة</h2>
+<p>يتعامل معظم المسوقين مع عرض القيمة على أنه عبارة واحدة على مستوى الشركة، يملكها الرئيس التنفيذي وتُطبع على الصفحة الرئيسية. لكن هذا مجرد أول مستوى من أربعة. فكل قرار يتخذه العميل المحتمل، من فتح إيميل إلى توقيع عقد، يقوم على عرض قيمة خاص به، وكل واحد منها يمكن كتابته واختباره وتحسينه.</p>
+<p>الأنواع الأربعة كلها تجيب عن صيغة من السؤال نفسه: «إن كنت عميلك المثالي، فلماذا أفعل هذا بدلًا من البديل؟»</p>
+<table><thead><tr><th>النوع</th><th>السؤال الذي يجيب عنه</th><th>أين يظهر</th></tr></thead>
+<tbody>
+<tr><td>الرئيسي</td><td>لماذا أشتري منك بدلًا من أي منافس؟</td><td>الصفحة الرئيسية، ورسائل البراند، وعروض المبيعات التقديمية</td></tr>
+<tr><td>على مستوى العميل المحتمل</td><td>لماذا يجب أن تشتري منك هذه الشريحة؟</td><td>الإعلانات المقسّمة حسب الشريحة، وصفحات الهبوط الخاصة بكل شخصية عميل</td></tr>
+<tr><td>على مستوى المنتج</td><td>لماذا أشتري هذا المنتج بدلًا من أي منتج آخر؟</td><td>صفحات المنتجات، ورسائل الإطلاق</td></tr>
+<tr><td>على مستوى الإجراء</td><td>لماذا أتخذ هذا الإجراء الآن؟</td><td>الأزرار، وعناوين الإيميلات، والإعلانات، والنماذج</td></tr>
+</tbody></table>
+
+<h3 id="h-primary-value-proposition">1. عرض القيمة الرئيسي</h3>
+<p>هذا هو عرض القيمة الخاص بالبراند نفسه، وهو موضوع معظم هذا المقال. وهو يجيب عن سؤال: «إن كنت عميلك المثالي، فلماذا أشتري منك بدلًا من أي من منافسيك؟»</p>
+<p>عرض القيمة الرئيسي القوي يطلق ادعاءً محددًا ويدعمه بالدليل. فقد يقول مزوّد لبيانات العملاء المحتملين: «لدينا قاعدة بيانات العملاء المحتملين الأشمل والأدق»، ثم يدعم كل صفة: «الأشمل» تعني الوصول إلى أكثر من 210 ملايين مستهلك أمريكي، و14 مليون شركة أمريكية، و13 مليون مدير تنفيذي؛ و«الأدق» تعني 600 باحث يتحققون من البيانات يوميًا، ويُجرون أكثر من 26 مليون مكالمة تحقق في السنة.</p>
+<p>كل الأنواع الأخرى تستمد منه. فإن كان عرض القيمة الرئيسي ضعيفًا، فلن تجد الأنواع الأخرى ما تستعير منه مصداقيتها.</p>
+
+<h3 id="h-prospect-level-value-proposition">2. عرض القيمة على مستوى العميل المحتمل</h3>
+<p>ما لم تكن تبيع لشريحة واحدة ضيقة، فإن العملاء المحتملين المختلفين يشترون لأسباب مختلفة، ومخاطبتهم جميعًا بالطريقة نفسها تكلّفك تحويلات. وقبل أن تبني الشرائح أو استهداف الإعلانات أو <a href="https://cxl.com/blog/creating-customer-personas-using-data-driven-research/">شخصيات العملاء (<bdi class="en">Personas</bdi>)</a>، أجب عن هذا السؤال: «إن كنت العميل المحتمل أ (أو ب، أو ج)، فلماذا أشتري منك بدلًا من أي من منافسيك؟»</p>
+<p>من الأخطاء الشائعة ترقية عرض قيمة خاص بشريحة إلى عرض القيمة الرئيسي. ففي إحدى ورش عمل عروض القيمة، اقترحت شركة «مرونة الدفع» عرضًا رئيسيًا لقيمتها. كانت الشركة الوحيدة في سوقها التي تقدّم خيار دفع معيّنًا، فبدت الفكرة منطقية. لكن 25% فقط من العملاء اختاروا هذا الخيار. أما البقية فاختاروا شروط دفع يقدّمها المنافسون أيضًا؛ وبالتالي كانت رسالة رئيسية مبنية على مرونة الدفع ستفوّت ثلاثة أرباع قاعدة العملاء.</p>
+<p>لكنها كانت قيّمة كعرض قيمة على مستوى العميل المحتمل. فبالنسبة للمشترين الذين أرادوا هذه الشروط تحديدًا، كانت هذه الشركة الخيار الوحيد. وهذا يبرر <a href="https://cxl.com/blog/ppc-targeting/">إعلانات مستهدفة</a> ترسل هذه الشريحة إلى <a href="https://cxl.com/blog/landing-page-optimization/">صفحة هبوط مخصصة</a> مبنية حول هذا العرض.</p>
+
+<h3 id="h-product-level-value-proposition">3. عرض القيمة على مستوى المنتج</h3>
+<p>السؤال هنا: «إن كنت عميلك المثالي، فلماذا أشتري المنتج أ بدلًا من أي منتج آخر؟»</p>
+<p>الإجابة تخبرك هل ينتمي المنتج الجديد إلى براندك الحالي أم لا. فإن كان عرض قيمته لا يستمد شيئًا من العرض الرئيسي، ففكّر في إطلاقه كبراند منفصل. النظارات التي تحمل اسم <bdi class="en">Wrangler</bdi> مثلًا فكرة بعيدة: فالبراند يعني الجينز المتين المريح، وليس واضحًا ما الذي يضيفه ذلك إلى النظارات. أما <bdi class="en">Nissan LEAF</bdi> فهي الحالة المعاكسة. فانعدام الانبعاثات كان أمرًا جديدًا على <bdi class="en">Nissan</bdi>، لكن السيارة الكهربائية تتسق مع براند شعاره «ابتكار يثير الحماس» (<bdi class="en">Innovation that excites</bdi>)، بل يمكن القول إنها تقوّيه.</p>
+<p>و«المنتج» أوسع مما تبيعه. فالإيميل منتج. وكذلك التدوينة، والندوة عبر الإنترنت، وموقعك نفسه. وكل منها يحتاج إلى إجابته الخاصة عن سؤال: «لماذا يجب أن أهتم بهذا تحديدًا؟». يُكافأ المسوقون على نجاح منتجاتهم، فيميلون إلى افتراض أن العملاء يهتمون بها بقدر اهتمامهم هم. وكتابة عرض قيمة على مستوى المنتج تجبرك على تجاوز هذه النقطة العمياء.</p>
+
+<h3 id="h-process-level-value-proposition">4. عرض القيمة على مستوى الإجراء</h3>
+<p>كل إجراء تطلبه يحتاج إلى سبب: افتح هذا الإيميل، اضغط هذا الإعلان، اقرأ هذه التدوينة، ابقَ في هذه المكالمة. والسؤال: «إن كنت عميلك المثالي، فلماذا أتخذ هذا الإجراء بدلًا من أي شيء آخر يمكنني فعله؟»</p>
+<p>نادرًا ما تحظى عروض القيمة الصغيرة هذه بورشة عمل، وهذا ما يجعلها مكاسب سهلة. والأزرار مكان جيد للبدء (عُدّ كم زرًا ما زال مكتوبًا عليه «إرسال»). ففي تجربة لناشر كتب دراسية، أدى تغيير نص زر من «سجّل الدخول واطلب عيّنة» إلى «اطلب نسخة مجانية» إلى <a href="https://sherpablog.marketingsherpa.com/online-marketing/call-to-action-optimization-changing-four-words/">زيادة معدل النقر بنسبة 132%</a> بمستوى ثقة 99%. والفرضية: أن «النسخة» (الشيء كاملًا) تُدرَك على أنها أعلى قيمة من «العيّنة» (جزء منه).</p>
+<p>والتفكير نفسه يتجاوز <a href="https://cxl.com/blog/call-to-action/">أزرار الدعوة لاتخاذ إجراء (<bdi class="en">CTA</bdi>)</a>. أرادت <bdi class="en">HealthSpire</bdi> أن يتصل الأمريكيون في سن 65 فأكثر بوكلائها عبر الهاتف (<bdi class="en">TeleAgents</bdi>) ليحصلوا على مساعدة في اختيار خطة <bdi class="en">Medicare</bdi>. كانت صفحة الهبوط الأصلية القصيرة تبدأ بعرض القيمة الرئيسي للشركة. أما نسخة أطول بُنيت حول قيمة إجراء المكالمة نفسها (نصيحة وأسئلة وأجوبة من وكيل حقيقي مع صورته، إضافة إلى تعهّد يصف ما سيحدث في المكالمة) فقد حققت <a href="https://marketingsherpa.com/article/case-study/Aetna-HealthSpire-call-center-638-percent-more-leads">زيادة 638% في العملاء المحتملين</a> لمركز الاتصال. لا أحد يريد أن يكون في مكالمة مبيعات، لذلك كان على الصفحة أن تبيع المكالمة أولًا قبل أن تبيع الخطة.</p>
+
+<h3 id="h-how-the-four-types-work-together">كيف تعمل الأنواع الأربعة معًا</h3>
+<p>فصلنا الأنواع هنا من أجل الوضوح، لكنها تكون في أقوى حالاتها مجتمعة. والسؤال الذي يجلب أكبر عدد من التحويلات هو: «إن كنت العميل المحتمل أ، فلماذا أتخذ هذا الإجراء نحو شراء المنتج ب منك، بدلًا من أي شيء آخر يمكنني فعله؟»</p>
+<p>ولا تخلط بين أيٍّ من هذه الأنواع و<a href="https://cxl.com/blog/unique-selling-proposition-examples/">عرض البيع الفريد (<bdi class="en">USP</bdi>)</a>. فعرض البيع الفريد ادعاء تمايز واحد، يكون عادةً سطرًا واحدًا داخل عرض قيمتك الرئيسي، وليس مستوى مستقلًا منه.</p>
+
+<h2 id="h-what-is-the-structure-of-a-unique-value-proposition">ما هيكل عرض القيمة الفريد؟</h2>
+<p>عرض القيمة عادةً كتلة نصية (عنوان رئيسي، وعنوان فرعي، وفقرة نصية واحدة) مع عنصر بصري (صورة، أو <a href="https://cxl.com/blog/hero-image/">صورة رئيسية (<bdi class="en">Hero Image</bdi>)</a>، أو رسومات).</p>
+<p>لا توجد طريقة واحدة صحيحة لذلك. ونقترح أن تبدأ بالمعادلة التالية:</p>
+<ul>
+<li><p><strong>العنوان الرئيسي.</strong> ما الفائدة النهائية التي تقدّمها، في جملة قصيرة واحدة؟ يمكن أن يذكر المنتج و/أو العميل. اجعله يخطف الانتباه.</p></li>
+<li><p><strong>عنوان فرعي أو فقرة من جملتين أو ثلاث.</strong> شرح محدد لما تفعله أو تقدّمه، ولمن، ولماذا هو مفيد.</p></li>
+<li><p><strong>ثلاث نقاط.</strong> اذكر الفوائد أو المزايا الأساسية.</p></li>
+<li><p><strong>عنصر بصري.</strong> الصور توصل المعنى أسرع بكثير من الكلمات. اعرض صورة المنتج، أو اللقطة الرئيسية، أو صورة تدعم رسالتك الأساسية.</p></li>
+</ul>
+<p><em>ملاحظة: امتلاك صور منتج جيدة مجرد قطعة واحدة من الأحجية.</em></p>
+<p>قيّم عرض قيمتك الحالي بأن تتحقق: هل يجيب عن الأسئلة التالية؟</p>
+<ul>
+<li><p>ما المنتج أو الخدمة التي تبيعها شركتك؟</p></li>
+<li><p>ما الفائدة النهائية من استخدامه؟</p></li>
+<li><p>من العميل المستهدف لهذا المنتج أو هذه الخدمة؟</p></li>
+<li><p>ما الذي يجعل ما تقدّمه فريدًا ومختلفًا؟</p></li>
+</ul>
+<p>استخدم معادلة العنوان/الفقرة/النقاط/العنصر البصري لترتيب الإجابات. (يمكن أن تساعدك <a href="https://wynter.com/post/value-proposition-design">لوحة عرض القيمة من <bdi class="en">Wynter</bdi></a> على ربط آلام العملاء ومكاسبهم واحتياجاتهم بالقيمة التي يقدّمها منتجك.)</p>
+
+<h2 id="h-what-makes-a-great-value-proposition">ما الذي يصنع عرض قيمة رائعًا؟</h2>
+<p>عرض القيمة الرائع <em>واضح</em>: يشرح ما العرض، ولمن، وكيف يفيد. إن أجبت عن هذه الأسئلة، فأنت على الطريق الصحيح. <strong>اسعَ إلى الوضوح أولًا دائمًا.</strong></p>
+<p>إن جعل عرض قيمتك الناس يقولون «هاه؟»، فأنت تفعلها خطأ. وإن اضطروا إلى قراءة نص طويل ليفهموا ما تقدّمه، فأنت تفعلها خطأ. وجود قدر كافٍ من المعلومات أمر حاسم للتحويل، لكن عليك أولًا أن تجذب الناس بعرض قيمة واضح ومقنع.</p>
+<p>وما زال صنع تمايز حقيقي تحديًا أمام الشركات. فقد وجدت <a href="https://wynter.com/post/b2b-saas-branding-2025-survey">أبحاث <bdi class="en">Wynter</bdi></a> أن 26% من قادة التسويق في شركات <bdi class="en">B2B SaaS</bdi> أشاروا إلى غياب التمايز الحقيقي في المنتج كسبب يجعل البراندات تبدو متشابهة.</p>
+<p>ومن الأطر الخاصة بالـ <bdi class="en">B2B</bdi> التي تستحق المعرفة إطار <a href="https://www.bain.com/consulting-services/customer-strategy-and-marketing/elements-of-value/">B2B Elements of Value</a> من <bdi class="en">Bain</bdi>، الذي يقسّم القيمة لدى المشتري إلى 40 عنصرًا موزعة على خمس فئات، تبدأ من القيمة الوظيفية الأساسية التي لا غنى عنها، وتصل إلى عناصر تمس مسيرة المشتري المهنية وسمعته الشخصية. إنه قائمة مراجعة مفيدة لاكتشاف قيمة لم يدّعها منافسوك بعد.</p>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013c9-639b-7480-8f62-055ac636add2.jpg"></figure>
+<p><strong>ما الذي يصنع عرض قيمة جيدًا؟</strong></p>
+<ol>
+<li><p>الوضوح: من السهل فهمه.</p></li>
+<li><p>يوضح النتائج الملموسة التي سيحصل عليها العميل من شراء منتجاتك و/أو خدماتك واستخدامها.</p></li>
+<li><p>يقول كيف يختلف عن عرض المنافس أو يتفوق عليه.</p></li>
+<li><p>يتجنب المبالغة (مثل «لم يُرَ له مثيل!» أو «منتج معجزة مذهل!»)، وصيغ التفضيل («الأفضل»)، ومصطلحات البيزنس («تفاعلات ذات قيمة مضافة»).</p></li>
+<li><p>يمكن قراءته وفهمه في نحو خمس ثوانٍ.</p></li>
+</ol>
+<p>وفي معظم الحالات أيضًا يوجد فرق بين عرض القيمة الخاص بـ<em>شركتك</em> وعرض القيمة الخاص بـ<em>منتجك</em>. وعليك أن تعالج الاثنين.</p>
+
+<h3 id="h-why-does-the-presentation-of-your-value-proposition-matter">لماذا تهم طريقة عرض قيمتك؟</h3>
+<p>أظهرت <a href="https://cxl.com/research-study/value-proposition-study/">أبحاث <bdi class="en">CXL</bdi> الأصلية عن عرض القيمة</a> أن المستخدمين:</p>
+<ul>
+<li><p>لاحظوا عرض القيمة أسرع حين كان يحتوي على نص أكثر (أي حين شغل مساحة أكبر من الصفحة).</p></li>
+<li><p>قضوا وقتًا أطول على عرض القيمة مقارنةً بباقي الصفحة حين كان فيه ما يُقرأ أكثر.</p></li>
+<li><p>تذكّروا عددًا أكبر من الخدمات التي يقدّمها الموقع حين عُرضت خدمات أكثر.</p></li>
+<li><p>وصفوا مزايا أكثر للموقع حين كانت هناك مزايا وفوائد أكثر متاحة للقراءة.</p></li>
+<li><p>فضّلوا المعلومات المعروضة في شكل قوائم نقطية.</p></li>
+<li><p>أبدوا تفضيلًا لتصميم الصفحة تأثّر بالنسخة التي رأوها أولًا.</p></li>
+</ul>
+<p>من الأدوار الأساسية لعرض القيمة أن يميّزك عن المنافسين. فمعظم مشتري الـ <bdi class="en">B2B</bdi> ما زالوا يراجعون عدة مورّدين قبل أن يقرروا، وهذا يعني أن ما تقدّمه يجب أن يبرز خلال مرحلة البحث هذه، لا في المكالمة الأخيرة فقط.</p>
+<p>وهذه المقارنة تحدث مبكرًا: فقد وجد <a href="https://6sense.com/science-of-b2b/buyer-experience-report-2025/">تقرير عن تجربة المشتري</a> أن المشترين يقيّمون في المتوسط 5.1 مورّدين، وأن الفائز في النهاية يكون موجودًا بالفعل في قائمتهم القصيرة منذ اليوم الأول في 95% من الحالات.</p>
+
+<h2 id="h-7-great-unique-value-proposition-examples">7 أمثلة رائعة لعروض قيمة فريدة</h2>
+<p>الأمثلة المثالية لعروض القيمة نادرة لأن صنعها صعب. ففي معظم عروض القيمة التي نصادفها نجد عيوبًا أو مجالًا للتحسين.</p>
+<p>ونحن نعرف تمامًا أننا لسنا العميل المثالي لكثير من الأمثلة التالية، وأن انتقاداتنا فرضيات مدروسة يجب اختبارها. وتعرض لقطات الشاشة التالية كل صفحة رئيسية كما كانت وقت المراجعة الأصلية؛ وقد حدّثت بعض الشركات رسائلها منذ ذلك الحين، وهذا تذكير مفيد بأن عرض القيمة لا «ينتهي» أبدًا.</p>
+<p>إليك بعض الأمثلة الجيدة مع تعليقاتنا:</p>
+
+<h3 id="h-1-campaign-monitor">1. Campaign Monitor</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013cb-c552-75e1-8817-9a14fedbbd21.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>واضح جدًا ما الذي تفعله <a href="https://www.campaignmonitor.com/">Campaign Monitor</a> (التسويق عبر الإيميل).</p></li>
+<li><p>يتضمن العنوان فوائد استخدامها.</p></li>
+<li><p>تتوسع الفقرة في شرح فوائد استخدام المنتج.</p></li>
+<li><p>صور ذات صلة تدعم الادعاءات المكتوبة.</p></li>
+</ul>
+
+<h3 id="h-2-stripe">2. Stripe</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013cd-d1ae-778a-aec0-96d961d31f4e.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>واضح ما هي <a href="https://stripe.com/">Stripe</a> ولمن.</p></li>
+<li><p>فقرة محددة تركّز على الفوائد.</p></li>
+<li><p>أدلة داعمة ذات صلة.</p></li>
+</ul>
+<p>وقد طوّرت <bdi class="en">Stripe</bdi> هذا العنوان منذ ذلك الحين ليبدأ بنمو الإيرادات بدلًا من البنية التحتية وحدها، وهو تحول صغير لكنه معبّر نحو لغة تبدأ بالفائدة بدلًا من وصف الفئة.</p>
+
+<h3 id="h-3-trello">3. Trello</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013d0-54dc-7e69-9967-0ecbb289f454.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>عبارة واضحة في العنوان الفرعي عمّا تفعله <a href="http://trello.com">Trello</a> لك.</p></li>
+<li><p>شرح موسّع لفوائد استخدام هذه الأداة على المستخدم.</p></li>
+<li><p>صور ذات صلة تُظهر التعاون أثناء العمل.</p></li>
+</ul>
+
+<h3 id="h-4-evernote">4. Evernote</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013d1-c494-75f1-aa53-9a09c4982c4c.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>يتحدث العنوان عن فوائد أكبر لحياتك.</p></li>
+<li><p>يأخذك العنوان الفرعي إلى الطريقة التي تقدّم بها <a href="https://evernote.com/">Evernote</a> هذه الفوائد.</p></li>
+<li><p>دعوة واضحة لاتخاذ إجراء.</p></li>
+</ul>
+
+<h3 id="h-5-intercom">5. Intercom</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013d5-c3c6-7c17-a4ac-a7cdb1facb00.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>يضع العنوان <a href="https://www.intercom.com/">Intercom</a> في موقع نظام خدمة العملاء (<bdi class="en">Helpdesk</bdi>) المبني لعصر وكلاء الذكاء الاصطناعي.</p></li>
+<li><p>تشرح الفقرة الافتتاحية تميّزها بذكاء اصطناعي مدمج من الأساس.</p></li>
+<li><p>صور ذات صلة للمنتج.</p></li>
+</ul>
+
+<h3 id="h-6-webflow">6. Webflow</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013e0-f13c-75fb-84a3-a5eb3f8a74f1.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>يضع العنوان <a href="https://webflow.com/">Webflow</a> بوضوح كمنصة لفرق المواقع الحديثة.</p></li>
+<li><p>يجمع النص الافتتاحي بين بناء المواقع وتحسينها والظهور في البحث بالذكاء الاصطناعي في منصة واحدة.</p></li>
+<li><p>عنصر بصري يقوده المنتج يدعم فكرة بناء المواقع.</p></li>
+</ul>
+
+<h3 id="h-7-prey">7. Prey</h3>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013e2-1443-785f-842c-29a3c5a927a3.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>العنوان مقبول، لكنه يمكن أن يكون أوضح (مثلًا: «تابع مكان اللابتوب أو الموبايل أو التابلت. واسترجعه إن سُرق أو ضاع.»)</p></li>
+<li><p>الفقرة التالية تشرح جيدًا كيف تفيدك <a href="https://preyproject.com/">Prey</a>.</p></li>
+<li><p>تقدّم خيار تجربة فوريًا (في الأعلى).</p></li>
+</ul>
+
+<h2 id="h-poor-value-proposition-examples-and-their-updates">أمثلة لعروض قيمة ضعيفة، وكيف تطورت</h2>
+<p>بعض الدروس من قسم «لا تفعل هذا!»</p>
+
+<h3 id="h-1-cloudflare">1. Cloudflare</h3>
+<p>إليك كيف تطور عرض قيمة <bdi class="en">Cloudflare</bdi>.</p>
+<h4 id="h-from-this">من هذا:</h4>
+<figure><img width="1024" height="513" alt="مثال لعرض قيمة ضعيف" src="https://cxl.com/wp-content/uploads/2019/07/image-27-1024x513.png"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>وضوح سيئ جدًا: «نساعد في بناء إنترنت أفضل»؟ لن يفهم أحد ماذا يعني ذلك، ولا يحل أي مشكلة لأحد.</p></li>
+<li><p>يقدّم العنوان الفرعي بعض الوضوح والتفاصيل، لكن هذه المعلومات يجب أن تكون في العنوان.</p></li>
+<li><p>الصورة تبدو صورة جاهزة من مكتبات الصور (<bdi class="en">Stock Photo</bdi>).</p></li>
+</ul>
+<h4 id="h-then">ثم:</h4>
+<figure><img width="1024" height="797" alt="" src="https://cxl.com/wp-content/uploads/2023/10/cloudflare-screenshot-1024x797.png"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>ما زال العنوان يفتقر إلى الوضوح فيما يخص الفوائد التي يقدّمها.</p></li>
+<li><p>العنوان الفرعي يركّز على الفوائد أكثر بكثير من النسخة السابقة.</p></li>
+<li><p>الصورة على الأقل مخصصة وذات صلة، لكن ترتيب النص حولها غريب ولا يتناسب معها تمامًا.</p></li>
+</ul>
+<p><strong>إلى هذا:</strong></p>
+<figure><img alt="" src="https://contengi-bucket.ams3.cdn.digitaloceanspaces.com/e72d2b21-d717-4732-8f8d-a6a8ee62d116/image/2026-08/01a013e6-8db3-7076-b2a8-222cae598f63.jpg"></figure>
+<p>تحركت <a href="https://www.cloudflare.com/">Cloudflare</a> مرة أخرى، فصارت تبدأ بعبارة: «كل ما تعلّمناه من تشغيل 20% من الإنترنت، صار لك تلقائيًا»، مدعومة بعرض أوضح: منصة واحدة لبناء التطبيقات والوكلاء وبيئات عمل الموظفين وتأمينها وتوسيعها، من غير أن تدير البنية التحتية بنفسك. رقم الـ 20% يضيف دليلًا ملموسًا إلى الوعد، بينما يجعل النص الداعم قيمة العميل صريحة.</p>
+
+<h3 id="h-2-continuum-financial">2. Continuum Financial</h3>
+<p>إليك كيف تطور عرض قيمة <bdi class="en">Continuum Financial</bdi>.</p>
+<h4 id="h-from-this-0">من هذا:</h4>
+<figure><img width="1024" height="512" alt="مثال لعرض قيمة سيئ" src="https://cxl.com/wp-content/uploads/2019/07/image-28-1024x512.png"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>لا يوجد عرض قيمة حقيقي على الإطلاق: العنوان يهنّئ الشركة بمرور خمس سنوات على تأسيسها.</p></li>
+<li><p>صياغة ركيكة إن لم تكن خاطئة صراحةً («<span class="en">…we look forward continuing to deliver…</span>» و«<span class="en">What stage of your financial journey are you at?</span>»)</p></li>
+<li><p>لا توجد صور في الجزء الظاهر أول الصفحة (<bdi class="en">Above the Fold</bdi>)؛ والصور الموجودة أسفله صور جاهزة.</p></li>
+</ul>
+<h4 id="h-to-this">إلى هذا:</h4>
+<figure><img width="1024" height="514" alt="" src="https://cxl.com/wp-content/uploads/2023/10/continuum-screenshot-1024x514.jpg"></figure>
+<p><strong>التعليقات</strong></p>
+<ul>
+<li><p>العنوان على الأقل يشير إلى قيمة تستطيع الشركة تقديمها: السعادة المالية.</p></li>
+<li><p>يتوسع العنوان الفرعي في العنوان: الشركة تقدّم مساعدة مالية مبسّطة وجديرة بالثقة.</p></li>
+<li><p>قد لا تبدو صورة الخلفية ذات صلة مباشرة للوهلة الأولى، لكنها تلمّح إلى النتائج التي يأملها الناس غالبًا حين يحققون أهدافهم المالية.</p></li>
+</ul>
+<p>إذن كيف تجعل عرضك فريدًا؟ غالبًا ما يصعب أن تلاحظ أي شيء فريد فيما تقدّمه. الأمر يتطلب تأملًا صادقًا مع النفس ونقاشًا.</p>
+
+<h2 id="h-how-do-you-write-a-unique-value-proposition">كيف تكتب عرض قيمة فريدًا؟</h2>
+<p>إن لم تجد شيئًا، فالأفضل أن تصنع شيئًا. وطبعًا يجب أن يكون الجزء الفريد شيئًا يهتم به العملاء فعلًا. فلا معنى لأن تكون فريدًا لمجرد التفرّد (مثل: «الكريات المعدنية داخل دراجاتنا لونها أزرق»). وحتى إن لم يكن ما تبيعه فريدًا، فما زال بإمكانك أن <a href="https://cxl.com/blog/how-to-come-up-with-a-value-proposition-when-what-you-sell-isnt-unique/">تصل إلى عرض قيمة رائع</a>.</p>
+<p>وما يقدّره العملاء أهم من الجِدّة: فقد وجدت <a href="https://www.qualtrics.com/articles/customer-experience/global-consumer-experience-trends/">أبحاث <bdi class="en">Qualtrics</bdi></a> أن القيمة مقابل المال كانت السبب الأول لاختيار المستهلكين التعامل مع براند ما (46%)، تليها جودة المنتج أو الخدمة (42%)، ثم السهولة والملاءمة (41%).</p>
+<p>إليك مصدرين يمكن أن يساعداك على إيجاد «فكرة محورية» أو زاوية لعرض قيمتك:</p>
+<ul>
+<li><p><a href="https://www.productmarketingalliance.com/the-secrets-of-compelling-messaging-and-effective-product-positioning/">كيف تصنع تموضعًا فعالًا للمنتج</a>، لتحديد القيمة الأساسية التي تقدّمها للعميل وتمييزها عن البدائل.</p></li>
+<li><p><a href="https://www.productmarketingalliance.com/how-uber-measures-value-perception-with-formula/">كيف تقيس <bdi class="en">Uber</bdi> إدراك القيمة</a>، وهو إطار عملي لتحديد أي أجزاء عرضك يراها العملاء الأعلى قيمة.</p></li>
+</ul>
+<p>تذكّر: <strong>لست مضطرًا لأن تكون فريدًا في نظر العالم كله، بل في ذهن العميل فقط.</strong> فإتمام البيع يحدث في ذهن العميل، لا في السوق بين المنافسين.</p>
+
+<h3 id="h-use-boosters-for-your-value-proposition">استخدم «المعزّزات» في عرض قيمتك</h3>
+<p>أحيانًا تكون أشياء صغيرة هي ما يرجّح القرار لصالحك. فإن كانت كل الأمور الكبرى متشابهة تقريبًا بينك وبين منافسيك، يمكنك أن تفوز بتقديم إضافات صغيرة ذات قيمة. نسمّيها المعزّزات (<bdi class="en">Boosters</bdi>).</p>
+<p>وهي تعمل جيدًا أمام المنافسين الذين لا يقدّمونها. ويمكن أن تكون المعزّزات أشياء مثل:</p>
+<ul>
+<li><p>شحن مجاني؛</p></li>
+<li><p>شحن سريع/في اليوم التالي؛</p></li>
+<li><p>هدية مجانية مع الشراء؛</p></li>
+<li><p>إعداد/تركيب مجاني؛</p></li>
+<li><p>بدون رسوم إعداد؛</p></li>
+<li><p>بدون عقد طويل الأجل، ويمكنك الإلغاء في أي وقت؛</p></li>
+<li><p>ترخيص لعدة أجهزة كمبيوتر (بدلًا من جهاز واحد)؛</p></li>
+<li><p>ضمان استرداد الأموال (أو ما هو أفضل منه)؛</p></li>
+<li><p>سعر مخفّض (لمنتج ما)؛</p></li>
+<li><p>قابلية التخصيص.</p></li>
+</ul>
+<p>فكّر في الأشياء الصغيرة التي يمكنك إضافتها، والتي لن تكلفك كثيرًا لكنها قد تجذب بعض المشترين.</p>
+<p>وتأكد أن المعزّز يظهر بجانب باقي عرض القيمة.</p>
+
+<h3 id="h-example-of-a-value-proposition-booster">مثال على «معزّز» لعرض القيمة</h3>
+<p>علامة «الشحن المجاني» في أعلى اليسار مثال على المعزّز.</p>
+<figure><img width="1024" height="513" alt="مثال على الشحن المجاني كطريقة لتعزيز أثر عرض القيمة" src="https://cxl.com/wp-content/uploads/2019/07/image-18-1024x513.png"></figure>
+
+<h2 id="h-how-do-you-test-your-value-proposition">كيف تختبر عرض قيمتك؟</h2>
+<p>عليك أن تختبر عرض قيمتك. وهناك ثلاث طرق رئيسية لذلك.</p>
+
+<h3 id="h-1-message-testing">1. اختبار الرسائل</h3>
+<p>أفضل طريقة على الإطلاق لاختبار عرض قيمتك هي أن تضعه أمام الأشخاص أنفسهم الذين تحاول أن تسوّق لهم، وتعرف كيف يرونه. وهذا هو الغرض من <a href="https://wynter.com/post/message-testing">اختبار الرسائل (<bdi class="en">Message Testing</bdi>)</a>. فهو يخبرك بالضبط برأي عملائك المستهدفين المثاليين:</p>
+<ul>
+<li><p>هل يجدونه واضحًا؟</p></li>
+<li><p>هل له صلة بهم؟ هل يفهمون أنه موجّه إليهم؟</p></li>
+<li><p>والأهم: هل يريدون القيمة الموعودة؟ هل يجعلهم يقولون «أريد هذا»؟</p></li>
+<li><p>وأخيرًا، هل هو متمايز؟ هل واضح لماذا يجب أن يختاروك بدلًا من البدائل؟</p></li>
+</ul>
+<p>ستحصل على معلومات نوعية غنية عن كيف وأين يقصر عرضك، فتستطيع تحسينه.</p>
+<p>وأفضل طريقة لإجراء اختبار الرسائل هي استخدام أداة مثل <a href="https://wynter.com">Wynter</a>.</p>
+
+<h3 id="h-2-a-b-testing">2. اختبار <bdi class="en">A/B</bdi></h3>
+<p>طريقة جيدة أخرى لاختبار عرض قيمتك هي أن تصوغ نسختين مرشحتين (أو أكثر إن كانت لديك زيارات كثيرة) وتختبرهما بالتقسيم. سيستغرق ذلك أربعة أسابيع على الأقل في معظم المواقع، ويتطلب 500 تسجيل/تحويل شهريًا على الأقل. (عليك أن تحسب حجم العيّنة بشكل صحيح مسبقًا لتعرف العدد بالضبط.)</p>
+<p>والقيد هنا أن اختبار <bdi class="en">A/B</bdi> لن يخبرك إلا بما إذا كانت النسخة ب أفضل من أ، وبكم. لا يخبرك بشيء عن «السبب». ولا يمنحك أي فكرة عن كيفية تحسين عرض قيمتك، على عكس اختبار الرسائل.</p>
+<p>تعلّم كيف <a href="https://cxl.com/blog/ab-testing-guide/">تُجري اختبارات <bdi class="en">A/B</bdi> بفعالية</a>.</p>
+
+<h3 id="h-3-pay-per-click-advertising">3. الإعلانات بالدفع مقابل النقرة</h3>
+<p>وهناك طريقة أخرى: استخدام <a href="https://cxl.com/institute/online-course/google-ads/">Google Ads</a> أو <a href="https://cxl.com/institute/online-course/facebook-ads-for-beginners/">Facebook Ads</a>. وقد يكون ذلك مكلفًا، ويستغرق أسبوعًا إلى أسبوعين على الأقل.</p>
+<p>اختبر بالتقسيم إعلانات بعروض قيمة مختلفة تستهدف العميل نفسه. الإعلان صاحب <a href="https://cxl.com/guides/click-through-rate/ppc/">معدل النقر</a> الأعلى يشير إلى أنه ربما أفضل في جذب الانتباه وإثارة الاهتمام، لكن عيب ذلك أنه لا يعني بالضرورة مبيعات أعلى.</p>
+<p>أرسل الزيارات إلى صفحة هبوط مطابقة، واختبر التحويلات أيضًا.</p>
+
+<h2 id="h-how-is-ai-changing-value-proposition-testing">كيف يغيّر الذكاء الاصطناعي اختبار عرض القيمة؟</h2>
+<p>لم يغيّر الذكاء الاصطناعي ما يجعل عرض القيمة ناجحًا. فالتحديد، والدليل، ولغة العميل ما زالت تتفوق على النص الذكي. ما تغيّر هو السرعة التي يمكنك بها توليد النسخ المرشحة واختبارها.</p>
+<p>يستطيع المسوقون الآن استخدام الذكاء الاصطناعي لكتابة عشرات البدائل للعنوان الرئيسي والفرعي، من مجموعة واحدة من تفريغات مقابلات العملاء، في دقائق، بدلًا من كاتب واحد يحدّق في صفحة فارغة. وهذا مفيد من حيث الكم، لكنه يجلب خطرًا جديدًا: النصوص التي يولّدها الذكاء الاصطناعي تميل افتراضيًا إلى صياغات عامة تتصدرها المزايا، ما لم تكن مستندة إلى اقتباسات وبيانات حقيقية من العملاء. وقد وجدت أبحاث <bdi class="en">CXL</bdi> عن <a href="https://cxl.com/blog/how-b2b-marketers-use-ai/">كيف يستخدم مسوقو الـ <bdi class="en">B2B</bdi> الذكاء الاصطناعي</a> أن معظم الفرق ما زالت عالقة في استخدامه لتسريع المهام المنفردة، مثل الكتابة بشكل أسرع، بدلًا من استخدامه لتشغيل دورة اختبار الرسائل والتطوير كاملة من البداية إلى النهاية.</p>
+<p>وسير العمل العملي الذي يصمد في 2026: أعطِ الذكاء الاصطناعي ملاحظات فعلية من مقابلات العملاء، أو تذاكر الدعم، أو نتائج اختبار الرسائل من <bdi class="en">Wynter</bdi>، لا مجرد بريف، ثم اجعله يكتب البدائل وفق هيكل العنوان/العنوان الفرعي/النقاط/العنصر البصري المذكور أعلاه. وما زال على إنسان أن يُجري اختبار الرسائل ويتخذ القرار النهائي، لأن نماذج الذكاء الاصطناعي لا تستطيع أن تخبرك هل يريد المشترون ما تعدهم به. والتحقق من هذه المخرجات مقابل إشارات حقيقية من العملاء هو فجوة المهارات التي يرصدها <a href="https://cxl.com/blog/marketer-ai-maturity-benchmark-2026/">مؤشر نضج الذكاء الاصطناعي 2026 من <bdi class="en">CXL</bdi></a> أكثر من غيرها لدى فرق التسويق في الـ <bdi class="en">B2B</bdi>: فمعظمها مرتاح لاستخدام الذكاء الاصطناعي في الكتابة، لكن عددًا أقل بكثير بنى خطوة الثقة والتحقق اللازمة لنشر هذه المخرجات من غير إعادة كتابة يدوية.</p>
+
+<h2 id="h-faq">أسئلة شائعة</h2>
+<h3 id="h-what-s-the-difference-between-a-value-proposition-and-a-unique-selling-proposition-usp">ما الفرق بين عرض القيمة وعرض البيع الفريد (<bdi class="en">USP</bdi>)؟</h3>
+<p>عرض القيمة يصف الوعد الكامل بالقيمة للعميل: الصلة، والفائدة القابلة للقياس، والتمايز، ويُقدَّم عادةً في صورة عنوان رئيسي وعنوان فرعي ونقاط داعمة. أما عرض البيع الفريد فأضيق: إنه الادعاء المحدد الوحيد الذي يميزك عن المنافسين، وغالبًا ما يكون سطرًا واحدًا داخل عرض القيمة الأكبر. كل عرض بيع فريد يجب أن يدعم عرض قيمة، لكن ليس كل عرض قيمة يحتاج إلى عرض بيع فريد بارز واحد كي ينجح. اطّلع على مزيد من أمثلة عروض البيع الفريدة لترى الفرق عمليًا.</p>
+<h3 id="h-how-long-should-a-value-proposition-be">ما الطول المناسب لعرض القيمة؟</h3>
+<p>قصير بما يكفي لقراءة العنوان الرئيسي وفهمه في نحو خمس ثوانٍ، مع عنوان فرعي داعم أو فقرة قصيرة (جملتان إلى ثلاث)، وثلاث نقاط للتفاصيل. إن اضطر الزائر إلى إعادة قراءته أو سؤال «لحظة، ماذا يفعلون بالضبط؟»، فهو طويل جدًا أو مبهم جدًا.</p>
+<h3 id="h-where-should-a-value-proposition-appear-on-a-website">أين يجب أن يظهر عرض القيمة على الموقع؟</h3>
+<p>في الصفحة الرئيسية في الجزء الظاهر أولًا، وفي كل نقطة دخول رئيسية أخرى إلى الموقع: صفحات الهبوط، وصفحات الفئات، وصفحات المنتجات. فالزوار لا يصلون عبر الصفحة الرئيسية فقط، وعرض القيمة الذي لا يوجد إلا هناك يفوّت نسبة كبيرة من الانطباعات الأولى.</p>
+<h3 id="h-can-ai-write-my-value-proposition-for-me">هل يستطيع الذكاء الاصطناعي أن يكتب عرض قيمتي بدلًا مني؟</h3>
+<p>يستطيع الذكاء الاصطناعي أن يكتب البدائل بسرعة، لكنه لا يستطيع أن يخبرك أيها صادق، أو متمايز، أو مرغوب لدى مشتريك. وأفضل سير عمل حالي يستخدم الذكاء الاصطناعي لتوليد خيارات مستندة إلى لغة العملاء الحقيقية (تفريغات المقابلات، وتذاكر الدعم، وبيانات اختبار الرسائل)، ثم يتحقق إنسان من النتيجة مع عملاء محتملين فعليين قبل نشرها.</p>
+<h3 id="h-how-do-i-know-if-my-value-proposition-is-working">كيف أعرف أن عرض قيمتي ناجح؟</h3>
+<p>اختبره. اختبار الرسائل (بأداة مثل <bdi class="en">Wynter</bdi>) يخبرك هل يجده العملاء المستهدفون واضحًا، وذا صلة، ومرغوبًا، ومتمايزًا، إضافة إلى سبب قصوره إن كان يقصر. أما اختبار <bdi class="en">A/B</bdi> فيخبرك هل تحقق نسخة تحويلات أفضل من أخرى، لكن ليس لماذا. استخدم الاثنين: اختبار الرسائل للتشخيص والتحسين، واختبار <bdi class="en">A/B</bdi> للتأكد من أن التحسين يصمد أمام زيارات حقيقية.</p>
+<h3 id="h-how-often-should-a-company-revisit-its-value-proposition">كم مرة يجب أن تراجع الشركة عرض قيمتها؟</h3>
+<p>كلما تغيّر سوقك أو منافسوك أو ملف عميلك المثالي (<bdi class="en">ICP</bdi>) تغيّرًا ملموسًا، ومرة في السنة على الأقل. ومثال <bdi class="en">Cloudflare</bdi> السابق يُظهر شركة تراجع عرض قيمتها مرات عدة على مدى سنوات مع تغيّر أعمالها ومشتريها. عرض القيمة أصل حي، وليس مُخرَجًا يُسلَّم مرة واحدة.</p>
+
+<h2 id="h-conclusion">الخلاصة</h2>
+<p>أنت تحتاج إلى عرض قيمة، وتحتاج إلى أن توصله بوضوح في كل صفحات الدخول الرئيسية: الصفحة الرئيسية، وصفحات المنتجات، وصفحات الفئات، وغيرها.</p>
+<p>إن لم تقل لماذا يجب أن يشتري المستخدمون منك، فستخسر معظمهم. ولتصوغ عرض قيمة رائعًا:</p>
+<ul>
+<li><p>ركّز على الوضوح قبل أي شيء آخر.</p></li>
+<li><p>استخدم معادلة العنوان الرئيسي، والعنوان الفرعي، والنقاط، والصورة.</p></li>
+<li><p>اختبر، ثم اختبر، ثم اختبر.</p></li>
+</ul>
+
+<h2 id="h-go-deeper">للتعمق أكثر</h2>
+<p>إن أردت أن تبني هذه المهارة بشكل منهجي بدلًا من مقال واحد في كل مرة، فهذه مصادر من <bdi class="en">CXL</bdi> تأخذك أبعد:</p>
+<ul>
+<li><p><a href="https://cxl.com/institute/online-trainings/broad-skills/brand-marketing/messaging-copywriting/">B2B Product &amp; Brand Messaging</a>: كورس عملي لبناء عرض قيمة يميّز براندك، ومواءمة الرسائل بين التسويق والمبيعات والمنتج.</p></li>
+<li><p><a href="https://cxl.com/institute/online-course/messaging/">كورسات صياغة الرسائل والكتابة الإعلانية</a>: مجموعة أوسع لتحويل الأبحاث إلى نصوص تحقق تحويلات.</p></li>
+<li><p><a href="https://cxl.com/blog/b2b-value-proposition/">B2B Value Proposition Strategy: 7 Steps to Convert Better Leads</a>، لشرح خطوة بخطوة للعملية خاص بالـ <bdi class="en">B2B</bdi>.</p></li>
+<li><a href="https://cxl.com/institute/marketing-engineer/">دفعة <bdi class="en">Marketing Engineer</bdi></a>، إن أردت أن تبني أنظمة ذكاء اصطناعي تدير تسويقك.</li>
+</ul>
+</main>
+</body>
+</html>

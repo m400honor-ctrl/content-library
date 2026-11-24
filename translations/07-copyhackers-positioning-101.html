@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>التموضع 101</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&family=Montserrat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+/* ألوان وقياسات مقال Copyhackers الأصلي (style.css للثيم) */
+:root{--ink:#393939;--text:#393939;--blue:#2797FE;--blue-dark:#017ef1;--line:#CCCCCC;--bg:#ffffff;--mute:#6b6b6b;--soft:#EEF3F4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Tajawal",Montserrat,sans-serif;font-size:18px;line-height:1.85}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline;color:var(--blue-dark)}
+.topbar{border-bottom:1px solid #eee;background:#fff}
+.topbar .in{max-width:1100px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:28px;font-size:14px;font-weight:700}
+.logo{font-family:"Montserrat","Cairo",sans-serif;font-weight:700;color:var(--blue);font-size:22px;letter-spacing:.3px;direction:ltr}
+.topbar nav{display:flex;gap:22px;color:var(--ink);flex-wrap:wrap}
+.topbar nav span{white-space:nowrap}
+.wrap{max-width:660px;margin:0 auto;padding:36px 16px 80px}
+h1,h2,h3,h4{font-family:"Cairo",Montserrat,sans-serif;color:var(--ink)}
+.cat{text-align:center;margin-top:12px}
+.cat a{font-size:14px;font-weight:700;color:var(--blue)}
+h1{font-size:40px;line-height:1.35;font-weight:700;text-align:center;margin:22px 0 22px}
+h2{font-size:30px;font-weight:600;line-height:1.5;margin:44px 0 26px;text-align:center}
+h3{font-size:24px;font-weight:600;line-height:1.5;margin:28px 0 18px;text-align:center}
+h4{font-size:20px;font-weight:700;line-height:1.5;margin:28px 0 16px;text-align:center}
+.byline{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:26px;font-size:15px}
+.byline .who{display:flex;align-items:center;gap:10px;border-radius:29px;padding:6px 12px;background:var(--soft)}
+.byline .who img{width:40px;height:40px;border-radius:50%}
+.byline .who span{display:flex;flex-direction:column;line-height:1.3}
+.byline .who small{color:var(--mute);font-size:13px}
+.date{text-align:center;font-size:14px;color:var(--mute);margin:-12px 0 22px}
+.hero{display:block;width:100%;height:auto;margin:0 0 28px;border-radius:15px;box-shadow:0 10px 30px 0 rgba(87,110,115,.38)}
+.orig{font-size:14px;color:var(--mute);border-top:1px solid #eee;border-bottom:1px solid #eee;padding:8px 0;margin-bottom:24px}
+.orig bdi{direction:ltr}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 20px;padding-right:28px;padding-left:0}
+li{margin-bottom:6px}
+strong{font-weight:700}
+.toc{background:var(--blue);color:#fff;border-radius:25px;padding:18px 26px;margin:0 0 30px}
+.toc .t{font-weight:700;font-size:15px;margin-bottom:6px}
+.toc ol{list-style:none;padding:0;margin:0}
+.toc li{margin:.55em 0}
+.toc a{color:#fff;text-decoration:underline;font-size:15px}
+blockquote{margin:0 1rem 1rem 0;padding:0 1rem 0 0;border-right:2px solid var(--line);border-left:0}
+blockquote p{margin:0 0 12px}
+blockquote .src{font-size:.92em;color:var(--mute)}
+.formula{font-weight:700;text-align:center;background:var(--soft);border-radius:12px;padding:12px 16px}
+.en{direction:ltr;unicode-bidi:isolate;font-family:Montserrat,sans-serif}
+.tag{direction:ltr;unicode-bidi:isolate;font-family:Montserrat,sans-serif;font-size:.9em;background:var(--soft);padding:1px 6px;border-radius:4px}
+@media (max-width:600px){h1{font-size:28px}h2{font-size:24px}h3{font-size:21px}h4{font-size:19px}.topbar nav{display:none}}
+/* rtl-polish v1 */
+html{direction:rtl}
+body{text-align:right}
+p,li,dd,dt,td,th,figcaption,blockquote,h1,h2,h3,h4,h5,h6{text-align:right;letter-spacing:0!important;text-transform:none!important}
+p,li{line-height:1.9;word-spacing:.02em}
+ul,ol{padding-right:1.7em!important;padding-left:0!important}
+li>ul,li>ol{margin-top:.35em}
+table{direction:rtl}
+th,td{text-align:right}
+figure,figcaption{text-align:center}
+bdi.en{unicode-bidi:isolate;direction:ltr}
+.orig a,.orig bdi{overflow-wrap:anywhere}
+pre,code,kbd,samp{direction:ltr;unicode-bidi:isolate;text-align:left}
+img{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<div dir="rtl" style="padding:10px 16px;border-bottom:1px solid #eee;background:#fff;font:600 14px Tajawal,Arial,sans-serif"><a href="../translations.html" style="color:#2446c7;text-decoration:none">← مكتبة الترجمات العربية</a> <span style="color:#888">·</span> <a href="../index.html" style="color:#2446c7;text-decoration:none">مكتبة الكونتنت</a></div>
+
+<div class="topbar"><div class="in"><span class="logo">Copyhackers</span>
+<nav><span>ابدأ هنا</span><span>المقالات</span><span>الكورسات</span><span>فيديوهات تعليمية</span><span>عن <bdi class="en">Joanna</bdi></span><span>تواصل معنا</span></nav></div></div>
+
+<main class="wrap">
+<div class="cat"><a href="https://copyhackers.com/category/copywriting/">مقالات الكوبي رايتنج</a></div>
+<h1>التموضع 101: كيف تسكن عقول أفضل عملائك بلا إيجار</h1>
+<div class="byline">
+<div class="who"><img alt="" src="https://secure.gravatar.com/avatar/cc2a1d513be2f2fed5f30929964c6d6f7d6b76f320f4dae6fd47ca73bcc8d8d6?s=96&amp;d=mm&amp;r=g"><span><strong>Roxana Gramada</strong><small>الكاتبة</small></span></div>
+<div class="who"><img alt="" src="https://secure.gravatar.com/avatar/3d0dad259d8e76a0cb505160a884cbb53052363487482c1998ed960451d6f80c?s=96&amp;d=mm&amp;r=g"><span><strong>Jessica Noel</strong><small>المحرّرة</small></span></div>
+</div>
+<div class="date">نُشر: 14 أبريل 2026</div>
+<img class="hero" src="https://copyhackers.com/wp-content/uploads/2026/04/Positioning-101.png" alt="Positioning 101">
+<div class="orig">ترجمة عربية بالمعنى للمقال الأصلي: <a href="https://copyhackers.com/2026/04/positioning-101/"><bdi>Positioning 101: How to live rent-free in your best clients’ minds</bdi></a></div>
+
+<nav class="toc"><div class="t">المحتويات</div><ol>
+<li><a href="#h-without-positioning-you-don-t-exist">من غير تموضع، أنت غير موجود</a></li>
+<li><a href="#h-what-is-positioning">ما هو التموضع؟</a></li>
+<li><a href="#h-how-can-i-know-my-positioning">كيف أعرف تموضعي؟</a></li>
+<li><a href="#h-the-fundamental-five-positioning-qs">أسئلة التموضع الخمسة الأساسية</a></li>
+<li><a href="#h-what-does-positioning-look-like">كيف يبدو التموضع؟</a></li>
+<li><a href="#h-the-formula-the-descriptor-and-the-killer">المعادلة. والجملة الوصفية. والجملة القاتلة.</a></li>
+<li><a href="#h-positioning-a-business-of-one">تموضع بيزنس يديره شخص واحد</a></li>
+<li><a href="#h-keep-your-positioning-alive">حافظ على تموضعك حيًّا</a></li>
+</ol></nav>
+
+<p><em>التموضع الجيد يلتقط ما يجعلك ذا قيمة لعملائك، والأفضل أن تكون قيمة لا يقدّمها غيرك. وهو يسكن عقولهم بلا إيجار. ولكي تجده، لا تبحث بعيدًا عمّا يميّزك عن غيرك. ثم اتبع الخطوات الموجودة في هذا المقال.</em></p>
+
+<h2 id="h-without-positioning-you-don-t-exist">من غير تموضع، أنت غير موجود</h2>
+<p>إن لم يكن لك مكان في الخريطة الذهنية لعملائك، فليس لديك بيزنس.</p>
+<p>يبدو الكلام مبالغًا فيه، لكن هذا هو شكل <em>غياب التموضع</em> فعلًا في حياة الكوبي رايتر:</p>
+<ul>
+<li>تبدو أصغر من حجمك، أو لا تُرى أصلًا، أمام العملاء الذين يدفعون جيدًا مقابل مهاراتك.</li>
+<li>تتنافس على السعر مع كل من «يكتب كوبي».</li>
+<li>تشكّ في كل قرار يخص جلب العملاء المحتملين (<bdi class="en">Lead Gen</bdi>) لأنك بلا تركيز.</li>
+<li>تتابع موجة الذعر من الذكاء الاصطناعي وهي تنتشر في المجال، وتتساءل إن كنت ستظل تعمل في هذه المهنة العام القادم.</li>
+</ul>
+<p>أو ربما أمورك تسير جيدًا، رائع! هذا يعني أن لديك تموضعًا بالفعل، لكنك ربما لا تدركه بالكامل.</p>
+<p>وربما لم تكتب وثيقة تموضع بعد.</p>
+<p>وهذا ما سيتغير الآن.</p>
+
+<h2 id="h-what-is-positioning">ما هو التموضع؟</h2>
+<p>التموضع (<bdi class="en">Positioning</bdi>) ثلاثة أشياء:</p>
+<ul>
+<li>عملية تفكير استراتيجي</li>
+<li>نتيجة هذه العملية، في جملة واحدة</li>
+<li>الوثيقة الموجودة في الدرايف الخاص بك، حيث تعيش إجابات هذه العملية، وتعود إليها بانتظام لتراجعها</li>
+</ul>
+<p>وبكلمات أعظم من كتبوا في الموضوع:</p>
+<blockquote><p><strong><em>«التموضع هو عملية تمييز منتج أو خدمة أو شركة في ذهن العميل للحصول على ميزة تنافسية استراتيجية؛ وهو الخطوة الأولى في بناء البراند».</em></strong><br><span class="src">— <span class="en">Positioning: The Battle for Your Mind</span>، <bdi class="en">Al Ries</bdi> و<bdi class="en">Jack Trout</bdi>، 2000</span></p></blockquote>
+<blockquote><p><em><strong>«التموضع يحدّد كيف يتصدّر منتجك في تقديم شيء يهتم به كثيرًا جمهور محدد بوضوح من العملاء».</strong></em><br><span class="src">— <span class="en">Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It</span>، <bdi class="en">April Dunford</bdi>، 2019</span></p></blockquote>
+<blockquote><p><strong><em>«العبارة التي تجلب لك المال هي ميزتك غير العادلة».</em></strong><br><span class="src">— اقتباس بتصرّف من مُعلّمة كتابة الكوبي التحويلية الأصلية، <bdi class="en">Joanna Wiebe</bdi></span></p></blockquote>
+<p>المُخرَج النهائي، أي وثيقة التموضع، هو صورة أشعة للقيمة التي يصنعها البيزنس الخاص بك: ماذا تفعل، وما طريقتك المختلفة في فعله، ولمن تفعله.</p>
+
+<h2 id="h-how-can-i-know-my-positioning">كيف أعرف تموضعي؟</h2>
+<p>بماذا يفكر عملاؤك حين يفكرون في البيزنس الخاص بك؟ بماذا يربطونك؟ في بيزنس المعرفة، مثل كتابة الكوبي، الإجابة جزء منها عمل محقق، وجزء منها عمل إبداعي.</p>
+<p>نقطة البداية هي: أكبر أصل في البيزنس الخاص بك هو أنت. تفرّدك. نقاط قوتك. والتموضع هو الطريقة التي تضعها بها في سياق السوق الصحيح، لتكسب أقصى ما يمكن. ولكي تُكمل العملية، استقِ من مصدرين:</p>
+<p>1) الطاقة الخام لعقلك أنت، بصفتك صاحب البيزنس وصانعه وحارس مقدّساته.</p>
+<p>2) ثروة الأدلة الموجودة في عقل عميلك: المقابلات، والتنقيب في المراجعات (<bdi class="en">Review Mining</bdi>)، والاستبيانات، وغيرها.</p>
+<blockquote><p><em><strong>«الحل الصحيح مدفون داخل المشكلة نفسها. لم يُكتب من قبل قط. ولا يمكن إنتاجه بالتكرار الآلي، ولا بالنسخ، ولا بالتعديل على حلول قديمة. لكن يمكن إخراجه إلى السطح، تلقائيًّا، بطرح الأسئلة الصحيحة».</strong></em><br><span class="src">— <bdi class="en">Eugene M. Schwartz</bdi>، <span class="en">Breakthrough Advertising</span></span></p></blockquote>
+<p>لذا اطرح هذه الأسئلة الخمسة، كما حدّدتها <a href="https://www.aprildunford.com/">April Dunford</a>، الخبيرة العالمية في تموضع شركات التكنولوجيا، ومؤلفة كتاب <a href="https://www.amazon.com/Obviously-Awesome-Product-Positioning-Customers/dp/1999023005"><span class="en">Obviously Awesome: How to Nail Product Positioning so Customers Get It, Buy It, Love It</span></a>.</p>
+
+<h2 id="h-the-fundamental-five-positioning-qs">أسئلة التموضع الخمسة الأساسية</h2>
+<h4>السؤال رقم 1: لو لم تكن موجودًا، ماذا كان سيفعل عملاؤك؟</h4>
+<p>قد ترغب في القول إنهم كانوا سيستعينون بكوبي رايتر آخر. لكن الأرجح أنهم كانوا سيطلبون من <bdi class="en">ChatGPT</bdi>: «اكتب لي صفحة رئيسية» (<a href="https://Copyhackers.com/2025/11/replacing-copywriters-with-ai/">وهو أمر لا يُنصح به إطلاقًا لأسباب كثيرة</a>). أو كانوا سيطلبون ذلك من المتدرب. أو كانوا سيؤجلون، ويؤجلون، ويؤجلون.</p>
+<p>بدائل التعاقد معك تتراوح بين ألّا يفعلوا شيئًا، وأن يكلّفوا ابن أخ صاحب الشركة، وأن يستعينوا بأستاذ كبير في كتابة الكوبي. هذا إن كانت هذه، وهذا أهم «إن» على الإطلاق، هي الخيارات التي تدور في ذهن عملائك.</p>
+<p>خبر عاجل للتشجيع: لن يفتّش أحد في كل الكوبي رايترز الأحياء على كوكب الأرض قبل أن يختار. سيختارون مما يدخل دائرة انتباههم: الترشيحات، والفيد ونتائج البحث، أو الفعاليات. احرص على أن تقابلهم هناك وتكسبهم من أول كلمة، وستكون قد بدأت العمل فعلًا. هيييه!</p>
+<p>نصيحة محترف: قم ببحث <a href="https://Copyhackers.com/2014/11/jobs-to-be-done-copywriting/">«المهام المطلوب إنجازها» (<bdi class="en">Jobs to Be Done</bdi>)</a> لتعرف من ينافسك فعلًا، ولماذا قد يتعاقدون معك أو يؤجلون التعاقد.</p>
+
+<h4>السؤال رقم 2: ما المزايا أو القدرات التي لديك وليست لدى البدائل؟</h4>
+<p>رغم أن هذا هو السؤال الثاني في إطار <bdi class="en">April Dunford</bdi>، فهو في بيزنس كتابة الكوبي سؤال البداية. المهارة والقدرة تصنعان الميزة. وأنت تعمل في هذا البيزنس لتستفيد لأقصى حد من مهاراتك وقدراتك، الموجودة منها والناشئة (ومبروك على دخولك عالم <bdi class="en">Copyhackers</bdi>! فهو بيت الكوبي رايترز الرائعين في كل مكان).</p>
+<p>إذن، ما مهاراتك؟ كتابة الكوبي طبعًا، لكن لنحاول أن نكون، كما ستقول <bdi class="en">Joanna Wiebe</bdi>، دقيقين دقة الجرّاح هنا:</p>
+<ul>
+<li>بحث صوت العميل (<bdi class="en">Voice of Customer</bdi>)</li>
+<li>نصوص المواقع</li>
+<li>صفحات البيع</li>
+<li>القُمع التسويقي (<bdi class="en">Funnels</bdi>)</li>
+<li>الإطلاقات (<bdi class="en">Launches</bdi>)</li>
+<li>الاختبار والتحقق</li>
+<li>الإيميل</li>
+<li>شيء آخر.</li>
+</ul>
+<p>ثم فكّر في المهارات الجانبية. الإنصات. إجراء المقابلات. التعاون. الاستخدام المتقدم للذكاء الاصطناعي في البحث. التصميم. أي مهارة تميّزك عن غيرك.</p>
+<p>كلمة تحذير! الحديث عمّا تقدّمه ولا يقدّمه منافسوك قد يبدو كأنه دعوة لمهرجان «متلازمة المحتال» (<bdi class="en">Impostor Syndrome</bdi>). من فضلك لا تستضف هذه الأفكار. إن أنجزت العمل المطلوب في <bdi class="en">Copy School</bdi>، فهذا في حد ذاته سيكون ما يميّزك.</p>
+<p>هل تبدأ لتوّك؟ أفضل استراتيجية أن تختار مسارًا واحدًا وتتعمق فيه: ادرسه على منصة <bdi class="en">Copy School</bdi>، واشتغل مع عملاء، وابنِ حوله خبرتك ومصداقيتك.</p>
+<p>وإن أردت وضوحًا أكبر في هذا الأمر، فقد صمّمت ورشة عمل خصيصًا لتساعدك على التركيز في قدرة البيزنس الخاص بك ونيّتك منه، وأن تترك تموضعك يطفو على السطح، على طريقة الأسطورة <bdi class="en">Eugene Schwartz</bdi>. وإن كنت عضوًا في <bdi class="en">Copy School</bdi>، فراقب بريدك لتصلك دعوة لتدريب خاص عن التموضع.</p>
+
+<h4>السؤال رقم 3: ما القيمة التي تتيحها سمات البيزنس الخاص بك للعملاء؟</h4>
+<p>أو بصيغة أخرى: ما المشكلات التي تستطيع حلّها؟</p>
+<p>هل رأيت من قبل ماكينة صنع الخبز؟ تضع فيها الدقيق والخميرة والماء والملح، وتضغط الزر، فيخرج الخبز. لكن يمكنك أيضًا أن تضع فيها فاكهة وسكرًا وماء، فتحصل على مربّى.</p>
+<p>ماكينة الخبز تحل مشكلة الخبز الطازج المصنوع في البيت. وتحل مشكلة المربّى أيضًا.</p>
+<p>اكتب قائمة بما هو مذهل في عملك، بكلماتك أنت وبكلمات عملائك (افتح ملف آراء العملاء). ابحث عن الأنماط وجمّعها، كما تقول <bdi class="en">April Dunford</bdi>، في «سلال». أو أدخلها في أداة الذكاء الاصطناعي التي تفضلها واطلب منها أهم ثلاثة محاور. ماذا يظهر لك؟ بعض الأفكار:</p>
+<ul>
+<li>السرعة: وقت التسليم عندك قصير، ومقابل السعر المناسب يمكنك أن تكون متاحًا في وقت قصير (مرحبًا بأيام الـ <bdi class="en">VIP</bdi>!).</li>
+<li>السهولة: تسلّم أعمالًا كاملة جاهزة للاستخدام فورًا. والعمل معك قرار بديهي للفرق الكبيرة.</li>
+<li>الأداء: عملك بارع جدًا في التقاط صوت البراند، أو مُهندَس جيدًا جدًا للتحويل، لدرجة أن نتائجك تتفوق باستمرار على خط الأساس.</li>
+</ul>
+<p>وإن أردت أن تعرف كم نوعًا من السلال يمكن أن يوجد، فورشتي <bdi class="en">The Dark Horse Protocol</bdi> تتعمق في أنواع القيمة التي يمكن أن تقدمها لعملائك، وكيف تختار نوعك.</p>
+
+<h4>السؤال رقم 4: من الذي يهتم كثيرًا بهذه القيمة؟</h4>
+<p>أفضل خدمة لديك لا تعني شيئًا للأشخاص الخطأ. تمامًا كما أن الأشخاص الصحيحين سيدفعون فيها أعلى سعر، وفي موعده، وسيرشّحونك لغيرهم، وسيعودون لطلب المزيد.</p>
+<p>إن كنت أنهيت مشروعات بالفعل، فأدخل المشروعات المفضلة لديك في أداة ذكاء اصطناعي، وارسم بها ملامح ملف العميل المثالي (<bdi class="en">Ideal Client Profile</bdi> أو <bdi class="en">ICP</bdi>).</p>
+<p>وإن كنت بدأت لتوّك ولا تعرف بعد من يقدّر ما تنتجه، فالإجابة هي: تجارب صغيرة. أجرِ مقابلات «المهام المطلوب إنجازها». راجع مكالمات البيع والتعاملات التي تمت. <a href="https://Copyhackers.com/2022/07/find-copywriting-jobs/">ثم اتخذ أفضل اختيار لديك ووقّع معهم</a>.</p>
+<p>بعد ذلك، كما نفعل في أي مشروع كوبي، اختبر وقيّم: هل يهتم هذا العميل المثالي كثيرًا بقيمتك؟ إن كانت الإجابة نعم، وكنت تستمتع بالعمل، فما مدى سهولة التوقيع مع المزيد منهم؟ وإن كانت لا، فما الذي يجب أن يتغير في فرضيتك عن العميل المثالي؟</p>
+
+<h4>السؤال رقم 5: ما السياق الذي يجعل القيمة واضحة لعملائك المستهدفين؟</h4>
+<p>هذا، على الأرجح، أصعب الأسئلة الخمسة حلًّا.</p>
+<p>السياق هو المكان الذي يُعرَف فيه عملك على أنه الحل. المسرح الذي يجب أن تقف عليه أمام عميلك المثالي، لكي يقول: «نعم، هذا بالضبط ما أحتاجه».</p>
+<ul>
+<li>حيث توجد ميزانيات تُصرف على خدمتك؛</li>
+<li>حيث يربطون بوضوح بين ما تقدمه والعائد على الاستثمار (<bdi class="en">ROI</bdi>) الخاص بهم؛</li>
+<li>حيث يشاركونك قيمك.</li>
+</ul>
+<p>إن كنت خبير استراتيجية إيميل، فاذهب حيث يحرّك الإيميل المال بالفعل، مثل شركات <bdi class="en">SaaS</bdi> وصنّاع الكورسات وغيرهم، لا حيث ما زالوا يتجادلون إن كانوا سيستخدمونه أم لا.</p>
+<p>سيبدو هذا بسيطًا بعد أن تحلّه.</p>
+<p>مرّ على الأسئلة. ضع فرضية. اختبرها. انظر إلى ردود الفعل. صحّح المسار واختبر مرة أخرى. حتى يظهر الفائز.</p>
+
+<h2 id="h-what-does-positioning-look-like">كيف يبدو التموضع؟</h2>
+<p>«أُعرِّف [التموضع] بأنه ما يفعله المنتج ولمن هو. كان يمكنني أن أضع <bdi class="en">Dove</bdi> كقطعة منظّف للرجال أصحاب الأيدي المتسخة، لكنني اخترت بدلًا من ذلك أن أضعه كقطعة صابون تجميل للنساء أصحاب البشرة الجافة. وما زال هذا يعمل بعد 25 عامًا». — <bdi class="en">David Ogilvy</bdi>، في الثمانينيات تقريبًا</p>
+<p>عُد إلى وضع المحقق: هذه الفقرة تخبرك بأهم الأشياء عن التموضع، وهي أنه يجب أن يذكر بوضوح من هو العميل المثالي، وما الفئة، وما قيمة المنتج أو فائدته الرئيسية.</p>
+<p>لكنه أيضًا يجب أن يصمد أمام اختبار الزمن. ولهذا يجب أن يكون كبيرًا ويسهل تذكّره.</p>
+
+<h2 id="h-the-formula-the-descriptor-and-the-killer">المعادلة. والجملة الوصفية. والجملة القاتلة.</h2>
+<p>أكثر صيغة ستقابلها هي:</p>
+<p class="formula">لـ [العميل المثالي]، [المنتج] هو [الفئة] الذي [الفائدة الرئيسية / عرض القيمة].</p>
+<p>وبإعادة صياغة ما قاله الأسطورة <bdi class="en">David Ogilvy</bdi>: للنساء أصحاب البشرة الجافة، <bdi class="en">Dove</bdi> هو صابون التجميل. والفائدة الرئيسية ضمنية: إنه ليس مجرد صابون، بل مرطّب أيضًا.</p>
+<p>مثال:</p>
+<p class="formula">للكوبي رايترز والمسوّقين، <bdi class="en">Copyhackers</bdi> هي منصة التعلّم الرقمية لكتابة الكوبي التحويلية.</p>
+<p>لاحظ أن هذه الجملة مبنية على الحقائق. بلا استعارات، وبلا رموز، وبلا دلالات.</p>
+<p>هذا هو المستوى الأول من أي محاولة تموضع: الجملة الوصفية (<bdi class="en">Descriptor</bdi>). س لـ ص، حيث س هي فئة المنتج أو الخدمة، وص هي العميل المثالي.</p>
+<p>لكننا نريد أن تصل جملة التموضع بقوة لكمة في المعدة.</p>
+
+<h3 id="h-and-for-that-it-needs-to-be-as-david-ogilvy-taught-us-big-and-memorable-a-killer">ولهذا يجب أن تكون، كما علّمنا <bdi class="en">David Ogilvy</bdi>، كبيرة ويسهل تذكّرها. جملة قاتلة.</h3>
+<p>لكي تجد جملتك القاتلة، ابحث عن الأدلة الكاشفة. التفاصيل التي تدل على العميل كما تدل البصمة على «المشتبه به». ولا توجد عدسة مكبّرة تعمل مثل اللعبة القديمة الجيدة: «هذا الشيء يشبه ماذا؟».</p>
+<p>في محاولتنا الافتراضية لتموضع <bdi class="en">Copyhackers</bdi>: منصة التعلّم الرقمية تشبه ماذا؟ خصوصًا حين يكون فيها مجتمع مدمج؟ مركز (<bdi class="en">Hub</bdi>)؟ وهذا يحوّل التموضع إلى:</p>
+<p class="formula"><bdi class="en">Copyhackers</bdi> هي مركز تعلّم كتابة الكوبي التحويلية.</p>
+<p>ليست سيئة، رغم أن العميل المثالي صار ضمنيًّا الآن، وقد نخسر المسوّقين بسبب ذلك. هل نستطيع أن نضيف طبقة من دلالة المكانة لنشير فورًا إلى نوع الجودة التي تقدمها <bdi class="en">Copyhackers</bdi>؟ هل نستطيع أن نضيف مكانة أو «حرارة»؟</p>
+<p>ماذا لو لمّحنا إلى أن <bdi class="en">Copyhackers</bdi> هي خيار «جامعات النخبة» (<bdi class="en">Ivy League</bdi>) للكوبي رايترز؟</p>
+<p>لاحظ أنني أبني هنا على افتراض: أن العميل المثالي لـ <bdi class="en">Copyhackers</bdi> يعرف معنى «الجامعة الأم» (<bdi class="en">Alma Mater</bdi>)، ويبحث عن واحدة.</p>
+<p>افتراض كهذا يجب أولًا التحقق منه مع طموحات صاحب البيزنس، وفي مقابلات «المهام المطلوب إنجازها». ولهذا تلك المرحلة شديدة الأهمية، فهي يمكن أن تنقل الحديث إلى سياق محدد جدًا وفعّال جدًا.</p>
+<p>في هذه الحالة، سيصبح التموضع:</p>
+<p class="formula"><bdi class="en">Copyhackers</bdi> هي الجامعة الأم الرقمية لأفضل كتّاب الكوبي التحويلي في العالم.</p>
+<p>أو،</p>
+<p class="formula"><bdi class="en">Copyhackers</bdi> هي الجامعة الأم الرقمية لنجوم كتابة الكوبي التحويلية في العالم.</p>
+<p>(سؤال للتحقق: بماذا تشعر حين تسمّي <bdi class="en">Copyhackers</bdi> جامعتك الأم الرقمية؟ اكتب تعليقًا بالأسفل لتنال جرعة إضافية من حب التموضع الرقمي.)</p>
+<p>هل هي كبيرة؟ نعم.</p>
+<p>هل يسهل تذكّرها؟ نعم.</p>
+<p>ولكي يكون التموضع مضادًا للرصاص، يجب أن يجتاز اختبارًا أخيرًا:</p>
+
+<h3 id="h-can-anyone-else-in-the-market-say-the-same-thing">هل يستطيع أي أحد آخر في السوق أن يقول الشيء نفسه؟</h3>
+<p>هل توجد أي مدرسة كوبي أخرى تستطيع أن تدّعي ما سبق؟ لا.</p>
+<p>هل هي جملة قاتلة؟ سنترك الحكم لـ <bdi class="en">Joanna Wiebe</bdi>. لكنني سأدافع عن أنها مادة قاتلة فعلًا.</p>
+<p>وأنت تحاول الإجابة عن هذا السؤال لنفسك، تذكّر من فضلك: كلما كبر البراند، ارتفعت المخاطر.</p>
+<p>قد يوجد شخص ما يقدّم نوع الكوبي الذي تقدّمه للعميل المثالي نفسه. وربما يتخصص في الشيء الواحد الذي اخترته أنت.</p>
+<p>لكن ما لم تظهر على رادار العملاء أنفسهم، ويحصروا الاختيار بينكما أنتما الاثنين (راجع السؤال رقم 1)، فلا داعي لأن تعيد النظر في تموضعك. استمر في طريق بناء الحضور والمصداقية.</p>
+
+<h2 id="h-positioning-a-business-of-one">تموضع بيزنس يديره شخص واحد</h2>
+<p>لننظر إلى بيزنس يديره شخص واحد يمكننا جميعًا أن نتعلم منه التموضع:</p>
+<p>«<bdi class="en">April Dunford</bdi> خبيرة معترف بها عالميًّا في التموضع واستراتيجية السوق. تساعد <bdi class="en">April</bdi> شركات التكنولوجيا على جعل المنتجات المعقدة سهلة الفهم ومحبوبة لدى العملاء». (كما تقول نبذتها التعريفية في كتاب <bdi class="en">Obviously Awesome</bdi>.)</p>
+<p>الجملة الوصفية:</p>
+<p class="formula"><bdi class="en">April</bdi> خبيرة في التموضع واستراتيجية السوق.</p>
+<p>مع نوع من الصفة المُعدِّلة (<bdi class="en">Modifier</bdi>) التي تحدد مستوى الحديث: «معترف بها عالميًّا». وهذه تضعها فورًا على مسرح بعينه، في علاقة مع عملاء بحجم معيّن: عالمي.</p>
+<p>الفائدة الرئيسية:</p>
+<p>إن عملت مع <bdi class="en">April</bdi>، فالأرجح جدًا أن عملاءك سيفهمون منتجك التقني ويحبونه، حتى لو كان معقدًا. والحب في هذا السياق يعني دائمًا مبيعات. دائمًا.</p>
+<p>خبر عاجل للتشجيع: في البيزنس الذي يديره شخص واحد، التموضع هو أفضل نبذة قصيرة وأفضل تعريف بالنفس. (هذا هو العائد على الاستثمار من قراءة هذا المقال!)</p>
+<p>أول محطة تريد أن تصل إليها هي:</p>
+<p class="formula">[اسمك هنا] هو كوبي رايتر [تخصصك الواحد] لـ [عميلك المثالي].</p>
+<p>ثم، مع نمو خبرتك ومصداقيتك، تركّز أكثر على قيمتك، وتعرّف نفسك بنفسك، وتتحقق. ثم تنتقل إلى مستوى الجملة القاتلة.</p>
+
+<h2 id="h-keep-your-positioning-alive">حافظ على تموضعك حيًّا</h2>
+<ul>
+<li>جمّع وثيقة التموضع: الجملة الوصفية، والجملة القاتلة، والأسئلة الخمسة، وتطويرك المستمر لإجاباتها.</li>
+<li>ضع عليها نجمة في <bdi class="en">Google Drive</bdi>، وأعطها العلامة الحمراء المخصصة لأهم ملفاتك.</li>
+<li>افتح التقويم وحدّد موعدًا متكررًا مدته 60 دقيقة كل 6 أشهر بعنوان «مراجعة وثيقة التموضع».</li>
+<li>خصّص 90 دقيقة هذا الأسبوع لتحديث موقعك، وحساباتك على السوشيال ميديا، وتوقيع الإيميل، ونبذتك القصيرة.</li>
+<li>اكتب خطوات بسيطة حولها: ملف إرشادات يشرح الخطوات التي مررت بها. وفي المراجعة القادمة، ستفتح الوثيقة وتبدأ مباشرة.</li>
+</ul>
+<p>واستعد لتلاحظ عضلات البيزنس الخاص بك وهي تشتد وتنمو. فالنتائج التي تساعد عملاءك على تحقيقها ستشحذ صفتك المُعدِّلة، وتعمّق مصداقيتك، وتوجّهك نحو المكان المحدد جدًا الذي صرت تملكه الآن في عقول عملائك.</p>
+<p>وهذا هو الأصل الحقيقي: تموضع يتراكم أثره مع الوقت.</p>
+</main>
+</body>
+</html>

@@ -1,0 +1,490 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>استراتيجية التمايز</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ألوان وقياسات مقال CXL الأصلي */
+:root{--ink:#1a1a1a;--text:rgba(26,26,26,.94);--red:#d61f2c;--box:#f1f1f1;--line:#cccccc;--bg:#ffffff;--mute:#6b6b6b}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Tajawal",lato,sans-serif;font-size:18px;line-height:1.75}
+a{color:var(--red);text-decoration:none}
+a:hover{text-decoration:underline}
+.topbar{border-bottom:1px solid #eee;background:#fff}
+.topbar .in{max-width:1100px;margin:0 auto;padding:14px 16px;display:flex;align-items:center;gap:28px;font-size:15px}
+.logo{font-family:"Work Sans","Cairo",sans-serif;font-weight:900;color:var(--red);font-size:22px;letter-spacing:.5px;direction:ltr}
+.topbar nav{display:flex;gap:22px;color:var(--ink);flex-wrap:wrap}
+.topbar nav span{white-space:nowrap}
+.wrap{max-width:760px;margin:0 auto;padding:36px 16px 80px}
+h1,h2,h3,h4{font-family:"Cairo","Work Sans",sans-serif;color:var(--ink)}
+h1{font-size:38px;line-height:1.35;font-weight:900;margin:0 0 18px}
+h2{font-size:34px;font-weight:600;line-height:1.45;margin:47px 0 19px}
+h3{font-size:24px;font-weight:600;line-height:1.5;margin:36px 0 12px}
+h4{font-size:19px;font-weight:600;line-height:1.5;margin:28px 0 10px}
+.crumbs{font-size:15px;color:var(--ink);margin-bottom:10px}
+.crumbs a{color:var(--ink)}
+.crumbs span{margin:0 6px;color:#999}
+.byline{font-size:15px;color:var(--text);margin-bottom:14px}
+.byline a{color:var(--red)}
+.pill{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:14px;padding:6px 16px;border-radius:999px;border:2px solid #b31722;margin-bottom:22px}
+.hero{display:block;width:100%;height:auto;margin:0 0 28px}
+.orig{font-size:14px;color:var(--mute);border-top:1px solid #eee;border-bottom:1px solid #eee;padding:8px 0;margin-bottom:24px}
+.orig bdi{direction:ltr}
+p{margin:0 0 18px}
+ul,ol{margin:0 0 20px;padding-right:28px;padding-left:0}
+li{margin-bottom:6px}
+li ul,li ol{margin:6px 0 4px}
+strong{font-weight:700}
+figure{margin:24px 0;text-align:center}
+figure img{max-width:100%;height:auto;display:inline-block}
+figcaption{font-size:16px;margin-top:6px}
+.toc h2{margin-top:30px}
+.toc ul{list-style:disc}
+blockquote{background:var(--ink);color:#fff;border-right:8px solid var(--red);border-left:0;margin:24px 0;padding:16px 40px;font-style:normal}
+blockquote p{margin:0 0 12px;color:#fff}
+blockquote p:last-child{margin-bottom:0}
+blockquote em{font-style:normal;opacity:.75}
+.expert{background:var(--box);border:1px solid var(--line);padding:20px;margin:0 0 20px}
+.expert figure{margin:0 0 6px;text-align:right}
+.expert img{width:150px;height:150px;object-fit:cover}
+.expert p:first-of-type{margin-top:9px}
+.en{direction:ltr;unicode-bidi:isolate;font-family:lato,sans-serif}
+/* عناصر إضافية في هذا المقال: فيديو وجدول */
+.video{position:relative;padding-top:56.25%;margin:24px 0}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+table{width:100%;border-collapse:collapse;font-size:17px;text-align:right}
+th,td{border:1px solid var(--line);padding:10px 12px;vertical-align:top}
+th{background:var(--box);font-family:"Cairo",sans-serif;font-weight:600;color:var(--ink)}
+@media (max-width:600px){h1{font-size:28px}h2{font-size:26px}h3{font-size:21px}blockquote{padding:14px 20px}.topbar nav{display:none}table{font-size:15px}}
+/* rtl-polish v1 */
+html{direction:rtl}
+body{text-align:right}
+p,li,dd,dt,td,th,figcaption,blockquote,h1,h2,h3,h4,h5,h6{text-align:right;letter-spacing:0!important;text-transform:none!important}
+p,li{line-height:1.9;word-spacing:.02em}
+ul,ol{padding-right:1.7em!important;padding-left:0!important}
+li>ul,li>ol{margin-top:.35em}
+table{direction:rtl}
+th,td{text-align:right}
+figure,figcaption{text-align:center}
+bdi.en{unicode-bidi:isolate;direction:ltr}
+.orig a,.orig bdi{overflow-wrap:anywhere}
+pre,code,kbd,samp{direction:ltr;unicode-bidi:isolate;text-align:left}
+img{max-width:100%;height:auto}
+</style>
+</head>
+<body>
+<div dir="rtl" style="padding:10px 16px;border-bottom:1px solid #eee;background:#fff;font:600 14px Tajawal,Arial,sans-serif"><a href="../translations.html" style="color:#2446c7;text-decoration:none">← مكتبة الترجمات العربية</a> <span style="color:#888">·</span> <a href="../index.html" style="color:#2446c7;text-decoration:none">مكتبة الكونتنت</a></div>
+
+<div class="topbar"><div class="in"><span class="logo">CXL</span>
+<nav><span>ورش مباشرة ⌄</span><span>ميني ديجريز ⌄</span><span>كورسات ⌄</span><span>مصادر ⌄</span><span>للفرق</span><span>الأسعار</span></nav></div></div>
+
+<main class="wrap">
+<h1>ما هي استراتيجية التمايز؟</h1>
+<div class="crumbs"><a href="https://cxl.com/">الرئيسية</a><span>›</span><a href="https://cxl.com/blog/">المدونة</a><span>›</span><a href="https://cxl.com/blog/category/business-building/">بناء البيزنس</a><span>›</span></div>
+<div class="byline">بقلم: <a href="https://cxl.com/blog/author/peep-laja/">Peep Laja</a> &<bdi class="en">nbsp</bdi>; نُشر: 19 أبريل 2023 &<bdi class="en">nbsp</bdi>;|&<bdi class="en">nbsp</bdi>; آخر تحديث: 5 نوفمبر 2026</div>
+<span class="pill">تابع الجديد</span>
+<img class="hero" width="1280" height="670" src="https://cxl.com/wp-content/uploads/2022/10/Differentiation-strategy-1280x670.png" alt="استراتيجية التمايز">
+<div class="orig">ترجمة عربية بالمعنى للمقال الأصلي: <a href="https://cxl.com/blog/differentiation-strategy/"><bdi>What is differentiation strategy?</bdi></a></div>
+
+<p>استراتيجية التمايز (<bdi class="en">Differentiation Strategy</bdi>) تعني أن تعطي الناس سببًا واضحًا لاختيارك أنت بدلًا من الخيارات الأخرى التي يفكرون فيها بالفعل. وقد يأتي هذا السبب من المنتج، أو من الجمهور الذي تخدمه، أو من طريقتك في البيع، أو من التجربة التي تقدّمها، أو من البراند، أو من اقتصاديات البيزنس نفسه. لكن إن كان الفرق موجودًا في نصوصك الإعلانية فقط، أو كان بوسع منافس أن ينسخه في الربع القادم، فهو ليس استراتيجية تُذكر.</p>
+<p>لا يبدأ أي بيزنس وهدفه أن يذوب وسط الزحام. ومع ذلك، يظل التميّز عن المنافسين واحدًا من أكبر التحديات التي يواجهها رواد الأعمال والمسوّقون باستمرار.</p>
+<p>أن ترغب في أن تكون مختلفًا عن منافسيك شيء، وأن تحقق ذلك فعلًا شيء آخر. فكيف تفعلها؟ الإجابة في حالات كثيرة تكمن في بناء استراتيجية تمايز فعّالة.</p>
+<p>بعد قراءة هذا المقال ستفهم لماذا تُعد استراتيجية التمايز صعبة إلى هذا الحد، ولماذا تعجز شركات كثيرة عن التمايز بسبب «التشابه» (<bdi class="en">Sameness</bdi>)، وكيف تبني تمايزًا حقيقيًا للبراند وللمنتج.</p>
+<p>التشابه هو الوضع الافتراضي لمعظم الشركات اليوم. لنرَ لماذا.</p>
+<h3><strong>الخلاصة السريعة (<bdi class="en">TL</bdi>;<bdi class="en">DR</bdi>)</strong></h3>
+<ul>
+<li>التمايز يعطي العملاء سببًا واضحًا لاختيارك بدلًا من البدائل. وهو ليس مرادفًا لكتابة جملة تموضع ذكية.</li>
+<li>مزايا المنتج قد تساعدك على البروز، لكن المنافسين يلحقون بك. والتمايز الأقوى غالبًا يأتي من التخصص، أو تجربة العميل، أو البراند، أو اختيار الفئة، أو نموذج بيزنس يصعب نسخه.</li>
+<li>التمايز (<bdi class="en">Differentiation</bdi>) شيء والتفرّد البصري أو التميّز في الذاكرة (<bdi class="en">Distinctiveness</bdi>) شيء آخر. التمايز يجيب عن سؤال «لماذا أختارك؟»، والتفرّد يجيب عن سؤال «هل سأتعرف عليك وأتذكرك؟».</li>
+<li>المنافسة بالسعر تنجح فقط إن كنت قادرًا على أن تظل الأرخص. فإن استطاع المنافسون مجاراة سعرك، فليست لديك ميزة حقيقية.</li>
+<li>تجربة العميل يمكن أن تميّز الشركة، لكن «الخدمة الجيدة» وحدها لا تكفي. فقد وجد <a href="https://business.adobe.com/resources/sdk/the-state-of-customer-experience-in-an-ai-driven-world-b2b.html">بحث <bdi class="en">Adobe</bdi> لعام 2026 عن الـ <bdi class="en">B2B</bdi></a> أن المشترين يتعاملون مع البراندات عبر نحو 14 نقطة تواصل مهمة، ولذلك فإن الاتساق على امتداد الرحلة كلها هو ما يصنع الفرق.</li>
+<li>الأسواق المزدحمة تجعل التمايز الواضح أهم. فقد أحصى <a href="https://chiefmartec.com/2026/05/2026-marketing-technology-landscape-supergraphic-peak-martech-achieved-maybe/">Chiefmartec</a> عدد 15,505 منتجات لتقنيات التسويق (<bdi class="en">Martech</bdi>) في 2026.</li>
+</ul>
+
+<div class="toc"><h2>المحتويات</h2><ul>
+<li><a href="#h-what-is-a-differentiation-strategy">ما هي استراتيجية التمايز؟</a></li>
+<li><a href="#h-why-do-so-many-companies-struggle-to-differentiate">لماذا تعجز شركات كثيرة عن التمايز؟</a></li>
+<li><a href="#h-why-is-differentiation-strategy-so-challenging">لماذا تُعد استراتيجية التمايز صعبة إلى هذا الحد؟</a><ul>
+<li><a href="#h-1-you-can-t-compete-on-features-for-long">1. لا يمكنك المنافسة بالمزايا (لوقت طويل).</a></li>
+<li><a href="#h-2-markets-are-getting-only-more-saturated">2. الأسواق لا تزداد إلا تشبّعًا.</a></li>
+<li><a href="#h-3-over-time-competitors-become-more-similar">3. مع الوقت، يزداد المنافسون تشابهًا.</a></li></ul></li>
+<li><a href="#h-what-actually-makes-a-brand-or-product-different">ما الذي يجعل البراند أو المنتج مختلفًا فعلًا؟</a><ul>
+<li><a href="#h-why-should-someone-buy-from-you">لماذا يشتري أحدهم منك؟</a></li>
+<li><a href="#h-a-differentiating-strategy-based-on-price-is-not-sustainable">استراتيجية التمايز القائمة على السعر لا تدوم.</a></li>
+<li><a href="#h-small-subtle-differences-are-not-enough">الفروق الصغيرة الدقيقة لا تكفي.</a></li>
+<li><a href="#h-it-s-scary-and-difficult-to-be-different">أن تكون مختلفًا أمر مخيف وصعب.</a></li>
+<li><a href="#h-why-radical-differentiation-is-key">لماذا يُعد التمايز الجذري هو المفتاح</a></li></ul></li>
+<li><a href="#h-when-does-a-differentiation-strategy-matter-less">متى تقل أهمية استراتيجية التمايز؟</a><ul>
+<li><a href="#h-differentiation-matters-much-less-if-you-have-a-big-market-share-nbsp">التمايز أقل أهمية بكثير إن كانت حصتك السوقية كبيرة.</a></li>
+<li><a href="#h-familiar-often-beats-differentiated">«المألوف» كثيرًا ما يتفوق على «المختلف».</a></li></ul></li>
+<li><a href="#h-the-8-best-differentiation-strategy-examples">أفضل 8 أمثلة على استراتيجيات التمايز</a><ul>
+<li><a href="#h-1-be-first">1. كن الأول</a></li>
+<li><a href="#h-2-attribute-leadership">2. الريادة في سمة واحدة</a></li>
+<li><a href="#h-3-be-the-preferred-provider">3. كن المزوّد المفضّل</a></li>
+<li><a href="#h-4-heritage">4. الإرث</a></li>
+<li><a href="#h-5-leadership">5. الريادة</a></li>
+<li><a href="#h-6-specialize-for-a-target-market">6. تخصّص في سوق مستهدف</a></li>
+<li><a href="#h-7-make-your-products-in-a-special-way">7. اصنع منتجاتك بطريقة خاصة</a></li>
+<li><a href="#h-8-be-hot">8. كن «الترند»</a></li></ul></li>
+<li><a href="#h-can-customer-experience-be-a-differentiator">هل يمكن أن تكون تجربة العميل عامل تمايز؟</a></li>
+<li><a href="#h-the-benefits-of-a-blue-ocean-strategy">فوائد استراتيجية المحيط الأزرق</a><ul>
+<li><a href="#h-how-blue-ocean-strategy-is-distinct-from-a-differentiation-strategy">كيف تختلف استراتيجية المحيط الأزرق عن استراتيجية التمايز</a></li></ul></li>
+<li><a href="#h-category-creation">صناعة الفئة</a></li>
+<li><a href="#h-brand">البراند</a><ul>
+<li><a href="#h-how-to-be-different-through-branding">كيف تكون مختلفًا من خلال البراندنج</a></li>
+<li><a href="#h-traits-of-successful-commodity-brands">سمات براندات السلع النمطية الناجحة</a></li>
+<li><a href="#h-personal-brands">البراندات الشخصية</a></li></ul></li>
+<li><a href="#h-how-do-you-turn-differentiation-into-a-strategy">كيف تحوّل التمايز إلى استراتيجية؟</a></li>
+<li><a href="#h-faq">أسئلة شائعة</a></li></ul></div>
+
+<h2 id="h-what-is-a-differentiation-strategy">ما هي استراتيجية التمايز؟</h2>
+<p><strong>استراتيجية التمايز هي منهج يجعل البيزنس الخاص بك فريدًا ومختلفًا عن الباقين. وهدفها الأساسي أن تزيد ميزتك التنافسية (<bdi class="en">Competitive Advantage</bdi>) بأن تبرز وسط الضجيج، وتعطي الناس سببًا لاختيار البراند الخاص بك دون غيره.</strong></p>
+<p>قد تظن أن الشركات تهتم بهذا الأمر أشد الاهتمام، لكنها كثيرًا جدًا ما تلجأ إلى استراتيجية عامة لا لون لها.</p>
+<p>وهذا التعريف وثيق الصلة بمفهوم المنافسة في البيزنس، الذي عرّفه أستاذ <bdi class="en">Harvard Business School</bdi> الشهير <bdi class="en">Michael Porter</bdi> بأنه السعي إلى الوصول إلى موقع فريد ومربح في السوق.</p>
+
+<h2 id="h-why-do-so-many-companies-struggle-to-differentiate">لماذا تعجز شركات كثيرة عن التمايز؟</h2>
+<p>السبب في افتقار شركات كثيرة إلى تمايز حقيقي في البراند والمنتج هو <strong>التشابه</strong>.</p>
+<p>والتشابه هو المحصلة المجتمعة لشركات متقاربة جدًا في عروضها، وضعيفة التمايز في <a href="https://cxl.com/institute/online-course/branding/">البراندنج</a>، وباهتة في طريقة تواصلها.</p>
+<p>لغتها عادية بلا نكهة، ومنتجها مثل أي منتج آخر، ورسالتها التسويقية مطابقة لرسالة منافسيها.</p>
+<p>إن زرت مواقع <a href="https://cxl.com/blog/competitive-analysis/">شركات متنافسة</a>، فستجد أن معظمها لا يقدّم أي تمايز ذي معنى. كلها تقول تقريبًا الكلام نفسه. استراتيجية التمايز عندها ضعيفة أو غائبة تمامًا.</p>
+<p>ومعظمها يصوغ <a href="https://cxl.com/blog/value-proposition-examples-how-to-create/">عرض القيمة (<bdi class="en">Value Proposition</bdi>)</a> كأنها الشركة الوحيدة التي تفعل ما تفعله. مثل صفحة الهبوط القديمة لـ <bdi class="en">sendinblue</bdi>.</p>
+<figure><img width="1024" height="576" src="https://cxl.com/wp-content/uploads/2020/06/image4-1024x576.png" alt="لقطة من الصفحة الرئيسية القديمة لـ sendinblue، ونصها: روّج للبراند الخاص بك ونمِّ البيزنس بإيميلات مصممة بشكل جميل"></figure>
+<p>أصبحت <bdi class="en">sendinblue</bdi> الآن <a href="https://www.brevo.com">Brevo</a>، وتحسّن تمايزها.</p>
+<figure><img width="1024" height="477" src="https://cxl.com/wp-content/uploads/2023/11/brevo-screenshot-1024x477.jpg" alt="لقطة من الصفحة الرئيسية لـ Brevo، ونصها: نمِّ إيراداتك مع الـ CRM الأسهل في التعامل، المنصة الشاملة لأتمتة حملاتك التسويقية عبر الإيميل والرسائل النصية وواتساب والشات. انضم إلى 500,000 شركة تثق في Brevo"></figure>
+<p>ما زالت تركز على النمو، لكنها الآن تميّز <bdi class="en">Brevo</bdi> بأنه <em>الـ <bdi class="en">CRM</bdi> الأسهل في التعامل</em>.</p>
+
+<h2 id="h-why-is-differentiation-strategy-so-challenging">لماذا تُعد استراتيجية التمايز صعبة إلى هذا الحد؟</h2>
+<h3 id="h-1-you-can-t-compete-on-features-for-long">1. لا يمكنك المنافسة بالمزايا (لوقت طويل).</h3>
+<p>هل يمكن أن يكون تمايزك في المزايا (<bdi class="en">Features</bdi>)؟</p>
+<p>يبدو أن شركات كثيرة تظن ذلك. فهي تعمل على تحسينات تدريجية بدلًا من التمايز. «لدينا الميزة <bdi class="en">X</bdi> وهم ليست لديهم».</p>
+<p>المشكلة أن أي ميزة مهمة وتلقى رواجًا تُنسخ. يمكنك أن تتباهى بها بضعة أشهر، لكنهم سيلحقون بك. فعندما بدأ <bdi class="en">Instagram</bdi> يفقد بريقه، أطلقت <bdi class="en">Meta</bdi> ببساطة <bdi class="en">Threads</bdi> لتستفيد من بعض أشهر وظائف المحادثة في <bdi class="en">X</bdi> (<bdi class="en">Twitter</bdi> سابقًا).</p>
+<figure><img width="1024" height="683" src="https://cxl.com/wp-content/uploads/2023/11/Threads_screenshots-1024x683.webp" alt=""></figure>
+<p>حتى لو كان لديك شيء مبتكر حقًا، فربما لا تملك أكثر من عامين قبل أن يلحقوا بك. لا بد أن يأتي التمايز من مصادر <em>أخرى</em> غير المزايا. فهم سيلحقون بك دائمًا.</p>
+
+<h4 id="h-the-result-commoditization">والنتيجة؟ التسليع (<bdi class="en">Commoditization</bdi>).</h4>
+<p>انظر إلى أي فئة منتجات ناضجة، وستجدها مليئة بمنتجات متطابقة في جوهرها.</p>
+<p>خذ مثلًا <a href="https://cxl.com/blog/ab-testing-tools/">أدوات اختبارات <bdi class="en">A/B</bdi></a>. أو أدوات <a href="https://cxl.com/blog/heat-maps/">الخرائط الحرارية</a> (تتبّع حركة الماوس). أو أدوات <a href="https://cxl.com/blog/session-replay-videos/">إعادة تشغيل الجلسات</a>. أو أدوات التسويق بالإيميل. كلها متشابهة في المزايا، والفروق بينها طفيفة. ويزداد صعوبة أن تقول كيف تختلف أداة عن غيرها أو تتفوق عليها.</p>
+<p>يسألني الناس طوال الوقت: «ما الفرق بين أداة اختبارات <bdi class="en">A/B</bdi> هذه وتلك؟». وعادةً أجيب: «كلها تقريبًا متشابهة». أنا هنا خبير متمرّس في هذه الفئة، وأستطيع أن أشرح بعض الفروق الأساسية إن أصررت، لكن عبارة «كلها تقريبًا متشابهة» صحيحة بنسبة 98%.</p>
+<blockquote><p>التسليع يزداد في كل فئة. والمزايا التي كانت جديدة يومًا أصبحت الآن الحد الأدنى المتوقع (<bdi class="en">Table Stakes</bdi>).</p></blockquote>
+<p>كل الهواتف الذكية تقريبًا لها شاشات رائعة. لم يكن الأمر كذلك دائمًا، لكنك لم تعد قادرًا فعلًا على بناء ميزة تنافسية أو الحفاظ عليها بالشاشة. ربما تستطيع أن تنافس بعمر البطارية، لكن إن صنعت بطارية أفضل، فلن تركب هذه الموجة إلا لفترة محدودة. سيلحقون بك.</p>
+<figure><img src="https://i.pinimg.com/originals/75/16/bb/7516bbe37f59101976b18a3507d893df.jpg" alt="إعلان قديم لمعجون أسنان"></figure>
+<p>منذ زمن بعيد، كان مصنّعو معجون الأسنان يتنافسون على أبعاد قليلة فقط، مثل «ينعش النفَس» و«يحارب التسوّس». أما اليوم، فقد يتوقع المستهلكون من أرخص معجون بلا اسم أن يزيل الجير، ويقي من أمراض اللثة، ويبيّض الأسنان.</p>
+<p>ما كان جديدًا بالأمس أصبح الحد الأدنى المتوقع اليوم.</p>
+
+<h3 id="h-2-markets-are-getting-only-more-saturated">2. الأسواق لا تزداد إلا تشبّعًا.</h3>
+<p>لم يسبق أن وُجد هذا العدد الهائل من البراندات. ولم تكن عوائق الدخول لبدء بيزنس جديد أقل مما هي عليه الآن.</p>
+<p>هناك الحرس القديم، وهناك الوافدون الجدد، أو ما يُسمّى «البراندات المتحدّية» (<bdi class="en">Challenger Brands</bdi>). وما الذي تراه البراندات المتحدّية أكبر تهديد لها؟ تشبّع السوق.</p>
+<p>يدير <bdi class="en">Scott Brinker</bdi> مشروع <a href="https://chiefmartec.com/2023/05/2023-marketing-technology-landscape-supergraphic-11038-solutions-searchable-on-martechmap-com/">خريطة تقنيات التسويق</a>. وفي أكثر من عشر سنوات، نمت هذه الخريطة بأكثر من 7,000%. هناك أكثر من 11,000 أداة لتقنيات التسويق.</p>
+<figure><img width="1024" height="575" src="https://cxl.com/wp-content/uploads/2023/11/martech-landscape-2011-2023-1456px-1024x575.jpg" alt=""></figure>
+<p>تريد أن يختار أحدهم أداتك المقلَّدة؟ الاحتمالات ضدك بشدة. ما يبرز هو ما يُختار.</p>
+
+<h3 id="h-3-over-time-competitors-become-more-similar">3. مع الوقت، يزداد المنافسون تشابهًا.</h3>
+<p>كلما زادت المنافسة، وجب أن يزداد الالتزام باستراتيجية تمايز قوية.</p>
+<p>لكن العكس هو ما يحدث في الغالب.</p>
+<p>المقارنة المستمرة وقياس النفس على الآخرين (<bdi class="en">Benchmarking</bdi>) يقودان إلى الامتثال، فيقل التمايز بين المنافسين مع الوقت.</p>
+<p>ومع تكاثر المنتجات داخل الفئة الواحدة، تصبح الفروق بين المنافسين تافهة أكثر فأكثر، إلى حد يقترب من السخف.</p>
+<p>إن أردت أن ترى التشابه على أرض الواقع، فانظر إلى الفنادق. كل فندق تقريبًا يعطيك الشامبو واللوشن وبعض أدوات النظافة الأخرى (غطاء استحمام؟!) مجانًا، لكن لا معجون أسنان ولا فرشاة.</p>
+<p>كيف حدث هذا؟ لأنهم جميعًا ينسخون بعضهم بعضًا.</p>
+<blockquote><p>معظم ما فعلته نسخته من شخص آخر.</p><p><em><bdi class="en">Sam Walton</bdi>، مؤسس <bdi class="en">Walmart</bdi></em></p></blockquote>
+<p>الفنادق تنظّف غرفتك وتغيّر الملاءات كل يوم. لماذا هذا هو الوضع الافتراضي في كل فندق <em>تقريبًا</em>؟ لماذا لا يكون «الاختيار» هو الافتراضي؟</p>
+<p><strong>لأنك تصبح مثل منافسيك مع مرور الوقت.</strong></p>
+<p>قد تقول إن الناس <em>يتوقعون</em> شامبو مجانيًا، وقد تكون محقًا. لكن تلبية التوقعات مجرد حد أدنى. عليك أن تلبّيها <em>وأن</em> تتجاوزها بكثير لتتجنب فخ التشابه، أو أن تقدّم رؤية مختلفة تمامًا لها.</p>
+<p>وتجد الأمر نفسه في البرمجيات. منافسك لديه الميزة <bdi class="en">X</bdi>، إذن أنت تحتاج الميزة <bdi class="en">X</bdi>. أنت تبني <bdi class="en">Y</bdi>، فيبنون هم <bdi class="en">Y</bdi>.</p>
+<p>لو انطلقت غدًا 10 شركات ناشئة تعمل في المساحة نفسها بالضبط، لكن دون أن يرى أي منها ما يفعله الآخرون، فماذا سيحدث؟ أراهن أننا سنرى شركات مختلفة اختلافًا جامحًا.</p>
+<p>وللأسف، تركّز الشركات على المنافسين أكثر من اللازم، ولا تمنح التفكير الأصيل في أفضل طريقة لخدمة المستخدم ما يستحقه.</p>
+
+<h4 id="h-one-of-the-hardest-things-to-do-is-be-original-nbsp">من أصعب الأشياء أن تكون أصيلًا.</h4>
+<blockquote><p>إن كنت لا تقرأ إلا ما يقرؤه الجميع، فالأرجح أنك لن تفكر إلا فيما يفكر فيه الجميع.</p><p><em>Haruki Murakami</em></p></blockquote>
+<p>النسخ سهل، والأصالة صعبة. ببساطة، أن تكون مقلِّدًا أسهل بكثير.</p>
+<p>صناعة شيء يعرف الناس مسبقًا أنهم يريدونه تبدو فكرة ذكية وسهلة التنفيذ، ولهذا يتجه إليها كثيرون.</p>
+<p>وما يغفلون عنه غالبًا في هذه العملية هو التفكير في الآثار من الدرجة الثانية، أي أنهم سينتهون بشيء يشبه تمامًا كل ما هو موجود بالفعل.</p>
+<p>ولهذا تتطابق تقريبًا معظم <a href="https://cxl.com/blog/messaging-strategy/">رسائل البراندات</a>. فبدلًا من بذل الجهد الشاق في <a href="https://cxl.com/blog/qualitative-research-guide/">جمع الرؤى من العملاء</a> واكتشاف المواقع الشاغرة في السوق، تنظر الشركات إلى منافسيها لتعرف أين تتجه. لا تجلس لتفكر في كيف تميّز نفسها وتبني استراتيجية تمايز حقيقية.</p>
+<p>التفكير الأصيل صعب، ولذلك يستخدم المسوّقون رسائل رأوها من قبل. وغالبًا ما يختارون البديهي، مثل التسويق بالإيميل «سهل الاستخدام». بل إنهم في بعض الحالات لا يكلّفون أنفسهم عناء توضيح لمن هذا المنتج أصلًا.</p>
+<figure><img width="1024" height="576" src="https://cxl.com/wp-content/uploads/2020/06/image2-1024x576.png" alt="عنوان صفحة رئيسية يستهدف الجميع"></figure>
+<p>بالتأكيد يريد الناس ذلك من حيث المبدأ. لكن إن نزلت إلى السوق بهذه الرسالة، فلن تصل إلى أي مكان.</p>
+<p>أن تكون أصيلًا يعني أن تبذل الجهد الشاق في التفكير بنفسك.</p>
+
+<h2 id="h-what-actually-makes-a-brand-or-product-different">ما الذي يجعل البراند أو المنتج مختلفًا فعلًا؟</h2>
+<p>الفرق لا يهم إلا إذا لاحظه العملاء، واهتموا به، واعتمدوا عليه عند قرار الشراء. ولا يكفي أن تكون مختلفًا قليلًا. يجب أن يكون التمايز كبيرًا بما يكفي ليُميل القرار لصالحك.</p>
+<p>إضافة كلمات مثل «قوي ومتين» إلى وصف برنامج التسويق بالإيميل الخاص بك لن تفعل الكثير.</p>
+<figure><img width="1024" height="576" src="https://cxl.com/wp-content/uploads/2020/06/image6-1024x576.png" alt="مثال لعنوان يحاول التمايز باستخدام صفة"></figure>
+<p>عليك أن تكون مختلفًا <em>حقًا</em>. وهذا ينطوي على مخاطرة، وتغيير، ومغامرة في المجهول.</p>
+
+<h3 id="h-why-should-someone-buy-from-you">لماذا يشتري أحدهم منك؟</h3>
+<p>أسهل طريقة للتفكير في التمايز هي أن تفكر في إعطاء الناس سببًا لاختيارك دون غيرك. وهذا ما يُفترض أن يفعله عرض القيمة الفريد، أو <a href="https://cxl.com/blog/unique-selling-proposition-examples/">عرض البيع الفريد (<bdi class="en">Unique Selling Proposition</bdi> أو <bdi class="en">USP</bdi>)</a>، أليس كذلك؟</p>
+<p>ظهرت عروض البيع الفريدة في الأربعينيات، وصُممت لإعلانات التلفزيون. في ذلك الوقت كان من السهل أن يكون لديك عرض فريد، لأن المنتجات لم تكن كثيرة. وكان إطلاق ادعاءات «لا مثيل لنا» أمرًا سهلًا. وقد تغيّر الوضع جذريًا منذ ذلك الحين.</p>
+<p>قبل ثورة الجودة، كان شراء منتجات رديئة أمرًا واقعًا: مصابيح وأجهزة تلفزيون وراديو لا تعمل أو تتعطل خلال أسابيع. هذا لا يُتخيَّل اليوم. تسعة وتسعون بالمائة من المنتجات، حتى من براندات مجهولة، تعمل وكفى. نحن نفترض مستوى معينًا من الجودة.</p>
+<figure><img width="610" height="793" src="https://www.adbranch.com/wp-content/uploads/ford_the_greatest_engine_in_the_low_price_field_1940-610x793.jpg" alt=""></figure>
+<p>الحجج الأساسية القديمة مثل «أرخص» و«أسرع» و«أقوى» و«يدوم أطول» وما شابهها، أصبحت الآن حدًا أدنى متوقعًا. نحن نتوقع أن تدوم الأشياء طويلًا، وأن يكون الدعم سريعًا، وأن تكون الخدمة مهذبة.</p>
+<p>وإن لجأت إلى صيغة التفضيل المطلق، كأن تقول الأسرع والأسهل وغيرها، فلن يصدّقك الناس ببساطة. الادعاءات الاستثنائية تحتاج إلى أدلة استثنائية.</p>
+<p>إن كنت تبيع منتجك بحجج الحد الأدنى المتوقع، أو تعرضه كأنك الوحيد في الساحة، فعليك أن تعيد التفكير في استراتيجية التمايز الخاصة بك.</p>
+
+<h3 id="h-a-differentiating-strategy-based-on-price-is-not-sustainable">استراتيجية التمايز القائمة على السعر لا تدوم.</h3>
+<p>يمكنك أن تبدأ بتقديم <a href="https://cxl.com/blog/should-i-lower-my-prices/">أقل سعر</a> كميزة تنافسية، لكن هذا في أحيان كثيرة لا يدوم ببساطة. إن جعلت السعر هو السبب الرئيسي لاختيارك، فأنت تلعب لعبة خاسرة، لأن أي أحد يستطيع أن يخفض السعر. سيوجد من هو أرخص منك، <em>وسيحدث هذا حتمًا</em>.</p>
+<p>والأرجح أنك ستحتاج في النهاية إلى التوجه نحو الشرائح الأعلى من السوق، لأنك تحتاج إلى هوامش ربح تموّل نموك وتمكّنك من توظيف أشخاص أفضل.</p>
+<p>استخدمت <bdi class="en">Walmart</bdi> و<bdi class="en">Southwest</bdi> السعر للتمايز، لكنهما تملكان ميزة هيكلية تسمح لهما بالاستمرار في ذلك. أما خفض الأسعار فجنون إن كان المنافسون قادرين على النزول إلى المستوى نفسه.</p>
+
+<h3 id="h-small-subtle-differences-are-not-enough">الفروق الصغيرة الدقيقة لا تكفي.</h3>
+<p>بعض الناس جدد على فئة منتجاتك. وآخرون خبراء يعرفون هذه الفئة معرفة وثيقة. ومعظم الناس من فئة المبتدئين.</p>
+<p>حيث يرى الخبير المتمرّس فروقًا، يرى المبتدئ أوجه تشابه. والخبير يعرف أيضًا أين يبحث عن هذه الفروق، أما المبتدئ فتنقصه الخبرة والمعايير اللازمة لاكتشاف هذه الفروق الطفيفة أو تقييمها.</p>
+<p>وهذا يعني أن تكون مختلفًا قليلًا فقط ليس كافيًا (على الأقل ليس عندما تحاول زيادة الوعي، وبناء ولاء للبراند، وكسب حصة سوقية).</p>
+
+<h3 id="h-it-s-scary-and-difficult-to-be-different">أن تكون مختلفًا أمر مخيف وصعب.</h3>
+<p>من المغري أن تكون شركة آمنة ومملة. فاستراتيجية التسويق الآمنة والمملة تُخرج أعمالًا آمنة ومملة. لا تزعج أحدًا، ولذلك فهي بمنأى عن النقد.</p>
+<p>لن تبرز، لكنك أيضًا لن تتلقى الضربات. لن ينتقدك أحد. أنت مثل الجميع تمامًا.</p>
+<p>والمشكلة طبعًا أن أحدًا لن يهتم بك أيضًا. إن كنت شركة قديمة راسخة وجيوبك عميقة، فقد تفلت بهذا. أما إن كنت وافدًا جديدًا يسعى إلى النمو، فلن يفيدك.</p>
+<p>نعم، بعض الناس يفضلون الشراء من شركات مملة، لكن لديهم واحدة بالفعل، وهم لا يبحثون عنك.</p>
+
+<h3 id="h-why-radical-differentiation-is-key">لماذا يُعد التمايز الجذري هو المفتاح</h3>
+<p>عندما يتعلق الأمر بالتمايز، فإن الشركات لا تمانع أن تكون مختلفة. الصعب هو أن تكون مختلفة <em>جذريًا</em>.</p>
+<p>الاختلاف الجذري ليس خيارًا آمنًا. ويراه معظم الناس مخاطرة كبيرة. ومن الصعب توقع كيف ستسير الأمور.</p>
+<p>ولن تخبرك أبحاث المستهلكين بالكثير عنه، لأن الناس في <a href="https://cxl.com/blog/customer-interviews/">المقابلات</a> يفضّلون الخيارات التي يعرفونها ورأوها من قبل. يريدون الأفضل والمحسَّن قليلًا. والأفكار المبتكرة تحصل على نتائج ضعيفة في مجموعات التركيز (<bdi class="en">Focus Groups</bdi>) و<a href="https://cxl.com/conversion-optimization//learning-from-customers-qualitative-surveys/">استبيانات المستخدمين</a>.</p>
+<p>تقديم شيء جديد مجال تحتاج فيه إلى الاعتماد على الخيال والجرأة. انتبه إلى «<a href="https://cxl.com/blog/customer-interviews/#h-3-how-to-run-jobs-to-be-done-interviews-to-gather-voc-data">المهام المطلوب إنجازها (<bdi class="en">Jobs to Be Done</bdi>)</a>»، أي الأهداف النهائية للمستخدم. ولا تنظر إلى المنافسين لتعرف كيف تحققها، وإلا ستحصل على مزيد من التشابه.</p>
+
+<h2 id="h-when-does-a-differentiation-strategy-matter-less">متى تقل أهمية استراتيجية التمايز؟</h2>
+<p>تقل أهمية التمايز عندما يكون لدى البراند بالفعل ما يكفي من الوعي والانتشار والألفة ليدخل دائرة الاعتبار دون أن يحتاج إلى إعطاء المشترين سببًا مختلفًا جذريًا لاختياره.</p>
+<p>لكن الأبحاث الحديثة تجعل الدفاع عن هذا الرأي أصعب.</p>
+<p>فقد وجدت <a href="https://business.google.com/uk/think/consumer-insights/differentiation-dividend/">دراسة أجرتها <bdi class="en">Google</bdi> و<bdi class="en">Kantar</bdi> عام 2025</a> أن التمايز مسؤول عن 57% من النمو المستقبلي لشركات التجزئة. كان للحضور في الذهن (<bdi class="en">Salience</bdi>) أثر أكبر على المدى القصير، لكن التمايز كان المحرّك الأقوى على المدى الطويل.</p>
+<p>بعبارة أخرى، الألفة قد تُدخلك دائرة الاعتبار (<bdi class="en">Consideration Set</bdi>)، لكنها لا تعطي الناس بالضرورة سببًا لاختيارك بعد أن تصل إليها.</p>
+<p>وهذا التمييز مهم. فالبراندات الكبيرة تستطيع أن تعتمد أكثر على الوعي والانتشار وعادات الشراء القائمة، أما البراندات الأصغر فعادةً ما يتعين عليها أن تبذل جهدًا أكبر لتبرز.</p>
+<p>لكن حتى البراندات الراسخة تحتاج إلى شيء يربطه العملاء بها ولا يملكه المنافسون بالقوة نفسها.</p>
+<p>إذن قد تقل أهمية التمايز عندما يحمل الوعي جزءًا من العبء الثقيل بالفعل. لكنه لا يفقد أهميته كليًا.</p>
+
+<h3 id="h-differentiation-matters-much-less-if-you-have-a-big-market-share-nbsp">التمايز أقل أهمية بكثير إن كانت حصتك السوقية كبيرة.</h3>
+<p>إن كنت بالفعل براندًا راسخًا ومعروفًا في فئة ناضجة، فالتمايز أقل إلحاحًا.</p>
+<p><bdi class="en">Nike</bdi> مقابل <bdi class="en">Adidas</bdi> مقابل <bdi class="en">New Balance</bdi>. الفروق كلها فروق براند. ولا يستطيع أن يشير إلى فروق وظيفية بين الأحذية إلا الخبراء المتمرسون في الفئة.</p>
+<p><bdi class="en">Mailchimp</bdi> هو رقم واحد في التسويق بالإيميل. لا يحتاج أن يكون مختلفًا؛ الآخرون هم من يحتاجون أن يكونوا مختلفين عن <bdi class="en">Mailchimp</bdi>. مجرد معرفة الناس بوجوده هو كل شيء.</p>
+
+<h3 id="h-familiar-often-beats-differentiated">«المألوف» كثيرًا ما يتفوق على «المختلف».</h3>
+<p>دائرة الاعتبار لدى الناس محدودة جدًا. وجزء كبير مما يجب أن يحققه التسويق هو أن يُدخلك إلى دائرة الاعتبار الصغيرة، بل الضئيلة، لدى المشترين.</p>
+<p>هناك مئات من أدوات التسويق بالإيميل، ومع ذلك لا يفكر معظم الناس إلا في <bdi class="en">MailChimp</bdi> وثلاثة أو أربعة من كبار المزوّدين الآخرين. بل إن <bdi class="en">Mailchimp</bdi> يُرشَّح من أشخاص لم يستخدموه قط، لأنه رقم واحد. الناس يعرفون اسمه.</p>
+
+<h4 id="h-it-s-hard-to-get-noticed">من الصعب أن تلفت الانتباه.</h4>
+<p>وهذا يعني أن <a href="https://cxl.com/blog/brand-awareness-marketing/">وصول البراند والوعي به</a> عنصر حاسم. لكن إن كان الناس يرونك «مثل الباقين تقريبًا»، فالمعركة شاقة. إن كنت وافدًا جديدًا في التسويق بالإيميل بلا تمايز يُذكر عن <bdi class="en">Mailchimp</bdi>، فمن الصعب للغاية أن تنجح (إلا إذا كان لديك مال كثير تنفقه، وحتى هذا على الأرجح لن ينقذك).</p>
+<p>يمكنك أن تفلت بالتشابه في فئة مشتتة وحديثة. لكن مع الوقت، سيبرز صاحب المال الأكثر (أو من يكسب الحصة السوقية الأكبر) قائدًا للفئة، ويتموضع بهذه الصفة في أذهان المستهلكين. وإن كنت نسخة منه تمامًا، فسيعيق ذلك نموك.</p>
+<p>الأفضل أن تختار <a href="https://cxl.com/blog/market-positioning/">تموضعًا (<bdi class="en">Positioning</bdi>)</a> محددًا منذ البداية وتلعب لتفوز بتلك الفئة. <bdi class="en">ConvertKit</bdi> يقدّم نفسه بأنه «من صنّاع المحتوى، لصنّاع المحتوى»، وقد حقق نموًا كبيرًا حتى صار رقم واحد في هذا السوق.</p>
+<figure><img width="1024" height="513" src="https://cxl.com/wp-content/uploads/2023/11/convertkit-screenshot-1024x513.png" alt="لقطة من الصفحة الرئيسية لـ ConvertKit، ونصها: نمِّ جمهورك ودخلك أسرع. انضم إلى أكثر من 600 ألف صانع محتوى ينمّون جمهورهم ويحققون منه دخلًا بمنصة صُنعت لصنّاع المحتوى، على يد صنّاع المحتوى"></figure>
+
+<h4 id="h-market-share-is-more-important-than-being-different">الحصة السوقية أهم من أن تكون مختلفًا.</h4>
+<p>انتشار البراند في السوق و<a href="https://cxl.com/blog/brand-tracking/">شعبيته</a> يسهمان بقدر كبير في أن يحبه الناس ويظنوا أنه جيد.</p>
+<p>عندما تطلب من الناس أن يرشّحوا لك أداة، فستسمع حتمًا أكبر الأسماء وأشهرها في الفئة، وليس بالضرورة تلك التي تحصل على أعلى الدرجات في جدول مقارنة. (فمعظم الناس يكتفون بأول خيار مُرضٍ على أي حال، ولا يجرون مقارنات وتحليلات تفصيلية، فهذا جهد أكبر من اللازم.)</p>
+<p>كثيرًا ما يرشّح الناس أدوات <em>لم</em> يستخدموها قط، لكنهم يرونها طوال الوقت (مثل <bdi class="en">Salesforce</bdi> و<bdi class="en">Intercom</bdi> و<bdi class="en">Hubspot</bdi> و<bdi class="en">Drift</bdi> و<bdi class="en">Optimizely</bdi> وغيرها).</p>
+<p>أضحك في كل مرة أرى فيها محادثة على <bdi class="en">Twitter</bdi> يرشّح فيها فريلانسر لفريلانسر آخر أن يستخدم <bdi class="en">Optimizely</bdi> في مدونته لاختبارات <bdi class="en">A/B</bdi>. هؤلاء لا يملكون أدنى فكرة عن كيفية عمل <a href="https://cxl.com/blog/ab-testing-guide//">اختبارات <bdi class="en">A/B</bdi></a>، ولا عن أحجام العينات التي يحتاجونها، ولا أن <bdi class="en">Optimizely</bdi> يكلّف نحو 150,000 دولار في السنة. لكنهم <em>سمعوا</em> به، فيرشّحونه.</p>
+<p>كسب الحصة السوقية هو أفضل ما يمكن أن يفعله البراند لمؤشرات الولاء، وللتسويق الشفهي (<bdi class="en">Word of Mouth</bdi>)، ولدخول دائرة الاعتبار لدى المشترين.</p>
+<p>كلما عرف مزيد من الناس بوجودك، أحبك مزيد من الناس. وكلما زادت شعبيتك، زادت شعبيتك أكثر.</p>
+<p>والتمايز ذو المعنى، الذي يستطيع الناس أن يعبّروا عنه بسهولة، يقطع شوطًا طويلًا عندما تكون ما زلت في حاجة إلى اقتطاع نصيبك من الكعكة.</p>
+
+<h2 id="h-the-8-best-differentiation-strategy-examples">أفضل 8 أمثلة على استراتيجيات التمايز</h2>
+<p>توضح الأمثلة التالية ثمانية طرق شائعة، من امتلاك سمة واحدة أو التخصص في جمهور واحد، إلى استخدام الإرث أو طريقة التصنيع أو الريادة أو الزخم.</p>
+<figure><div class="video"><iframe src="https://www.youtube.com/embed/I1X6kjptwWM?feature=oembed" title="فيديو يوتيوب" allowfullscreen loading="lazy"></iframe></div></figure>
+<p>يقدّم كتاب التسويق الكلاسيكي <a href="https://www.amazon.com/Differentiate-Die-Survival-Killer-Competition-ebook/dp/B000U5I6QU"><em>Differentiate or Die</em></a> أفكارًا لثمانية أنواع من استراتيجيات التمايز (والتعليقات من عندي):</p>
+
+<h3 id="h-1-be-first"><strong>1. كن الأول</strong></h3>
+<p>أن تدخل إلى الذهن بفكرة أو منتج أو فائدة جديدة ميزة هائلة: <a href="https://cxl.com/blog/brand-owned-terms/"><bdi class="en">HubSpot</bdi> والتسويق الجاذب (<bdi class="en">Inbound Marketing</bdi>)</a>؛ و<bdi class="en">Coca-Cola</bdi>، «الأصلية».</p>
+<p>طبعًا، أن تكون الأول شيء، وأن تظل الأول شيء آخر. فالبقاء في القمة بمنتج أو فكرة جديدة يحتاج إلى عمل شاق وطاقة هائلة. والابتكار المستمر ضرورة.</p>
+
+<h3 id="h-2-attribute-leadership"><strong>2. الريادة في سمة واحدة</strong></h3>
+<p>وهي أن تضاعف رهانك على سمة واحدة، فتُعرف بأنك الأفضل في جانب واحد أو حالة استخدام واحدة. فعلتها <bdi class="en">Zappos</bdi> بخدمة العملاء. واستخدمت <bdi class="en">WP Engine</bdi> السرعة. و<a href="https://wynter.com">Wynter</a> هي أداة أبحاث الرسائل التسويقية الوحيدة.</p>
+<figure><img width="1024" height="539" src="https://cxl.com/wp-content/uploads/2021/06/wynter-home-june-15-1-1024x539.jpg" alt="الصفحة الرئيسية لـ Wynter"></figure>
+<p>لا يمكنك أن تمتلك السمة أو الموقع نفسه الذي يمتلكه منافسك؛ عليك أن تبحث عن سمة أخرى. لا تلعب لعبة قادة الفئة. ابحث عن سمة معاكسة تسمح لك بأن تلعب في مواجهة القائد.</p>
+<p>ومن الواضح أن بعض السمات أهم لدى العملاء من غيرها. وعليك أن تحاول امتلاك السمة الأهم.</p>
+
+<h3 id="h-3-be-the-preferred-provider"><strong>3. كن المزوّد المفضّل</strong></h3>
+<p>هذا هو نوع التمايز على طريقة «عدد أكبر من الأطباء يدخنون <bdi class="en">Camel</bdi>» و«معجون الأسنان الذي يوصي به أطباء الأسنان». وتستخدم <bdi class="en">Tylenol</bdi> عبارة «البراند رقم 1 الذي يوصي به الأطباء» منذ عقود.</p>
+<figure><img width="780" height="1024" src="https://cxl.com/wp-content/uploads/2021/02/camels_doctors_choice-780x1024.jpg" alt="إعلان سجائر Camel"><figcaption>(<a href="http://tobacco.stanford.edu/tobacco_web/images/tobacco_ads/doctors_smoking/more_doctors_smoke_camels/large/camels_doctors_choice.jpg">مصدر الصورة</a>)</figcaption></figure>
+<p>هل يمكنك أن تصبح الأداة أو الخدمة المفضلة لشريحة سوقية مؤثرة بشكل خاص؟</p>
+
+<h3 id="h-4-heritage"><strong>4. الإرث</strong></h3>
+<p>للتاريخ قدرة على تمييز منتجك. وقد يكون قوة طاغية، لأن هناك أهمية نفسية طبيعية لامتلاك تاريخ طويل، تجعل الناس مطمئنين إلى اختياراتهم.</p>
+<p><bdi class="en">Levi’s</bdi> بنت أمريكا. وكانت <bdi class="en">Red Wing Shoes</bdi> المورّد الرئيسي للجيش الأمريكي في الحربين العالميتين. والبيتزا «التي تشبه بيتزا جدتك» أصلها من صقلية.</p>
+
+<h3 id="h-5-leadership"><strong>5. الريادة</strong></h3>
+<p>رغم أن الناس يحبون الطرف الأضعف، فإنهم عادةً يراهنون على الفائزين. المستهلكون يحبون القائد. ويبدو اختيار <bdi class="en">Optimizely</bdi> أكثر أمانًا من اختيار أداة اختبارات <bdi class="en">A/B</bdi> أصغر. ففي النهاية <bdi class="en">Optimizely</bdi> هو القائد، ولا بد أن لذلك سببًا!</p>
+<p>أحيانًا لا يعرف الناس أنك القائد، فتأكد من أنهم يعرفون. ربما أنت الأول في المبيعات. أو ربما لديك أعلى تقييم لرضا العملاء، أو أفضل سجل إنجازات، أو أنك رائد في جانب معين أو في شريحة سوقية محددة.</p>
+<p>وأيًّا كان مقياس الريادة بالضبط، فإن أي ادعاء من هذا النوع يجب أن يكون محددًا وذا مصداقية.</p>
+
+<h3 id="h-6-specialize-for-a-target-market"><strong>6. تخصّص في سوق مستهدف</strong></h3>
+<p>التركيز على مستخدم مستهدف واحد أو حالة استخدام واحدة سيجعلك متخصصًا، ويميّزك عن كثير من الشركات العامة. فالناس يرون أن هذه الشركات تملك معرفة أو خبرة أو فهمًا أكبر لمجالهم، وهذا يعطي العملاء سببًا لاختيارها.</p>
+<p><a href="https://paperbell.com/">Paperbell</a> ليس مجرد برنامج لجدولة المواعيد والفوترة، بل هو برنامج جدولة <em>للكوتشز</em>. و<a href="https://pilot.co/">Pilot</a> نظام رواتب <em>للموظفين الدوليين</em> (ما يميّزه عن <bdi class="en">Gusto</bdi> أو <bdi class="en">ADP</bdi>).</p>
+<p><bdi class="en">USAA</bdi> شركة خدمات مالية ذائعة الصيت ومتخصصة (في العسكريين)، تملك أصولًا بقيمة 155 مليار دولار، وإيرادات بقيمة 30 مليار دولار، وأرباحًا بقيمة 2.5 مليار دولار، من قاعدة مستهلكين لا تتجاوز 12.4 مليون.</p>
+
+<h3 id="h-7-make-your-products-in-a-special-way"><strong>7. اصنع منتجاتك بطريقة خاصة</strong></h3>
+<p>التركيز على تصميم أو تقنية فريدة يمكن أن يساعد على تمييز منتجك في السوق. وقد يكون ذلك مكوّنًا سريًا أو منهجية تحمل اسمًا خاصًا. ولا يهم إن كان أحد يفهمها، ما دامت تبدو مبهرة وذات مصداقية.</p>
+<p>حقق <bdi class="en">CoolSculpting</bdi> من <bdi class="en">Allergan</bdi> نجاحًا ضخمًا لبضع سنوات. هل فهم الناس حقًا كيف يعمل (غير أنه «يجمّد الدهون ويذيبها»)؟ لا. وهل كان ذلك مهمًا؟ لا.</p>
+<figure><img width="1024" height="338" src="https://cxl.com/wp-content/uploads/2020/06/image-4-1024x338.png" alt="شرح لطريقة عمل CoolSculpting"></figure>
+
+<h3 id="h-8-be-hot"><strong>8. كن «الترند»</strong></h3>
+<p>هذا يعني أن تنفخ في بوقك بنفسك. إنها استراتيجية <bdi class="en">Kim Kardashian</bdi>: أنت مشهور لأنك مشهور.</p>
+<p>كان <bdi class="en">Zoom</bdi> أكثر الأشياء رواجًا عندما تحوّل الجميع إلى العمل من البيت. كان يمكن أن يكون <bdi class="en">Skype</bdi>، أو <bdi class="en">Google Meet</bdi>، أو <bdi class="en">GoToMeeting</bdi>، أو أي أحد. لكن <bdi class="en">Zoom</bdi> هو الذي صار الترند. وقاد ذلك إلى رواج أكبر <em>بكثير</em>.</p>
+<p><a href="https://www.notion.so/">Notion</a> يغزو العالم. و<a href="https://roamresearch.com/">Roam Research</a> لديه أتباع كأنهم طائفة. الزخم يعطي العملاء سببًا لاختيارك.</p>
+<p>أن تكون رائجًا أو أن تحقق نموًا هائلًا يمكن أن يرفع منتجك أو شركتك إلى ارتفاع ما؛ وبمجرد أن تصل إلى هناك، يمكنك أن تبحث عن شيء آخر يبقيك محلّقًا.</p>
+
+<h2 id="h-can-customer-experience-be-a-differentiator">هل يمكن أن تكون تجربة العميل عامل تمايز؟</h2>
+<p>يمكن أن تكون تجربة العميل (<bdi class="en">Customer Experience</bdi>) عامل تمايز، لكن بشرط أن يستطيع العملاء أن يلمسوا أنها أفضل مما يحصلون عليه في أماكن أخرى. وتجربة العميل هي الطريقة التي يرى بها العملاء تعاملاتهم مع شركتك. ويمكن أن تكون قوة دافعة هائلة للتمايز بين الشركات، أي عامل تمايز حقيقيًا.</p>
+<p>معظم الشركات تركّز على اكتساب العملاء، لا على تقديم أفضل تجربة. فهي تنفق على إدخال العميل من الباب أكثر <em>بكثير</em> مما تنفقه على الاحتفاظ به وإسعاده. الجميع يحسب تكلفة اكتساب العميل (<bdi class="en">CAC</bdi>) والقيمة الدائمة للعميل (<bdi class="en">LTV</bdi>)، لكن ماذا عن تكلفة الاحتفاظ بالعميل (<bdi class="en">CKC</bdi>)؟</p>
+<p>التميّز بتجربة عميل أفضل ثمرة قريبة نسبيًا كاستراتيجية للتمايز، لأن المستوى العام منخفض جدًا.</p>
+<p>إن أردت أن تتعلم المزيد عن هذا الموضوع، فأنصحك بشدة بكتاب <a href="https://www.amazon.com/Never-Lose-Customer-Again-Lifelong/dp/0735220034"><em>Never Lose a Customer Again</em></a>، الذي يعرض إطار عمل رائعًا.</p>
+
+<h2 id="h-the-benefits-of-a-blue-ocean-strategy">فوائد استراتيجية المحيط الأزرق</h2>
+<p>استراتيجية المحيط الأزرق (<bdi class="en">Blue Ocean Strategy</bdi>) مفهوم شهير يتناول في جوهره المشكلة نفسها تمامًا. وقد نشأ من دراسة استمرت أكثر من 10 سنوات، وحللت نجاحات الشركات وإخفاقاتها في أكثر من 30 صناعة.</p>
+<p>في كتابهما الكلاسيكي <a href="https://www.amazon.com/Blue-Ocean-Strategy-Uncontested-Competition/dp/1591396190"><em>Blue Ocean Strategy</em></a>، صاغ <bdi class="en">Chan Kim</bdi> و<bdi class="en">Ren</bdi>é<bdi class="en">e Mauborgne</bdi> مصطلحي «المحيط الأحمر» و«المحيط الأزرق» لوصف الأسواق.</p>
+<figure><table><thead><tr><th>استراتيجية المحيط الأحمر</th><th>استراتيجية المحيط الأزرق</th></tr></thead>
+<tbody>
+<tr><td>نافس في مساحة سوقية <strong>قائمة</strong>.</td><td>اصنع مساحة سوقية <strong>بلا منافسة</strong>.</td></tr>
+<tr><td><strong>اهزم</strong> المنافسين.</td><td>اجعل المنافسة <strong>بلا معنى</strong>.</td></tr>
+<tr><td>استغل الطلب <strong>القائم</strong>.</td><td>اصنع طلبًا <strong>جديدًا</strong> واستحوذ عليه.</td></tr>
+<tr><td><strong>اقبل</strong> المفاضلة بين القيمة والتكلفة.</td><td><strong>اكسر</strong> المفاضلة بين القيمة والتكلفة.</td></tr>
+<tr><td>وجّه منظومة أنشطة الشركة كلها نحو <strong>اختيارها الاستراتيجي بين التمايز أو التكلفة المنخفضة</strong>.</td><td>وجّه منظومة أنشطة الشركة كلها نحو <strong>السعي إلى التمايز والتكلفة المنخفضة معًا</strong>.</td></tr>
+</tbody></table>
+<figcaption><a href="https://www.blueoceanstrategy.com/what-is-blue-ocean-strategy/">المصدر</a></figcaption></figure>
+<p>«المحيط الأحمر» يرمز إلى الأسواق الناضجة المكتظة بالمنافسة (أحمر من دماء المنافسة)، حيث تحوّل الجميع إلى سلع نمطية إلى حد كبير. وهوامش الربح فيها تتناقص باستمرار. في المحيط الأحمر تركّز الشركات على تلبية احتياجات العملاء الحاليين، وتتقاتل على العملاء الموجودين، وتعطي الأولوية للطلب القائم. وفي المحيطات الحمراء يستحيل الجمع بين التمايز واستراتيجية السعر المنخفض في آن واحد.</p>
+<p>أما «المحيطات الزرقاء» فهي على العكس أسواق جديدة، مساحات لم تُستكشف بعد ولا منافسة فيها. والفكرة هي صناعة سوق لم يكتشفه جمهور واسع بعد. ومع الوقت، يمكن أن يتحول كل محيط أزرق إلى أحمر عندما ينضج ويجذب مزيدًا ومزيدًا من المنافسين.</p>
+<p>استراتيجية المحيط الأزرق هي السعي إلى التمايز والتكلفة المنخفضة في آن واحد، لفتح سوق جديد وصناعة طلب جديد. فإذا استطاعت الشركة أن تحدد ما يقدّره المستهلكون حاليًا، ثم تعيد التفكير في طريقة تقديم هذه القيمة، أمكن تحقيق التمايز والتكلفة المنخفضة معًا. وهذا ما يُسمّى «ابتكار القيمة» (<bdi class="en">Value Innovation</bdi>).</p>
+
+<h3 id="h-how-blue-ocean-strategy-is-distinct-from-a-differentiation-strategy"><strong>كيف تختلف استراتيجية المحيط الأزرق عن استراتيجية التمايز</strong></h3>
+<p>استراتيجية المحيط الأزرق تعني السعي إلى التمايز والتكلفة المنخفضة معًا، بينما يتحقق التمايز في الاستراتيجية التنافسية التقليدية بتقديم قيمة متميزة بتكلفة أعلى على الشركة وسعر أعلى على العملاء.</p>
+<p>الطريقة لهزيمة المنافسين هي أن تتوقف عن محاولة هزيمتهم. لا توجد منافسة، لكن لا يوجد طلب أيضًا، حتى الآن. (عليك أن تصنعه.) ويمكنك أن تستخدم استراتيجيتي التمايز والسعر المنخفض في آن واحد.</p>
+<p>النقطة الأساسية هي تلبية احتياجات المستهلكين. أنت تركّز على العميل وحده، لا على المنافسين، لأنك الوحيد في السوق.</p>
+
+<h2 id="h-category-creation">صناعة الفئة</h2>
+<p>عندما دخلت <a href="https://www.drift.com/">Drift</a> سوق أدوات الشات المباشر المزدحم أصلًا، لم تقل: «لدينا هذه الميزة التي تجعلنا مختلفين». بل أطلقت على اللعبة كلها اسمًا آخر: «التسويق بالمحادثة» (<bdi class="en">Conversational Marketing</bdi>).</p>
+<p>يقول <bdi class="en">Dave Gerhardt</bdi>، نائب رئيس التسويق السابق في <bdi class="en">Drift</bdi>: «دخلنا ذلك السوق ونحن نعرف أن علينا أن نخرج إلى الناس، ونصنع فئة جديدة، ونكون الطريقة الوحيدة لفهمها».</p>
+<p>لقد غيّروا الطريقة التي ينبغي أن يفكر بها الناس فيهم. فبرزوا. وكانوا مختلفين.</p>
+<figure><img width="1024" height="319" src="https://cxl.com/wp-content/uploads/2020/06/image-6-1024x319.png" alt="Drift والتسويق بالمحادثة"></figure>
+<p>وفعلوا ذلك بصناعة فئة.</p>
+<p>صناعة الفئة (<bdi class="en">Category Creation</bdi>) لا تعني أن تكون الأول في السوق بمنتج أو خدمة جديدة. أحيانًا يكون هذا صحيحًا، لكنه في الغالب ليس كذلك.</p>
+<p>صناعة فئة جديدة تثقّف السوق لا عن حل جديد فقط، بل كثيرًا ما تثقّفه عن <em>مشكلة</em> جديدة (ليست حاضرة في ذهنه). صناعة الفئة تبيع المشكلة لا المنتج، وبذلك تضع ابتكارك في موقع الحل الأفضل لهذه المشكلة.</p>
+<p>وهي تحتاج إلى ابتكار جذري في المنتج أو الخدمة، مع ابتكار في نموذج البيزنس، مدعومًا ببيانات عن الطلب المستقبلي على الفئة. وصنّاع الفئات، بحكم التعريف، لا منافسين مباشرين لهم، فهم قادة السوق. وقادة السوق هم من يجنون أكبر الأرباح.</p>
+<p>راجع <bdi class="en">Jack Welch</bdi>، الرئيس التنفيذي الأسطوري لـ <bdi class="en">GE</bdi>، أنشطة الشركة، وقرر التركيز على تسع فئات كانت الشركة تحتل فيها أحد المركزين الأولين (أو كانت قريبة من ذلك).</p>
+<p>فإن لم تستطع <bdi class="en">GE</bdi> أن تكون الأولى أو الثانية في فئة ما، كانت تخرج من ذلك النشاط. وإن لم تستطع أنت أن تكون الأول أو الثاني في فئة ما، فربما يكون أفضل طريق أمامك أن تصنع فئتك الخاصة.</p>
+<p>هناك كتابان لا بأس بهما في هذا الموضوع:</p>
+<ol>
+<li><a href="https://www.amazon.com/Play-Bigger-Dreamers-Innovators-Dominate/dp/0062407619"><em>Play Bigger</em></a>. كرهت أسلوبه المتباهي وأمثلته السهلة، لكن أفكاره جيدة.</li>
+<li><a href="https://www.amazon.com/Category-Creation-Customers-Employees-Investors/dp/1119611563"><em>Category Creation</em></a>. خليط من الأفكار المثيرة للاهتمام وأساسيات التسويق، لكنه يستحق القراءة على أي حال.</li>
+</ol>
+
+<h2 id="h-brand">البراند</h2>
+<p>كانت الشركات تتنافس قديمًا على المزايا (أي من يفعل ماذا). ومع بداية التسويق الجماهيري، صارت تتنافس على الفوائد والتجربة.</p>
+<p>وفي العقود الأخيرة، أصبح الأمر يدور أكثر فأكثر حول البراند. فالفروق الوظيفية تحل محلها القيم والمُثُل والهوية.</p>
+<p><em>من أكون إن اشتريت البراند الخاص بك؟ وماذا يقول ذلك عني؟</em></p>
+<ul>
+<li>أشتري <bdi class="en">Patagonia</bdi> لأنني أؤمن بالاستدامة وأهتم بالأرض.</li>
+<li>عندما أشتري <bdi class="en">Nike</bdi>، فأنا أناصر المساواة للمرأة وأعارض عنف الشرطة (من بين أشياء أخرى).</li>
+<li>أشتري <bdi class="en">CXL Institute</bdi> لأنني أرى نفسي شخصًا طموحًا مجتهدًا ينتظره مستقبل كبير.</li>
+<li>أشتري المجوهرات من <bdi class="en">Tiffany’s</bdi>، وأدفع سعرًا أعلى مقابل ذلك الألماس، لأنني أقدّر الأفضل.</li>
+</ul>
+<p><strong>البراند الخاص بك هو خط دفاعك ضد التسليع.</strong></p>
+<p>البراند القوي هو أفضل أصولك التسويقية وأكثرها استدامة على المدى الطويل. استثمر فيه قبل أن تحتاج إليه. فهو شيء لا يستطيع منافسوك نسخه. ويمكن أن يكون أقوى «لماذا» تجعل الناس يختارونك.</p>
+<p>الفروق الوظيفية وفروق السمات مهمة، والابتكار يقطع شوطًا طويلًا، لكنها ليست لعبة يستطيع الجميع أن يلعبها. أما المنافسة بالبراند فيستطيعها أي أحد تقريبًا.</p>
+<p>والابتكار الناعم ونقاط الاختلاف العاطفية تذهب أبعد بكثير في عالمنا المليء بالمزايا والفوائد التي لا تنتهي.</p>
+<p>للأشياء قيمة محدودة، لكن المعنى الذي نربطه بها، أي القصص التي نحكيها لأنفسنا عنها، له قيمة تتضاعف بلا حدود.</p>
+
+<h3 id="h-how-to-be-different-through-branding">كيف تكون مختلفًا من خلال البراندنج</h3>
+<p>في كتابها الممتاز <a href="https://www.amazon.com/Different-Escaping-Competitive-Youngme-Moon/dp/030746086X"><em>Different</em></a>، تشرح أستاذة <bdi class="en">Harvard</bdi> يونغمي مون (<bdi class="en">Youngme Moon</bdi>) ثلاثة أنواع من البراندات التي تبرز في المشهد التنافسي اليوم:</p>
+<ol>
+<li>البراندات المعاكسة (<bdi class="en">Reverse Brands</bdi>)؛</li>
+<li>البراندات المنشقّة (<bdi class="en">Breakaway Brands</bdi>)؛</li>
+<li>البراندات العدائية (<bdi class="en">Hostile Brands</bdi>).</li>
+</ol>
+
+<h4 id="h-1-reverse-brands"><strong>1. البراندات المعاكسة</strong></h4>
+<p>معظم البراندات تحسّن عرض القيمة باستمرار، لأنها تفترض أن العملاء لا يمكن إرضاؤهم إرضاءً كاملًا أبدًا. لكن أصحاب التموضع المعاكس يفترضون أن العملاء، وإن كانوا <em>فعلًا</em> يريدون شيئًا أكثر من المنتج الأساسي، لا يريدون بالضرورة مزايا أكثر.</p>
+<p>ولذلك تحذف البراندات المعاكسة من المنتج جوانب معينة قد يتوقعها العملاء، وتضيف أشياء جديدة غير متوقعة. والمثال الأوضح: <bdi class="en">IKEA</bdi>.</p>
+<p>بينما تمتلئ محلات الأثاث التقليدية بالبائعين وبأثاث يدوم العمر كله، لا تقدّم <bdi class="en">IKEA</bdi> أي مساعدة داخل المتجر، وقد لا يدوم أثاثها طويلًا. وبينما توصّل محلات الأثاث التقليدية الطلبات إلى البيوت، يجب على متسوّقي <bdi class="en">IKEA</bdi> أن يركّبوا أثاثهم بأنفسهم من القطع.</p>
+<figure><img src="https://www.ikea.com/images/ikea-gwangmyeong-store-05005f26df564e93f64322364c7358a6.jpg?f=xxl" alt="واجهة أحد متاجر IKEA"></figure>
+<p>لكنك تحصل على <a href="https://cxl.com/blog/first-impressions-matter-the-importance-of-great-visual-design/">تصميم رائع</a> بأسعار في المتناول. ومتاجرها ذات طابع واسع وعصري جدًا. وفيها مطعم يقدّم كرات اللحم السويدية وغيرها من الأطايب.</p>
+<p>والطريقة تنجح. فبينما خسرت محلات الأثاث الأمريكية أمام متاجر مثل <bdi class="en">Walmart</bdi> بشكل متواصل، أصبحت <bdi class="en">IKEA</bdi> أكبر متجر أثاث في العالم (والثاني في الولايات المتحدة).</p>
+<p>ولم يستطع أحد أن ينسخ <bdi class="en">IKEA</bdi>.</p>
+
+<h4 id="h-2-breakaway-brands"><strong>2. البراندات المنشقّة</strong></h4>
+<p>تدرك البراندات المنشقّة أن تصنيف المنتجات في فئات أمر اعتباطي. فنحن لا نأكل البسكويت على الإفطار، لكن كثيرين يأكلون حبوب إفطار محلّاة لها القيمة الغذائية نفسها، لأنها «حبوب إفطار».</p>
+<p>كانت لدى مصنّعي الحفاضات مشكلة. فمعظم الآباء كانوا يشعرون بالحرج من شراء الحفاضات بعد أن يتم طفلهم ثلاث سنوات، فكانوا يدرّبونه جيدًا على استخدام الحمام. ثم اخترعوا <bdi class="en">Pull-Ups</bdi>، حفاضات تشبه الملابس الداخلية. وكانت حالة استخدامها للأطفال من 3 إلى 5 سنوات. فزال الحرج الاجتماعي، وقفزت الأرباح.</p>
+<figure><img width="426" height="426" src="https://cxl.com/wp-content/uploads/2023/11/Cookie-Crisp-box-Feb-22-426x426.webp" alt=""><figcaption>(<a href="https://www.generalmills.com/food-we-make/brands/cookie-crisp">مصدر الصورة</a>)</figcaption></figure>
+<p>هذا ما يفعله البراند المنشق: تأخذ فئة قائمة وتعيد تعريف حالة استخدامها. وقد فعلها <bdi class="en">Cirque du Soleil</bdi> عندما أعاد صياغة مفهوم السيرك، فاستبدل الحيوانات بعروض بهلوانية وبدنية مذهلة يؤديها البشر.</p>
+
+<h4 id="h-3-hostile-brands"><strong>3. البراندات العدائية</strong></h4>
+<p>البراندات العدائية تتمنّع وتصعّب الوصول إليها. فهي النقيض من «البراندات التي تمنحك شعورًا لطيفًا»، وتطالبك بتحدٍّ أن تحسم قرارك: أحبّني أو اتركني. إنها تقسم الناس عن عمد.</p>
+<figure><img width="1024" height="512" src="https://cxl.com/wp-content/uploads/2020/06/image5-1024x512.png" alt="مثال لبراند عدائي"></figure>
+<p>البراندات العدائية لا تعتذر عن جوانب قد يعتبرها البعض عيوبًا، بل تتباهى بعيوبها. فعندما دخلت <bdi class="en">Mini Cooper</bdi> السوق الأمريكي، لم يعتذر البراند عن كونه سيارة صغيرة في بلد يعشق سيارات الدفع الرباعي (<bdi class="en">SUV</bdi>). بل تفاخر بأن السيارة صغيرة جدًا، وبأنها ضد الـ <bdi class="en">SUV</bdi>.</p>
+<p>قد تُشعرنا البراندات العدائية بعدم الارتياح (مثل بعض براندات الملابس المصنوعة حصريًا للنحفاء)، لكن طبيعتها التي تقسم الناس هي ما يجعلها في النهاية تبرز وسط بحر التشابه.</p>
+
+<h3 id="h-traits-of-successful-commodity-brands">سمات براندات السلع النمطية الناجحة</h3>
+<p>في كتابه <a href="https://www.amazon.com/Bigger-Than-This-venture-admired/dp/0989646173"><em>Bigger Than This</em></a>، يناقش <bdi class="en">Fabian Geyrhalter</bdi> ثماني «سمات براند» تشترك فيها براندات السلع النمطية (<bdi class="en">Commodity Brands</bdi>) الناجحة.</p>
+
+<h4 id="h-1-story">1. القصة</h4>
+<p>هذه أفضل طريقة لتبرز ببراند سلعة نمطية عندما لا يكون لديك أي ابتكار: <a href="https://cxl.com/institute/online-course/authentic-storytelling-and-digital-marketing-masterclass/">أن تكون لديك قصة</a>. <bdi class="en">Fishpeople Seafood</bdi> شركة حاصلة على شهادة <bdi class="en">B Corp</bdi>، تحكي قصة معايير صارمة في الاستدامة والمسؤولية. وهي تركّز على قصص مؤسسيها، لكن الأهم أنك تستطيع أن <a href="https://fishpeopleseafood.com/pages/trace-your-fish">تتتبّع السمكة</a> التي توشك أن تأكلها وتعرف القصة وراءها.</p>
+
+<h4 id="h-2-belief">2. الإيمان</h4>
+<p>هذه السمة تدور حول القيم المشتركة، حيث يرتبط البراند ارتباطًا عميقًا بقبيلته (<bdi class="en">Tribe</bdi>) من خلال إيمان مشترك، يتحقق بفهم أفرادها. وهذا يتطلب كثيرًا من المتابعة والإنصات، والأهم من ذلك كله الحوار المنفتح والعفوي <a href="https://cxl.com/blog/social-media-market-research/">على السوشيال ميديا</a> وفي الفعاليات وغيرها. فالمعتقدات المتّقدة تصبح القوة المحرّكة للبيزنس الخاص بك. <bdi class="en">Black Rifle Coffee Company</bdi> شركة مؤيدة لحمل السلاح، لفتت الانتباه على المستوى الوطني عام 2017 بدعمها <bdi class="en">Donald Trump</bdi>. هم يعيشون قيمهم، ولذلك يجذبون (وينفّرون) فئات معينة من الناس.</p>
+
+<h4 id="h-3-cause">3. القضية</h4>
+<p>ربط وجود البراند الخاص بك بقضية يمكن أن يمنحك <a href="https://cxl.com/institute/online-course/positioning/">تموضعًا قويًا للبراند</a>. فالبيزنس الخاص بك موجود ليصحّح خطأً، أو ليصنع شيئًا من الخير في العالم. ويخطر على البال هنا أحذية <bdi class="en">TOMS</bdi>.</p>
+
+<h4 id="h-4-heritage-0">4. الإرث</h4>
+<p>اربط منتجك برغبة المستهلكين في بناء صلة أعمق بمكان ما، حقيقي أو خيالي، أو حتى بحقبة من التاريخ. فالحنين إلى الماضي (<bdi class="en">Nostalgia</bdi>) في البراندنج نجح دائمًا، حتى في الأيام الخوالي. ولهذا تعرض علينا <bdi class="en">Coca-Cola</bdi> بابا نويل القديم عامًا بعد عام. لقد نجحت في ذلك، لكن الإرث قد يكون صعب التوسّع.</p>
+
+<h4 id="h-5-delight">5. الإبهاج</h4>
+<p>هذه السمة تشبه التركيز على تجربة العميل الذي تحدثنا عنه سابقًا. فاللفتات الصغيرة غير المتوقعة تجعل المستهلك يراك صديقًا. وعندما تكرر هذه الخطوة وطريقة التفكير هذه، تنتقل من الصداقة إلى بناء مجتمع. استهدف أن تصنع روحًا للبراند لا يستطيع أحد أن يسرقها.</p>
+
+<h4 id="h-6-transparency">6. الشفافية</h4>
+<p>قيادة البراند بالشفافية تكسبك ثقة فورية لدى المستهلكين. وأول ما يخطر في بالي <bdi class="en">Buffer</bdi> و<a href="https://buffer.com/salary/director-of-people/average/">رواتبها المعلنة</a>. وكانت <bdi class="en">Moz</bdi> و<bdi class="en">ConvertKit</bdi> أيضًا شفافتين جدًا. الشفافية والصراحة تحتاجان إلى التزام جاد. ماذا لو أدرت شركة شفافة شفافية جذرية؟ وبثثت اجتماعاتك الداخلية مباشرة؟ وجعلت وثائق الاستراتيجية وما يشبهها علنية؟ لا أحد بهذه الشجاعة. لكن المؤكد أنه لن يكون لك منافس.</p>
+
+<h4 id="h-7-solidarity">7. التضامن</h4>
+<p>التضامن هو فكرة ربط البراند الخاص بك بحلم شخص آخر. ويتطلب منك أن تُظهر تعاطفًا عميقًا مع جمهور محدد جدًا، وأن تجعل عرضك وقصتك ومعتقداتك ورسائلك متوافقة مع وجهة نظر متابعيك. عليك أن تجسّد قيم قبيلتك في كل ما تفعله وتقوله.</p>
+
+<h4 id="h-8-individuality">8. الفردية</h4>
+<p>منتجات وتجارب مخصّصة لكل شخص. فالقصة الفريدة والمنتج المخصّص يكسبان انتباه المستهلك من خلال الفردية. فاجئ قبيلتك بأن تكون شخصيًا معهم، فيصبح البراند الخاص بك قريبًا ودودًا. وقد أحدثت <bdi class="en">Wonderbly</bdi> ضجة بكتب <a href="https://www.wonderbly.com/pages/lost-my-name-world-books-page-1">Lost My Name</a>.</p>
+
+<h3 id="h-personal-brands">البراندات الشخصية</h3>
+<p>طريقة أخرى لإعطاء الناس سببًا لاختيارك دون غيرك هي <a href="https://cxl.com/blog/personal-branding/">البراند الشخصي (<bdi class="en">Personal Branding</bdi>)</a>. فإن أحب العملاء المحتملون الأشخاص المرتبطين بشركتك، زاد احتمال أن يشتروا منك.</p>
+<p>لدى <bdi class="en">Tesla</bdi> إيلون ماسك (<bdi class="en">Elon Musk</bdi>). فإن كنت أحب <bdi class="en">Elon</bdi> وأحترمه، يزيد احتمال أن أشتري <bdi class="en">Tesla</bdi>. ومن هو الاسم وراء <bdi class="en">Chevrolet</bdi> أو <bdi class="en">Mazda</bdi>؟ لا فكرة لدي.</p>
+<figure><img width="840" height="531" src="https://cxl.com/wp-content/uploads/2020/06/elon.jpg" alt=""><figcaption><bdi class="en">Elon Musk</bdi> أثناء إطلاق <bdi class="en">Cybertruck</bdi></figcaption></figure>
+<p>كان لدى <bdi class="en">Microsoft</bdi> بيل جيتس (<bdi class="en">Bill Gates</bdi>). وكان لدى <bdi class="en">Apple</bdi> ستيف جوبز (<bdi class="en">Steve Jobs</bdi>). وما زالت شركات ضخمة تستخدم البراندات الشخصية: <bdi class="en">Google</bdi>، و<bdi class="en">Virgin</bdi>، و<bdi class="en">HubSpot</bdi>، و<bdi class="en">Salesforce</bdi>. فالتواصل مع إنسان آخر أسهل بكثير من التواصل مع كيان.</p>
+<p>أنا أحب <bdi class="en">Rand Fishkin</bdi> واستمتعت بحلقات <bdi class="en">Whiteboard Fridays</bdi> التي كان يقدّمها، ولذلك يزيد احتمال أن أشترك في <bdi class="en">Moz</bdi> (رغم أنه لم يعد في الشركة) بدلًا من <bdi class="en">SEMrush</bdi>. وسأجرّب <a href="https://sparktoro.com/">Sparktoro</a> لأنني أحب <bdi class="en">Rand</bdi>.</p>
+<p>لا يلزم أن تكون المؤسس أو الرئيس التنفيذي لتستخدم البراند الشخصي في التمايز. انظر إلى ما فعله <bdi class="en">Dave Gerhardt</bdi> مع <bdi class="en">Drift</bdi> عندما كان نائب رئيس التسويق فيها. والآن هو في <a href="https://www.privy.com/">Privy</a>، ورغم أن معظم الناس لا يعرفون ما هي <bdi class="en">Privy</bdi>، فإن لديهم بالفعل شعورًا إيجابيًا تجاهها بسبب البراند الشخصي لـ <bdi class="en">Dave</bdi>.</p>
+<p>وكما كتب مؤسسا <bdi class="en">Basecamp</bdi> في <a href="https://www.amazon.com/Rework-Jason-Fried/dp/0307463745"><em>Rework</em></a>، فإن أن تضع نفسك في منتجك طريقة قوية لتبرز وسط الزحام:</p>
+<blockquote><p>إن نجحت، سيحاول الناس نسخ ما تفعله. لكن هناك طريقة رائعة لتحمي نفسك من المقلّدين:</p>
+<p>اجعل نفسك جزءًا من منتجك أو خدمتك. ضع ما هو فريد في طريقة تفكيرك داخل ما تبيعه. اسكب نفسك في منتجك وفي كل ما يحيط به أيضًا: في طريقة بيعه، وطريقة دعمه، وطريقة شرحه، وطريقة تسليمه.</p>
+<p>لا يستطيع المنافسون أبدًا أن ينسخوا «أنت» الموجود في منتجك.</p></blockquote>
+<p>أتفق مئة بالمئة. ولأنني ربما أكون معجبًا بمؤسسي <bdi class="en">Basecamp</bdi> الصريحين، فسأختار <bdi class="en">Basecamp</bdi> دون غيره من برامج إدارة المشروعات (أو على الأقل سأضعه ضمن دائرة الاعتبار عندي).</p>
+
+<h2 id="h-how-do-you-turn-differentiation-into-a-strategy">كيف تحوّل التمايز إلى استراتيجية؟</h2>
+<p>يجب أن يظهر الفرق في المنتج، والتسعير، والعمليات، والرسائل التسويقية، وتجربة العميل، لا في الصفحة الرئيسية فقط.</p>
+<p>ضاعف رهانك على عامل التمايز الخاص بك لتبني استراتيجية التمايز. واضبط الماكينة كلها لتفي بهذا الوعد.</p>
+<ul>
+<li>هل أنت أسرع؟ ما رأيك أن تجعلها أسرع 10 مرات؟</li>
+<li>أرخص؟ اذهب إلى رخص أبعد بكثير، واجعل كل شيء يدور حول الرخص. (وهذا لا ينجح إلا إذا كان المنافسون عاجزين عن مجاراتك بسبب اقتصاديات الوحدة لديك أو ميزة هيكلية.)</li>
+<li>جودة أفضل؟ اجعل ميزة الجودة هذه أفضل 10 مرات من أي شيء آخر في السوق (بشرط أن تكون محددة).</li>
+<li>تجربة عميل أفضل؟ اسعَ إلى <a href="https://medium.com/@reidhoffman/how-to-scale-a-magical-experience-4-lessons-from-airbnbs-brian-chesky-eca0a182f3e3">تجربة الـ 11 نجمة</a>.</li>
+</ul>
+<p>بهذه الطريقة يصبح عامل التمايز الخاص بك عامل تمايز حقيقيًا.</p>
+
+<h2 id="h-faq">أسئلة شائعة</h2>
+<p><strong>ما هي استراتيجية التمايز؟</strong></p>
+<p>استراتيجية التمايز تعطي العملاء سببًا واضحًا لاختيار شركتك بدلًا من البدائل. فإن كان الفرق الوحيد هو طريقة وصفك للمنتج، فلديك رسائل مختلفة، وليس بالضرورة بيزنس مختلف.</p>
+<p><strong>ما الفرق بين التمايز والتموضع؟</strong></p>
+<p>التمايز هو ما يفصلك فعلًا عن المنافسين. والتموضع هو الطريقة التي تجعل بها العملاء يفهمون هذا الفرق ويضعونك في المكان الصحيح من السوق.</p>
+<p><strong>ما الفرق بين التمايز والتفرّد؟</strong></p>
+<p>التمايز يجيب عن سؤال «لماذا أختار هذا البراند؟». والتفرّد يجيب عن سؤال «هل سأتعرف على هذا البراند وأتذكره؟». وعادةً تحتاج إلى الاثنين.</p>
+<p><strong>هل يمكن أن يكون السعر المنخفض استراتيجية تمايز؟</strong></p>
+<p>نعم، إن كان نموذج البيزنس الخاص بك يسمح لك بأن تظل أرخص من المنافسين. أما إن كان أي أحد يستطيع مجاراة سعرك غدًا، فليست ميزة تُذكر.</p>
+<p><strong>هل يمكن أن تكون تجربة العميل عامل تمايز؟</strong></p>
+<p>نعم، إن كان العميل يستطيع فعلًا أن يلمس أن التعامل معك أسهل، أو أسرع، أو أوضح، أو أفضل من التعامل مع المنافسين. أما أن تقول إن لديك «خدمة عملاء رائعة» فلا يُحتسب.</p>
+<p><strong>كيف تعرف إن كان تمايزك قويًا بما يكفي؟</strong></p>
+<p>اسأل أربعة أسئلة: هل يفهمه العملاء؟ هل يهتمون به؟ هل تستطيع إثباته؟ هل يستطيع المنافسون نسخه بسهولة؟ الإجابات الضعيفة تعني عادةً أن التمايز يحتاج إلى مزيد من العمل.</p>
+<p><strong>هل تحتاج البراندات الكبيرة إلى التمايز بقدر ما تحتاجه البراندات الأصغر؟</strong></p>
+<p>ليس دائمًا. فالبراندات الكبيرة تستفيد بالفعل من الوعي والانتشار والألفة والعادة. أما الشركات الأصغر فعادةً ما تكون مساحتها للتشابه مع الجميع أضيق، لأنها تحتاج أولًا إلى إعطاء المشترين سببًا لملاحظتها.</p>
+
+<h2 id="h-conclusion">الخلاصة</h2>
+<p>التسويق لعبة انتباه. وسواء كان <bdi class="en">B2C</bdi> أو <bdi class="en">B2B</bdi>، فإن فعلت ما يفعله الجميع، فمن الصعب أن تحصل عليه.</p>
+<p>إن كان هدفك أن تكسب حصة سوقية ووعيًا، لكن ليس لديك تمايز واضح في المنتج، فهذه مشكلة. ولن تُحل بتغيير عنوان أو بإضافة ميزة أخرى يستطيع المنافسون نسخها.</p>
+<p>التمايز يتطلب التزامًا كاملًا. يجب أن يظهر في المنتج، والتموضع، والبراند، والرسائل التسويقية، وتجربة العميل، وفي القرارات التي تقف وراءها جميعًا. إنه ليس تكتيكًا لحملة يمكن تفويضه لقسم التسويق. القيادة هي التي يجب أن تتبنّاه.</p>
+<p>إن كنت تحتاج إلى تقوية هذه الأسس، فإن <a href="https://cxl.com/institute/online-course/positioning/">كورس التموضع</a> من <bdi class="en">CXL</bdi> يشرح كيف تحدد تموضعًا وتوصله بحيث لا يستطيع المنافسون احتلاله بسهولة، و<a href="https://cxl.com/institute/online-course/branding/">كورس البراندنج</a> يتعمق في بناء براند يمكن التعرف عليه حول هذا التموضع، و<a href="https://cxl.com/institute/online-course/messaging/">كورس الرسائل التسويقية</a> يوضح لك كيف تحوّل هذا التمايز إلى رسائل يفهمها العملاء فعلًا.</p>
+<p>ومع أن الذكاء الاصطناعي يجعل البحث والكتابة والإطلاق والتطوير أسرع لكل شركة، فإن مجرد الإكثار مما يفعله الجميع لن يصنع ميزة. هل تريد أن تبني أنظمة كهذه لتسويقك؟ برنامج <a href="https://cxl.com/institute/marketing-engineer/">Marketing Engineer</a> الجماعي من <bdi class="en">CXL</bdi> هو ثمانية أسابيع مباشرة من بناء أنظمة ذكاء اصطناعي تدير تسويقك، وتحصل على شهادة بناءً على ما تبنيه.</p>
+</main>
+</body>
+</html>
