@@ -84,7 +84,7 @@ p,ul,ol,dl,figure,blockquote{margin:0}
 .spine.lean.pulled{transform:rotate(0) translateY(-40px)}
 /* النوع 0: خطين دهبي فوق وتحت */
 .spine.v0::before,.spine.v0::after{content:"";position:absolute;inset-inline:5px;height:7px;border-block:2px solid #D8B45A;opacity:.9}
-.spine.v0::before{top:8px}
+.spine.v0::before{top:26px}
 .spine.v0::after{bottom:30px}
 /* النوع 1: ورقة عنوان ملزوقة */
 .spine.v1 .sp-t{background:#F3EBD8;color:#2B2D33;padding:10px 3px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.18),0 1px 2px rgba(0,0,0,.2)}
@@ -92,7 +92,7 @@ p,ul,ol,dl,figure,blockquote{margin:0}
 /* النوع 2: حزام لون غامق فوق */
 .spine.v2::before{content:"";position:absolute;inset-inline:0;top:12%;height:20px;background:rgba(0,0,0,.24);box-shadow:0 -2px 0 rgba(255,255,255,.12)}
 .spine.v2::after{content:"";position:absolute;inset-inline:6px;bottom:30px;height:2px;background:currentColor;opacity:.45}
-.sp-t{position:relative;writing-mode:vertical-rl;font-family:var(--f-display);font-weight:600;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;max-height:calc(100% - 46px);margin-top:16px}
+.sp-t{position:relative;writing-mode:vertical-rl;font-family:var(--f-display);font-weight:600;font-size:14px;line-height:1.2;white-space:nowrap;overflow:hidden;max-height:calc(100% - 46px);margin-top:14px}
 .sp-s{position:relative;font-family:var(--f-latin);font-size:9.5px;font-weight:700;letter-spacing:.05em;opacity:.85;text-transform:uppercase;writing-mode:vertical-rl;transform:rotate(180deg);max-height:96px;overflow:hidden;white-space:nowrap}
 
 /* الكتاب وهو بيتسحب ويتفتح */
@@ -310,7 +310,7 @@ p,ul,ol,dl,figure,blockquote{margin:0}
 .read-list li{counter-increment:r}
 .read-list a{display:grid;grid-template-columns:52px minmax(0,1fr);grid-template-areas:"n t" "n m" "n o";column-gap:16px;row-gap:2px;padding:18px 20px;border:1.5px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);transition:border-color .15s,background .15s}
 .read-list a:hover{border-color:var(--c);background:var(--t)}
-.read-list a::before{content:counter(r);grid-area:n;width:46px;height:46px;border-radius:14px;background:var(--c);color:var(--on);display:grid;place-items:center;font-family:var(--f-display);font-size:19px;font-weight:700}
+.read-list a::before{content:attr(data-n);grid-area:n;width:46px;height:46px;border-radius:14px;background:var(--c);color:var(--on);display:grid;place-items:center;font-family:var(--f-display);font-size:19px;font-weight:700}
 .rl-t{grid-area:t;font-family:var(--f-display);font-size:19px;font-weight:700;line-height:1.5}
 .rl-m{grid-area:m;font-size:13.5px;color:var(--ink-3)}
 .rl-m b{color:var(--ink-2);font-weight:700}
@@ -323,4 +323,24 @@ p,ul,ol,dl,figure,blockquote{margin:0}
   .read-list a::before{width:36px;height:36px;font-size:16px;border-radius:10px}
   .shelf-tip{font-size:17px}
 }
+
+/* ترتيب القراية */
+.sp-n{position:relative;font-family:var(--f-mono);font-size:11px;font-weight:500;line-height:1;opacity:.9;margin-top:-4px}
+.spine.v1 .sp-n,.spine.v2 .sp-n{margin-top:-2px}
+.cover .tag{display:inline-flex;align-items:center;gap:6px}
+.cover .tag b{font-size:11.5px;color:var(--ink-3);font-weight:500}
+.a-head .ord{font-weight:700;color:var(--c);background:var(--paper);border-radius:6px;padding:1px 10px;line-height:1.8;font-size:13px}
+.ct-stage{font-family:var(--f-mono);font-size:12px;color:var(--c);letter-spacing:.02em}
+.pager{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.pager.single{grid-template-columns:minmax(0,1fr);max-width:560px}
+.pg{display:grid;gap:4px;padding:18px 20px;border:1.5px solid var(--line);border-radius:16px;text-decoration:none;color:var(--ink);background:var(--paper);transition:border-color .15s,background .15s,transform .15s}
+.pg:hover{border-color:var(--c);background:var(--t);transform:translateY(-2px)}
+.pg small{font-size:13px;color:var(--ink-3);font-weight:600}
+.pg small b{color:var(--c);font-weight:500}
+.pg > b{font-family:var(--f-display);font-size:18.5px;line-height:1.5}
+.pg.next{border-color:var(--c);background:var(--t)}
+.pg.next:hover{background:var(--paper)}
+.pg.empty{border:1.5px dashed var(--line);background:transparent}
+.pg.done{--c:var(--ink);--t:var(--wash)}
+@media (max-width:760px){.pager{grid-template-columns:minmax(0,1fr)}.pg.empty{display:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
